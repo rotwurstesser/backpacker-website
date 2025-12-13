@@ -1,8 +1,7 @@
+# Root redirect to English
+/   /en   302
+
 # Language path trailing slash normalization
 /en   /en/  301
 /de   /de/  301
 /es   /es/  301
-
-# SvelteKit handles all routing - catch-all for SPA
-# The 200 status means it's a rewrite, not a redirect
-/*    /index.html   200
