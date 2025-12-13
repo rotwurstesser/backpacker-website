@@ -14,7 +14,7 @@
   "priceUnit": "per_room",
   "beds": 2,
   "bathType": "private",
-  "image": "/images/rooms/double-private.jpg",
+  "image": "/images/gallery/double-room.jpg",
   "features": [
     { "en": "Private bathroom", "de": "Eigenes Bad", "es": "Baño privado" }
   ],

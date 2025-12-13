@@ -14,7 +14,7 @@
   "priceUnit": "per_bed",
   "beds": 6,
   "bathType": "shared",
-  "image": "/images/rooms/dormitory.jpg",
+  "image": "/images/gallery/6-bed-dorm.jpg",
   "features": [
     { "en": "Locker included", "de": "Schliessfach inklusive", "es": "Taquilla incluida" },
     { "en": "Reading light", "de": "Leselampe", "es": "Luz de lectura" }

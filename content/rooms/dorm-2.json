@@ -14,7 +14,7 @@
   "priceUnit": "per_bed",
   "beds": 2,
   "bathType": "shared",
-  "image": "/images/rooms/dormitory.jpg",
+  "image": "/images/gallery/2-bed-dorm.jpg",
   "features": [
     { "en": "Locker included", "de": "Schliessfach inklusive", "es": "Taquilla incluida" }
   ],

@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { t as translate } from '$lib/content';
+	import { t as translate, safeMarkdown } from '$lib/content';
 	import type { PageData } from './$types';
 
 	export let data: PageData;
@@ -25,11 +25,11 @@
 	</div>
 </section>
 
-<!-- Content -->
+<!-- Content - sanitized markdown rendering -->
 <section class="py-16">
 	<div class="container max-w-3xl">
 		<div class="prose prose-lg max-w-none">
-			{@html translate(page.content, lang)}
+			{@html safeMarkdown(page.content, lang)}
 		</div>
 	</div>
 </section>

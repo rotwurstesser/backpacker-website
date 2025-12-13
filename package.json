@@ -24,7 +24,9 @@
   "dependencies": {
     "bits-ui": "^0.21.0",
     "clsx": "^2.1.0",
+    "isomorphic-dompurify": "^2.34.0",
     "lucide-svelte": "^0.344.0",
+    "marked": "^17.0.1",
     "mode-watcher": "^0.3.0",
     "tailwind-merge": "^2.2.1",
     "tailwind-variants": "^0.2.0"

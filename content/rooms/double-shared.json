@@ -14,7 +14,7 @@
   "priceUnit": "per_room",
   "beds": 2,
   "bathType": "shared",
-  "image": "/images/rooms/double.jpg",
+  "image": "/images/gallery/double-room-view.jpg",
   "features": [],
   "order": 3,
   "available": true

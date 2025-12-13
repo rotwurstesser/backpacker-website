@@ -14,7 +14,7 @@
   "priceUnit": "per_room",
   "beds": 1,
   "bathType": "shared",
-  "image": "/images/rooms/single.jpg",
+  "image": "/images/gallery/single-room.jpg",
   "features": [],
   "order": 5,
   "available": true
