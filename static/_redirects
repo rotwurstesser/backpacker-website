@@ -1,7 +1,0 @@
-# Root redirect to English
-/   /en   302
-
-# Language path trailing slash normalization
-/en   /en/  301
-/de   /de/  301
-/es   /es/  301
