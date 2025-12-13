@@ -1,0 +1,23 @@
+{
+  "id": "double-private",
+  "name": {
+    "en": "Double Room (Private Bath)",
+    "de": "Doppelzimmer (mit Bad)",
+    "es": "Habitación Doble (Baño Privado)"
+  },
+  "description": {
+    "en": "Comfortable double room with private bathroom.",
+    "de": "Komfortables Doppelzimmer mit eigenem Bad.",
+    "es": "Cómoda habitación doble con baño privado."
+  },
+  "price": 144,
+  "priceUnit": "per_room",
+  "beds": 2,
+  "bathType": "private",
+  "image": "/images/rooms/double-private.jpg",
+  "features": [
+    { "en": "Private bathroom", "de": "Eigenes Bad", "es": "Baño privado" }
+  ],
+  "order": 4,
+  "available": true
+}

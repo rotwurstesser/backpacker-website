@@ -1,0 +1,23 @@
+{
+  "id": "dorm-2",
+  "name": {
+    "en": "2-Bed Dormitory",
+    "de": "2er Dormitory",
+    "es": "Dormitorio de 2 camas"
+  },
+  "description": {
+    "en": "Small dormitory room with 2 beds, shared bathroom facilities.",
+    "de": "Kleines Mehrbettzimmer mit 2 Betten und Etagendusche.",
+    "es": "Pequeño dormitorio con 2 camas y baño compartido."
+  },
+  "price": 49,
+  "priceUnit": "per_bed",
+  "beds": 2,
+  "bathType": "shared",
+  "image": "/images/rooms/dormitory.jpg",
+  "features": [
+    { "en": "Locker included", "de": "Schliessfach inklusive", "es": "Taquilla incluida" }
+  ],
+  "order": 2,
+  "available": true
+}

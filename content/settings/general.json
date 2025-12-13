@@ -1,0 +1,12 @@
+{
+  "siteName": "Bern Backpackers - Hotel Glocke",
+  "phone": "+41 31 311 37 71",
+  "fax": "+41 31 311 15 68",
+  "email": "info@bernbackpackers.ch",
+  "address": "Rathausgasse 75\n3011 Bern\nSwitzerland",
+  "receptionHours": "08:00 - 12:00 and 15:00 - 22:00",
+  "bookingUrl": "https://secure.dormproject.ch/online/?id=8",
+  "checkIn": "15:00 - 22:00",
+  "checkOut": "until 11:00",
+  "quietHours": "22:00 - 08:00"
+}

@@ -1,0 +1,21 @@
+{
+  "id": "single",
+  "name": {
+    "en": "Single Room",
+    "de": "Einzelzimmer",
+    "es": "Habitación Individual"
+  },
+  "description": {
+    "en": "Private single room with shared bathroom facilities.",
+    "de": "Privates Einzelzimmer mit Etagendusche.",
+    "es": "Habitación individual privada con baño compartido."
+  },
+  "price": 76,
+  "priceUnit": "per_room",
+  "beds": 1,
+  "bathType": "shared",
+  "image": "/images/rooms/single.jpg",
+  "features": [],
+  "order": 5,
+  "available": true
+}

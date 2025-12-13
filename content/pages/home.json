@@ -1,0 +1,92 @@
+{
+  "heroTitle": {
+    "en": "Bern's Best Budget Stay",
+    "de": "Berns beste Budget-Unterkunft",
+    "es": "La Mejor Estancia Económica en Berna"
+  },
+  "heroSubtitle": {
+    "en": "Welcome to Bern's better alternative to the Youth Hostel",
+    "de": "Willkommen zur besseren Alternative zur Jugendherberge",
+    "es": "Bienvenido al primer Hotel Budget de Berna"
+  },
+  "heroTagline": {
+    "en": "Member of Swiss Hostels",
+    "de": "Mitglied von Swiss Hostels",
+    "es": "Miembro de Swiss Hostels"
+  },
+  "heroCta": {
+    "en": "Book Your Stay",
+    "de": "Jetzt Buchen",
+    "es": "Reservar Ahora"
+  },
+  "features": [
+    {
+      "icon": "MapPin",
+      "title": {
+        "en": "Perfect Location",
+        "de": "Perfekte Lage",
+        "es": "Ubicación Perfecta"
+      },
+      "description": {
+        "en": "Located in the center of the old town, only 10 min walk from the train station",
+        "de": "Mitten in der Altstadt, nur 10 Min. zu Fuss vom Bahnhof",
+        "es": "En el centro del casco antiguo, a solo 15 min a pie de la estación"
+      }
+    },
+    {
+      "icon": "Wifi",
+      "title": {
+        "en": "Great Amenities",
+        "de": "Tolle Ausstattung",
+        "es": "Excelentes Servicios"
+      },
+      "description": {
+        "en": "Free WLAN, kitchen facilities, common room with TV, games, and gift shop",
+        "de": "Gratis WLAN, Gästeküche, Aufenthaltsraum mit TV, Spielen und Shop",
+        "es": "WLAN gratis, cocina, sala común con TV, juegos y tienda"
+      }
+    },
+    {
+      "icon": "Shield",
+      "title": {
+        "en": "Safe & Clean",
+        "de": "Sicher & Sauber",
+        "es": "Seguro y Limpio"
+      },
+      "description": {
+        "en": "Solid security, non-smoking throughout, max 6 beds per room",
+        "de": "Solide Sicherheit, komplett rauchfrei, max. 6 Betten pro Zimmer",
+        "es": "Buena seguridad, totalmente libre de humo, máx. 6 camas por habitación"
+      }
+    },
+    {
+      "icon": "CreditCard",
+      "title": {
+        "en": "Best Value",
+        "de": "Bestes Preis-Leistung",
+        "es": "Mejor Valor"
+      },
+      "description": {
+        "en": "Competitive prices including sheets, all taxes. Credit cards & EURO accepted",
+        "de": "Günstige Preise inkl. Bettwäsche und Steuern. Kreditkarten & EURO akzeptiert",
+        "es": "Precios competitivos con sábanas e impuestos incluidos. Aceptamos tarjetas y EURO"
+      }
+    }
+  ],
+  "amenities": [
+    { "icon": "Wifi", "name": { "en": "Free WLAN", "de": "Gratis WLAN", "es": "WLAN Gratis" } },
+    { "icon": "Coffee", "name": { "en": "Kitchen", "de": "Küche", "es": "Cocina" } },
+    { "icon": "Users", "name": { "en": "Common Room", "de": "Aufenthaltsraum", "es": "Sala Común" } },
+    { "icon": "Home", "name": { "en": "Laundry", "de": "Wäscherei", "es": "Lavandería" } }
+  ],
+  "ctaTitle": {
+    "en": "Ready to book your stay?",
+    "de": "Bereit zu buchen?",
+    "es": "¿Listo para reservar?"
+  },
+  "ctaDescription": {
+    "en": "Experience the best of Bern's Old Town from our central location. Book directly for the best rates.",
+    "de": "Erleben Sie das Beste der Berner Altstadt von unserer zentralen Lage. Buchen Sie direkt für die besten Preise.",
+    "es": "Experimente lo mejor del casco antiguo de Berna desde nuestra ubicación central. Reserve directamente para las mejores tarifas."
+  }
+}

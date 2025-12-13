@@ -1,0 +1,24 @@
+{
+  "id": "dorm-6",
+  "name": {
+    "en": "6-Bed Dormitory",
+    "de": "6-Bett Mehrbettzimmer",
+    "es": "Dormitorio de 6 camas"
+  },
+  "description": {
+    "en": "Comfortable dormitory room with 6 beds, shared bathroom facilities.",
+    "de": "Komfortables Mehrbettzimmer mit 6 Betten und Etagendusche.",
+    "es": "Dormitorio cómodo con 6 camas y baño compartido."
+  },
+  "price": 37,
+  "priceUnit": "per_bed",
+  "beds": 6,
+  "bathType": "shared",
+  "image": "/images/rooms/dormitory.jpg",
+  "features": [
+    { "en": "Locker included", "de": "Schliessfach inklusive", "es": "Taquilla incluida" },
+    { "en": "Reading light", "de": "Leselampe", "es": "Luz de lectura" }
+  ],
+  "order": 1,
+  "available": true
+}
