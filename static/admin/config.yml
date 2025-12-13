@@ -2,8 +2,6 @@ backend:
   name: github
   repo: rotwurstesser/backpacker-website
   branch: main
-  base_url: https://api.netlify.com
-  auth_endpoint: auth
 
 # Uncomment for local development: npx decap-server
 # local_backend: true
