@@ -1,0 +1,321 @@
+backend:
+  name: git-gateway
+  branch: main
+
+# Uncomment below for local development with npx decap-server
+# local_backend: true
+
+media_folder: static/images
+public_folder: /images
+
+site_url: https://bernbackpackers.ch
+display_url: https://bernbackpackers.ch
+logo_url: https://bernbackpackers.ch/images/logo.png
+
+# Since content uses nested i18n structure (e.g., { "en": "value", "de": "value" })
+# we use "single_file" structure with i18n: duplicate
+i18n:
+  structure: single_file
+  locales: [en, de, es]
+  default_locale: en
+
+collections:
+  # =====================
+  # PAGES COLLECTION
+  # =====================
+  - name: pages
+    label: Pages
+    files:
+      - name: home
+        label: Homepage
+        file: content/pages/home.json
+        fields:
+          - label: Hero Title
+            name: heroTitle
+            widget: object
+            fields:
+              - { label: English, name: en, widget: string }
+              - { label: German, name: de, widget: string }
+              - { label: Spanish, name: es, widget: string }
+
+          - label: Hero Subtitle
+            name: heroSubtitle
+            widget: object
+            fields:
+              - { label: English, name: en, widget: string }
+              - { label: German, name: de, widget: string }
+              - { label: Spanish, name: es, widget: string }
+
+          - label: Hero Tagline
+            name: heroTagline
+            widget: object
+            fields:
+              - { label: English, name: en, widget: string }
+              - { label: German, name: de, widget: string }
+              - { label: Spanish, name: es, widget: string }
+
+          - label: Hero CTA Button
+            name: heroCta
+            widget: object
+            fields:
+              - { label: English, name: en, widget: string }
+              - { label: German, name: de, widget: string }
+              - { label: Spanish, name: es, widget: string }
+
+      - name: about
+        label: About Page
+        file: content/pages/about.json
+        fields:
+          - label: Title
+            name: title
+            widget: object
+            fields:
+              - { label: English, name: en, widget: string }
+              - { label: German, name: de, widget: string }
+              - { label: Spanish, name: es, widget: string }
+
+          - label: Content
+            name: content
+            widget: object
+            fields:
+              - { label: English, name: en, widget: markdown }
+              - { label: German, name: de, widget: markdown }
+              - { label: Spanish, name: es, widget: markdown }
+
+      - name: amenities
+        label: Amenities Page
+        file: content/pages/amenities.json
+        fields:
+          - label: Title
+            name: title
+            widget: object
+            fields:
+              - { label: English, name: en, widget: string }
+              - { label: German, name: de, widget: string }
+              - { label: Spanish, name: es, widget: string }
+
+          - label: Amenities List
+            name: amenities
+            widget: list
+            fields:
+              - label: Name
+                name: name
+                widget: object
+                fields:
+                  - { label: English, name: en, widget: string }
+                  - { label: German, name: de, widget: string }
+                  - { label: Spanish, name: es, widget: string }
+              - { label: Icon, name: icon, widget: string, hint: "Lucide icon name (e.g., Wifi, Coffee, Bed)" }
+              - label: Description
+                name: description
+                widget: object
+                fields:
+                  - { label: English, name: en, widget: text }
+                  - { label: German, name: de, widget: text }
+                  - { label: Spanish, name: es, widget: text }
+
+  # =====================
+  # ROOMS COLLECTION
+  # =====================
+  - name: rooms
+    label: Rooms
+    folder: content/rooms
+    create: true
+    slug: "{{slug}}"
+    identifier_field: id
+    fields:
+      - { label: ID, name: id, widget: string, hint: "Unique identifier (e.g., dorm-4-bed)" }
+
+      - label: Name
+        name: name
+        widget: object
+        fields:
+          - { label: English, name: en, widget: string }
+          - { label: German, name: de, widget: string }
+          - { label: Spanish, name: es, widget: string }
+
+      - label: Description
+        name: description
+        widget: object
+        fields:
+          - { label: English, name: en, widget: text }
+          - { label: German, name: de, widget: text }
+          - { label: Spanish, name: es, widget: text }
+
+      - { label: Price (CHF), name: price, widget: number, value_type: float, min: 0, step: 0.5 }
+      - { label: Price Unit, name: priceUnit, widget: select, options: [per_bed, per_room], default: per_bed }
+      - { label: Number of Beds, name: beds, widget: number, value_type: int, min: 1, max: 20 }
+      - { label: Bathroom Type, name: bathType, widget: select, options: [shared, private], default: shared }
+      - { label: Room Image, name: image, widget: image, required: false }
+
+      - label: Features
+        name: features
+        widget: list
+        required: false
+        field:
+          label: Feature
+          name: feature
+          widget: object
+          fields:
+            - { label: English, name: en, widget: string }
+            - { label: German, name: de, widget: string }
+            - { label: Spanish, name: es, widget: string }
+
+      - { label: Display Order, name: order, widget: number, value_type: int, default: 0, hint: "Lower numbers appear first" }
+      - { label: Available, name: available, widget: boolean, default: true }
+
+  # =====================
+  # GALLERY COLLECTION
+  # =====================
+  - name: gallery
+    label: Gallery
+    folder: content/gallery
+    create: true
+    slug: "{{slug}}"
+    identifier_field: id
+    fields:
+      - { label: ID, name: id, widget: string, hint: "Unique identifier" }
+      - { label: Title, name: title, widget: string }
+      - { label: Image, name: image, widget: image }
+      - { label: Category, name: category, widget: select, options: [rooms, facilities, common_areas, exterior, location], default: facilities }
+      - { label: Display Order, name: order, widget: number, value_type: int, default: 0 }
+      - { label: Alt Text (EN), name: altEn, widget: string, required: false }
+      - { label: Alt Text (DE), name: altDe, widget: string, required: false }
+      - { label: Alt Text (ES), name: altEs, widget: string, required: false }
+
+  # =====================
+  # SITE SETTINGS
+  # =====================
+  - name: settings
+    label: Site Settings
+    files:
+      - name: general
+        label: General Settings
+        file: content/settings/general.json
+        fields:
+          - { label: Site Name, name: siteName, widget: string }
+          - { label: Phone, name: phone, widget: string }
+          - { label: Fax, name: fax, widget: string, required: false }
+          - { label: Email, name: email, widget: string }
+          - { label: Address, name: address, widget: text }
+          - { label: Reception Hours, name: receptionHours, widget: string }
+          - { label: Booking URL, name: bookingUrl, widget: string, hint: "External booking system URL" }
+          - { label: Check-in Time, name: checkIn, widget: string, required: false }
+          - { label: Check-out Time, name: checkOut, widget: string, required: false }
+          - { label: Quiet Hours, name: quietHours, widget: string, required: false }
+
+      - name: pricing
+        label: Pricing
+        file: content/settings/pricing.json
+        fields:
+          - label: Room Prices
+            name: rooms
+            widget: list
+            fields:
+              - { label: Room Type, name: type, widget: string }
+              - { label: Price (CHF), name: price, widget: number, value_type: float }
+              - { label: Unit, name: unit, widget: select, options: [per_bed, per_room] }
+              - { label: Season, name: season, widget: select, options: [year_round, summer, winter, high_season, low_season], default: year_round, required: false }
+
+      - name: social
+        label: Social Media
+        file: content/settings/social.json
+        fields:
+          - { label: Facebook URL, name: facebook, widget: string, required: false }
+          - { label: Instagram URL, name: instagram, widget: string, required: false }
+          - { label: Twitter/X URL, name: twitter, widget: string, required: false }
+          - { label: TripAdvisor URL, name: tripadvisor, widget: string, required: false }
+          - { label: YouTube URL, name: youtube, widget: string, required: false }
+
+      - name: translations
+        label: UI Translations
+        file: content/settings/translations.json
+        fields:
+          - label: Navigation
+            name: nav
+            widget: object
+            fields:
+              - label: Home
+                name: home
+                widget: object
+                fields:
+                  - { label: English, name: en, widget: string, default: Home }
+                  - { label: German, name: de, widget: string, default: Startseite }
+                  - { label: Spanish, name: es, widget: string, default: Inicio }
+              - label: Rooms
+                name: rooms
+                widget: object
+                fields:
+                  - { label: English, name: en, widget: string, default: Rooms }
+                  - { label: German, name: de, widget: string, default: Zimmer }
+                  - { label: Spanish, name: es, widget: string, default: Habitaciones }
+              - label: Amenities
+                name: amenities
+                widget: object
+                fields:
+                  - { label: English, name: en, widget: string, default: Amenities }
+                  - { label: German, name: de, widget: string, default: Ausstattung }
+                  - { label: Spanish, name: es, widget: string, default: Servicios }
+              - label: Gallery
+                name: gallery
+                widget: object
+                fields:
+                  - { label: English, name: en, widget: string, default: Gallery }
+                  - { label: German, name: de, widget: string, default: Galerie }
+                  - { label: Spanish, name: es, widget: string, default: Galería }
+              - label: Contact
+                name: contact
+                widget: object
+                fields:
+                  - { label: English, name: en, widget: string, default: Contact }
+                  - { label: German, name: de, widget: string, default: Kontakt }
+                  - { label: Spanish, name: es, widget: string, default: Contacto }
+
+          - label: Common Labels
+            name: labels
+            widget: object
+            fields:
+              - label: Book Now
+                name: bookNow
+                widget: object
+                fields:
+                  - { label: English, name: en, widget: string, default: "Book Now" }
+                  - { label: German, name: de, widget: string, default: "Jetzt Buchen" }
+                  - { label: Spanish, name: es, widget: string, default: "Reservar Ahora" }
+              - label: Price Per Night
+                name: pricePerNight
+                widget: object
+                fields:
+                  - { label: English, name: en, widget: string, default: "per night" }
+                  - { label: German, name: de, widget: string, default: "pro Nacht" }
+                  - { label: Spanish, name: es, widget: string, default: "por noche" }
+              - label: From Price
+                name: fromPrice
+                widget: object
+                fields:
+                  - { label: English, name: en, widget: string, default: "from" }
+                  - { label: German, name: de, widget: string, default: "ab" }
+                  - { label: Spanish, name: es, widget: string, default: "desde" }
+
+  # =====================
+  # BLOG (OPTIONAL)
+  # =====================
+  - name: blog
+    label: Blog Posts
+    folder: content/blog
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - { label: Title, name: title, widget: string }
+      - { label: Publish Date, name: date, widget: datetime }
+      - { label: Featured Image, name: image, widget: image, required: false }
+      - { label: Excerpt, name: excerpt, widget: text, required: false }
+      - label: Content
+        name: body
+        widget: object
+        fields:
+          - { label: English, name: en, widget: markdown }
+          - { label: German, name: de, widget: markdown }
+          - { label: Spanish, name: es, widget: markdown }
+      - { label: Published, name: published, widget: boolean, default: false }
+      - { label: Tags, name: tags, widget: list, required: false }

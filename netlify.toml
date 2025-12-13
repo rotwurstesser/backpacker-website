@@ -1,0 +1,29 @@
+[build]
+  command = "npm run build"
+  publish = "build"
+
+[build.environment]
+  NODE_VERSION = "20"
+
+# SvelteKit adapter-netlify configuration
+[functions]
+  directory = ".netlify/functions-internal"
+
+# Note: Headers and redirects are configured in static/_headers and static/_redirects
+# The @sveltejs/adapter-netlify v4+ requires using these files instead of netlify.toml
+#
+# See static/_headers for:
+# - Security headers (CSP, X-Frame-Options, etc.)
+# - Cache-Control headers for static assets
+#
+# See static/_redirects for:
+# - Language path redirects (/en, /de, /es)
+# - SPA fallback routing
+# - 404 handling
+
+# Netlify Dev configuration (for local development)
+[dev]
+  command = "npm run dev"
+  port = 5173
+  targetPort = 5173
+  autoLaunch = false
