@@ -1,6 +1,5 @@
 backend:
-  name: github
-  repo: rotwurstesser/backpacker-website
+  name: git-gateway
   branch: main
 
 # Uncomment for local development: npx decap-server

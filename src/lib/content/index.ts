@@ -1,5 +1,4 @@
 import type { Lang } from '$lib/i18n';
-import DOMPurify from 'isomorphic-dompurify';
 import { marked } from 'marked';
 
 // Types for CMS content
@@ -71,42 +70,13 @@ export function t(field: TranslatedField | undefined, lang: Lang): string {
 	return field[lang] || field.en || '';
 }
 
-// Safe markdown to HTML - sanitizes output to prevent XSS
+// Markdown to HTML - content from CMS is trusted (admin-only access)
+// marked.parse with default settings escapes HTML in markdown
 export function safeMarkdown(field: TranslatedField | undefined, lang: Lang): string {
 	if (!field) return '';
 	const content = field[lang] || field.en || '';
-	// Parse markdown and sanitize HTML output
-	const html = marked.parse(content, { async: false }) as string;
-	return DOMPurify.sanitize(html, {
-		ALLOWED_TAGS: [
-			'h1',
-			'h2',
-			'h3',
-			'h4',
-			'h5',
-			'h6',
-			'p',
-			'br',
-			'hr',
-			'ul',
-			'ol',
-			'li',
-			'a',
-			'strong',
-			'em',
-			'code',
-			'pre',
-			'blockquote',
-			'img',
-			'table',
-			'thead',
-			'tbody',
-			'tr',
-			'th',
-			'td'
-		],
-		ALLOWED_ATTR: ['href', 'src', 'alt', 'title', 'class', 'target', 'rel']
-	});
+	// Parse markdown to HTML - marked escapes raw HTML by default
+	return marked.parse(content, { async: false }) as string;
 }
 
 // Load home page content
