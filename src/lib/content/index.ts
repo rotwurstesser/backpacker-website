@@ -52,6 +52,17 @@ export interface GeneralSettings {
 	quietHours?: string;
 }
 
+export interface CustomPage {
+	slug: string;
+	title: TranslatedField;
+	description: TranslatedField;
+	content: TranslatedField;
+	image?: string;
+	showInNav: boolean;
+	navOrder: number;
+	published: boolean;
+}
+
 // Helper to get translated value
 export function t(field: TranslatedField | undefined, lang: Lang): string {
 	if (!field) return '';
@@ -82,4 +93,26 @@ export async function loadRooms(): Promise<RoomContent[]> {
 export async function loadSettings(): Promise<GeneralSettings> {
 	const content = await import('../../../content/settings/general.json');
 	return content.default as GeneralSettings;
+}
+
+// Load custom pages (excludes home.json which has different structure)
+export async function loadCustomPages(): Promise<CustomPage[]> {
+	const pageModules = import.meta.glob('../../../content/pages/*.json', { eager: true });
+	const pages: CustomPage[] = [];
+
+	for (const path in pageModules) {
+		// Skip home.json as it has a different structure
+		if (path.includes('home.json')) continue;
+
+		const module = pageModules[path] as { default: CustomPage };
+		pages.push(module.default);
+	}
+
+	return pages.sort((a, b) => (a.navOrder || 99) - (b.navOrder || 99));
+}
+
+// Load pages that should appear in navigation
+export async function loadNavPages(): Promise<CustomPage[]> {
+	const pages = await loadCustomPages();
+	return pages.filter((p) => p.showInNav && p.published);
 }

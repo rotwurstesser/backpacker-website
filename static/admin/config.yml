@@ -8,9 +8,6 @@ backend:
 # Media handling
 media_folder: static/images/uploads
 public_folder: /images/uploads
-media_library:
-  max_file_size: 5120000  # 5MB
-  folder_support: true
 
 # Site info
 site_url: https://bernbackpackers.ch
@@ -164,6 +161,51 @@ collections:
                   - { label: English, name: en, widget: text }
                   - { label: German, name: de, widget: text }
                   - { label: Spanish, name: es, widget: text }
+
+  # --------------------
+  # CUSTOM PAGES
+  # --------------------
+  - name: pages
+    label: "📄 Pages"
+    label_singular: "Page"
+    folder: content/pages
+    create: true
+    delete: true
+    slug: "{{slug}}"
+    identifier_field: slug
+    summary: "{{title.en}} ({{slug}})"
+    fields:
+      - { label: URL Slug, name: slug, widget: string, pattern: ['^[a-z0-9-]+$', 'Only lowercase letters, numbers, and hyphens'], hint: "e.g., about-us → /en/about-us" }
+
+      - label: Page Title
+        name: title
+        widget: object
+        fields:
+          - { label: English, name: en, widget: string }
+          - { label: German, name: de, widget: string }
+          - { label: Spanish, name: es, widget: string }
+
+      - label: Meta Description (SEO)
+        name: description
+        widget: object
+        fields:
+          - { label: English, name: en, widget: text }
+          - { label: German, name: de, widget: text }
+          - { label: Spanish, name: es, widget: text }
+
+      - { label: Featured Image, name: image, widget: image, required: false }
+
+      - label: Page Content
+        name: content
+        widget: object
+        fields:
+          - { label: English, name: en, widget: markdown }
+          - { label: German, name: de, widget: markdown }
+          - { label: Spanish, name: es, widget: markdown }
+
+      - { label: Show in Navigation, name: showInNav, widget: boolean, default: false }
+      - { label: Navigation Order, name: navOrder, widget: number, default: 99, required: false }
+      - { label: Published, name: published, widget: boolean, default: true }
 
   # --------------------
   # ROOMS
