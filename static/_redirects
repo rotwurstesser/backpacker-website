@@ -1,0 +1,4 @@
+# Admin - serve static files directly, don't route through SvelteKit
+/admin/*  /admin/:splat  200
+
+# Let SvelteKit SSR handle everything else
