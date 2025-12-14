@@ -45,7 +45,7 @@
 				>
 					{translate(homeContent.heroTagline, lang)}
 				</span>
-				<h1 class="text-4xl md:text-6xl font-bold tracking-tight">
+				<h1>
 					{translate(homeContent.heroTitle, lang)}
 				</h1>
 				<p class="text-xl text-muted-foreground">
@@ -66,11 +66,11 @@
 	<!-- Features Section -->
 	<section class="py-20 bg-muted/30">
 		<div class="container">
-			<h2 class="text-3xl font-bold text-center mb-12">{t.features.title}</h2>
-			<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+			<h2 class="text-center mb-12">{t.features.title}</h2>
+			<div class="flex flex-wrap justify-center gap-6">
 				{#each homeContent.features as feature (feature.icon)}
 					{@const Icon = getIcon(feature.icon)}
-					<Card class="p-6 text-center hover:shadow-lg transition-shadow">
+					<Card class="p-6 text-center hover:shadow-lg transition-shadow w-full md:w-[calc(50%-12px)] lg:w-[calc(25%-18px)]">
 						<div
 							class="w-12 h-12 mx-auto mb-4 bg-primary/10 rounded-full flex items-center justify-center"
 						>
@@ -88,7 +88,7 @@
 	<section class="py-20">
 		<div class="container">
 			<div class="text-center mb-12">
-				<h2 class="text-3xl font-bold mb-4">{t.rooms.title}</h2>
+				<h2 class="mb-4">{t.rooms.title}</h2>
 				<p class="text-muted-foreground">{t.rooms.subtitle}</p>
 			</div>
 
@@ -129,7 +129,7 @@
 	<!-- Amenities Section -->
 	<section class="py-20 bg-muted/30">
 		<div class="container">
-			<h2 class="text-3xl font-bold text-center mb-12">{translate(homeContent.amenitiesTitle, lang)}</h2>
+			<h2 class="text-center mb-12">{translate(homeContent.amenitiesTitle, lang)}</h2>
 			<div class="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
 				{#each homeContent.amenities as amenity (amenity.icon)}
 					{@const Icon = getIcon(amenity.icon)}
@@ -147,7 +147,7 @@
 	<!-- CTA Section -->
 	<section class="py-20 bg-primary text-primary-foreground">
 		<div class="container text-center">
-			<h2 class="text-3xl font-bold mb-4">{translate(homeContent.ctaTitle, lang)}</h2>
+			<h2 class="mb-4">{translate(homeContent.ctaTitle, lang)}</h2>
 			<p class="text-lg opacity-90 mb-8 max-w-2xl mx-auto">
 				{translate(homeContent.ctaDescription, lang)}
 			</p>

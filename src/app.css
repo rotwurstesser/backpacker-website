@@ -19,8 +19,8 @@
 		--card-foreground: 213 38% 20%;
 		--popover-foreground: 213 38% 20%;
 
-		/* Primary - Teal #85ABAB */
-		--primary: 180 17% 60%;
+		/* Primary - Teal #85ABAB - darkened for better contrast */
+		--primary: 180 25% 45%;
 		--primary-foreground: 0 0% 100%;
 
 		/* Secondary - Burgundy #854745 */
@@ -90,23 +90,23 @@
 
 	/*
 	 * Typography hierarchy
-	 * Anton has tight default spacing - needs generous letter-spacing for readability
-	 * Reference: The Bivvi hostel uses 0.1-0.2em for uppercase headings
+	 * Anton is designed to be tight and bold - embrace its condensed nature
+	 * Only add minimal spacing to prevent letters from touching
 	 */
 	h1, h2 {
 		font-family: 'Anton', sans-serif;
 		text-transform: uppercase;
-		line-height: 1.1;
+		line-height: 1.15;
 	}
 
 	h1 {
-		@apply text-4xl md:text-5xl lg:text-6xl;
-		letter-spacing: 0.15em; /* Wide spacing for hero headlines */
+		@apply text-3xl md:text-4xl lg:text-5xl;
+		letter-spacing: 0.02em;
 	}
 
 	h2 {
-		@apply text-2xl md:text-3xl lg:text-4xl;
-		letter-spacing: 0.12em; /* Slightly less for section headings */
+		@apply text-xl md:text-2xl lg:text-3xl;
+		letter-spacing: 0.02em;
 	}
 
 	/* h3-h6 use body font for better readability at smaller sizes */
@@ -161,7 +161,7 @@
 	.font-display {
 		font-family: 'Anton', sans-serif;
 		text-transform: uppercase;
-		letter-spacing: 0.12em;
-		line-height: 1.1;
+		letter-spacing: 0.02em;
+		line-height: 1.15;
 	}
 }
