@@ -4,48 +4,77 @@
 
 @layer base {
 	:root {
-		--background: 0 0% 100%;
-		--foreground: 222.2 84% 4.9%;
-		--card: 0 0% 100%;
-		--card-foreground: 222.2 84% 4.9%;
+		/* Brand Colors from Farbpalette */
+		/* #F0EDE5 - Cream (background) */
+		--background: 40 29% 92%;
+		/* #1F3345 - Navy (foreground/text) */
+		--foreground: 213 38% 20%;
+
+		/* Cards use cream background */
+		--card: 40 29% 92%;
+		--card-foreground: 213 38% 20%;
+
 		--popover: 0 0% 100%;
-		--popover-foreground: 222.2 84% 4.9%;
-		--primary: 142 76% 36%;
-		--primary-foreground: 355.7 100% 97.3%;
-		--secondary: 210 40% 96.1%;
-		--secondary-foreground: 222.2 47.4% 11.2%;
-		--muted: 210 40% 96.1%;
-		--muted-foreground: 215.4 16.3% 46.9%;
-		--accent: 210 40% 96.1%;
-		--accent-foreground: 222.2 47.4% 11.2%;
+		--popover-foreground: 213 38% 20%;
+
+		/* #85ABAB - Teal (primary) */
+		--primary: 180 19% 60%;
+		--primary-foreground: 0 0% 100%;
+
+		/* #854745 - Burgundy (secondary) */
+		--secondary: 2 31% 40%;
+		--secondary-foreground: 0 0% 100%;
+
+		/* #C78F57 - Copper (accent) */
+		--accent: 29 52% 56%;
+		--accent-foreground: 0 0% 100%;
+
+		/* Muted uses light teal */
+		--muted: 180 15% 90%;
+		--muted-foreground: 213 20% 40%;
+
 		--destructive: 0 72.2% 50.6%;
 		--destructive-foreground: 210 40% 98%;
-		--border: 214.3 31.8% 91.4%;
-		--input: 214.3 31.8% 91.4%;
-		--ring: 142 76% 36%;
+
+		/* Border uses subtle teal */
+		--border: 180 15% 80%;
+		--input: 180 15% 85%;
+		--ring: 180 19% 60%;
 		--radius: 0.5rem;
 	}
 
 	.dark {
-		--background: 222.2 84% 4.9%;
-		--foreground: 210 40% 98%;
-		--card: 222.2 84% 4.9%;
-		--card-foreground: 210 40% 98%;
-		--popover: 222.2 84% 4.9%;
-		--popover-foreground: 210 40% 98%;
-		--primary: 142 76% 36%;
-		--primary-foreground: 355.7 100% 97.3%;
-		--secondary: 217.2 32.6% 17.5%;
-		--secondary-foreground: 210 40% 98%;
-		--muted: 217.2 32.6% 17.5%;
-		--muted-foreground: 215 20.2% 65.1%;
-		--accent: 217.2 32.6% 17.5%;
-		--accent-foreground: 210 40% 98%;
-		--destructive: 0 62.8% 30.6%;
-		--destructive-foreground: 210 40% 98%;
-		--border: 217.2 32.6% 17.5%;
-		--input: 217.2 32.6% 17.5%;
-		--ring: 142 76% 36%;
+		/* Dark mode uses Navy as background */
+		--background: 213 38% 12%;
+		--foreground: 40 29% 92%;
+
+		--card: 213 38% 15%;
+		--card-foreground: 40 29% 92%;
+
+		--popover: 213 38% 15%;
+		--popover-foreground: 40 29% 92%;
+
+		/* Teal stays as primary */
+		--primary: 180 19% 60%;
+		--primary-foreground: 213 38% 12%;
+
+		/* Burgundy secondary */
+		--secondary: 2 31% 50%;
+		--secondary-foreground: 40 29% 92%;
+
+		/* Copper accent */
+		--accent: 29 52% 56%;
+		--accent-foreground: 213 38% 12%;
+
+		--muted: 213 30% 20%;
+		--muted-foreground: 40 20% 70%;
+
+		--destructive: 0 62.8% 40%;
+		--destructive-foreground: 40 29% 92%;
+
+		--border: 213 30% 25%;
+		--input: 213 30% 25%;
+		--ring: 180 19% 60%;
 	}
 }
 
@@ -55,6 +84,13 @@
 	}
 	body {
 		@apply bg-background text-foreground;
+	}
+
+	/* Headlines use Anton font */
+	h1, h2, h3, h4, h5, h6 {
+		font-family: 'Anton', sans-serif;
+		text-transform: uppercase;
+		letter-spacing: 0.02em;
 	}
 }
 
@@ -82,5 +118,16 @@
 		overflow: visible;
 		clip: auto;
 		white-space: normal;
+	}
+
+	/* Brand font classes */
+	.font-heading {
+		font-family: 'Anton', sans-serif;
+		text-transform: uppercase;
+		letter-spacing: 0.02em;
+	}
+
+	.font-body {
+		font-family: 'Work Sans', sans-serif;
 	}
 }

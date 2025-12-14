@@ -47,7 +47,13 @@ const config = {
 				card: {
 					DEFAULT: 'hsl(var(--card) / <alpha-value>)',
 					foreground: 'hsl(var(--card-foreground) / <alpha-value>)'
-				}
+				},
+				/* Brand colors as direct values for convenience */
+				cream: '#F0EDE5',
+				copper: '#C78F57',
+				teal: '#85ABAB',
+				burgundy: '#854745',
+				navy: '#1F3345'
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
@@ -55,7 +61,8 @@ const config = {
 				sm: 'calc(var(--radius) - 4px)'
 			},
 			fontFamily: {
-				sans: ['Inter', ...fontFamily.sans]
+				sans: ['Work Sans', ...fontFamily.sans],
+				heading: ['Anton', 'sans-serif']
 			}
 		}
 	}
