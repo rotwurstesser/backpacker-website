@@ -1,6 +1,6 @@
 {
   "heroTitle": {
-    "de": "Das zentralste Budget-Hotel von Bern",
+    "de": "Das zentralste Budget-Hotel von Bern!!",
     "en": "Bern's Most Central Budget Hotel",
     "es": "El Hotel Budget Más Central de Berna"
   },
@@ -87,10 +87,38 @@
     }
   ],
   "amenities": [
-    { "icon": "Wifi", "name": { "de": "Gratis WLAN", "en": "Free WiFi", "es": "WiFi Gratis" } },
-    { "icon": "Coffee", "name": { "de": "Gästeküche", "en": "Guest Kitchen", "es": "Cocina" } },
-    { "icon": "Users", "name": { "de": "Aufenthaltsraum", "en": "Common Room", "es": "Sala Común" } },
-    { "icon": "Lock", "name": { "de": "Schliessfächer", "en": "Lockers", "es": "Taquillas" } }
+    {
+      "icon": "Wifi",
+      "name": {
+        "de": "Gratis WLAN",
+        "en": "Free WiFi",
+        "es": "WiFi Gratis"
+      }
+    },
+    {
+      "icon": "Coffee",
+      "name": {
+        "de": "Gästeküche",
+        "en": "Guest Kitchen",
+        "es": "Cocina"
+      }
+    },
+    {
+      "icon": "Users",
+      "name": {
+        "de": "Aufenthaltsraum",
+        "en": "Common Room",
+        "es": "Sala Común"
+      }
+    },
+    {
+      "icon": "Lock",
+      "name": {
+        "de": "Schliessfächer",
+        "en": "Lockers",
+        "es": "Taquillas"
+      }
+    }
   ],
   "ctaTitle": {
     "de": "Preise inkl. Bettwäsche & Taxen",
