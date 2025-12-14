@@ -3,368 +3,270 @@ backend:
   repo: rotwurstesser/backpacker-website
   branch: main
 
-# Uncomment for local development: npx decap-server
-# local_backend: true
-
-# Media handling
 media_folder: static/images/uploads
 public_folder: /images/uploads
 
-# Site info
 site_url: https://bernbackpackers.ch
 display_url: https://bernbackpackers.ch
 logo_url: /images/logos/logo.png
 
-# Localization
+# German first, Spanish optional
 i18n:
   structure: single_file
-  locales: [en, de, es]
-  default_locale: en
+  locales: [de, en, es]
+  default_locale: de
 
-# Slug settings
 slug:
   encoding: ascii
   clean_accents: true
 
-# ====================
-# COLLECTIONS
-# ====================
 collections:
 
-  # --------------------
+  # ====================
   # HOMEPAGE
-  # --------------------
+  # ====================
   - name: homepage
     label: "🏠 Homepage"
     files:
       - name: home
-        label: Homepage Content
+        label: Homepage
         file: content/pages/home.json
         fields:
-          - label: "Hero Section"
-            name: hero
+          - label: "Hero Title"
+            name: heroTitle
             widget: object
-            collapsed: false
             fields:
-              - label: Title
-                name: heroTitle
-                widget: object
-                fields:
-                  - { label: English, name: en, widget: string }
-                  - { label: German, name: de, widget: string }
-                  - { label: Spanish, name: es, widget: string }
+              - { label: DE, name: de, widget: string, required: false }
+              - { label: EN, name: en, widget: string, required: false }
+              - { label: ES, name: es, widget: string, required: false }
 
-              - label: Subtitle
-                name: heroSubtitle
-                widget: object
-                fields:
-                  - { label: English, name: en, widget: string }
-                  - { label: German, name: de, widget: string }
-                  - { label: Spanish, name: es, widget: string }
-
-              - label: Tagline (Badge)
-                name: heroTagline
-                widget: object
-                fields:
-                  - { label: English, name: en, widget: string }
-                  - { label: German, name: de, widget: string }
-                  - { label: Spanish, name: es, widget: string }
-
-              - label: CTA Button Text
-                name: heroCta
-                widget: object
-                fields:
-                  - { label: English, name: en, widget: string }
-                  - { label: German, name: de, widget: string }
-                  - { label: Spanish, name: es, widget: string }
-
-          - label: "Features (Why Choose Us)"
-            name: features
-            widget: list
-            label_singular: "Feature"
-            summary: "{{fields.title.en}} ({{fields.icon}})"
-            fields:
-              - label: Icon
-                name: icon
-                widget: select
-                options:
-                  - { label: "📍 Location Pin", value: "MapPin" }
-                  - { label: "📶 WiFi", value: "Wifi" }
-                  - { label: "🛡️ Shield/Security", value: "Shield" }
-                  - { label: "💳 Credit Card", value: "CreditCard" }
-                  - { label: "🛏️ Bed", value: "Bed" }
-                  - { label: "👥 Users/Group", value: "Users" }
-                  - { label: "☕ Coffee/Kitchen", value: "Coffee" }
-                  - { label: "🏠 Home/Building", value: "Home" }
-                  - { label: "⭐ Star", value: "Star" }
-                  - { label: "❤️ Heart", value: "Heart" }
-
-              - label: Title
-                name: title
-                widget: object
-                fields:
-                  - { label: English, name: en, widget: string }
-                  - { label: German, name: de, widget: string }
-                  - { label: Spanish, name: es, widget: string }
-
-              - label: Description
-                name: description
-                widget: object
-                fields:
-                  - { label: English, name: en, widget: text }
-                  - { label: German, name: de, widget: text }
-                  - { label: Spanish, name: es, widget: text }
-
-          - label: "Amenities Grid"
-            name: amenities
-            widget: list
-            label_singular: "Amenity"
-            summary: "{{fields.name.en}}"
-            fields:
-              - label: Icon
-                name: icon
-                widget: select
-                options:
-                  - { label: "📶 WiFi", value: "Wifi" }
-                  - { label: "☕ Kitchen", value: "Coffee" }
-                  - { label: "👥 Common Room", value: "Users" }
-                  - { label: "🏠 Laundry", value: "Home" }
-                  - { label: "🚿 Shower", value: "Droplets" }
-                  - { label: "🔒 Lockers", value: "Lock" }
-                  - { label: "📺 TV", value: "Tv" }
-                  - { label: "🎮 Games", value: "Gamepad2" }
-
-              - label: Name
-                name: name
-                widget: object
-                fields:
-                  - { label: English, name: en, widget: string }
-                  - { label: German, name: de, widget: string }
-                  - { label: Spanish, name: es, widget: string }
-
-          - label: "Call-to-Action Section"
-            name: cta
+          - label: "Hero Subtitle"
+            name: heroSubtitle
             widget: object
             collapsed: true
             fields:
+              - { label: DE, name: de, widget: string, required: false }
+              - { label: EN, name: en, widget: string, required: false }
+              - { label: ES, name: es, widget: string, required: false }
+
+          - label: "Badge Text"
+            name: heroTagline
+            widget: object
+            collapsed: true
+            fields:
+              - { label: DE, name: de, widget: string, required: false }
+              - { label: EN, name: en, widget: string, required: false }
+              - { label: ES, name: es, widget: string, required: false }
+
+          - label: "Button Text"
+            name: heroCta
+            widget: object
+            collapsed: true
+            fields:
+              - { label: DE, name: de, widget: string, required: false }
+              - { label: EN, name: en, widget: string, required: false }
+              - { label: ES, name: es, widget: string, required: false }
+
+          - label: "Features"
+            name: features
+            widget: list
+            collapsed: true
+            required: false
+            summary: "{{fields.title.de}}"
+            fields:
+              - { label: Icon, name: icon, widget: select, required: false, options: ["MapPin", "Wifi", "Shield", "CreditCard", "Bed", "Users", "Coffee", "Home"] }
               - label: Title
-                name: ctaTitle
+                name: title
                 widget: object
+                required: false
                 fields:
-                  - { label: English, name: en, widget: string }
-                  - { label: German, name: de, widget: string }
-                  - { label: Spanish, name: es, widget: string }
-
+                  - { label: DE, name: de, widget: string, required: false }
+                  - { label: EN, name: en, widget: string, required: false }
+                  - { label: ES, name: es, widget: string, required: false }
               - label: Description
-                name: ctaDescription
+                name: description
                 widget: object
+                required: false
                 fields:
-                  - { label: English, name: en, widget: text }
-                  - { label: German, name: de, widget: text }
-                  - { label: Spanish, name: es, widget: text }
+                  - { label: DE, name: de, widget: text, required: false }
+                  - { label: EN, name: en, widget: text, required: false }
+                  - { label: ES, name: es, widget: text, required: false }
 
-  # --------------------
-  # CUSTOM PAGES
-  # --------------------
+          - label: "Amenities"
+            name: amenities
+            widget: list
+            collapsed: true
+            required: false
+            summary: "{{fields.name.de}}"
+            fields:
+              - { label: Icon, name: icon, widget: select, required: false, options: ["Wifi", "Coffee", "Users", "Home", "Droplets", "Lock"] }
+              - label: Name
+                name: name
+                widget: object
+                required: false
+                fields:
+                  - { label: DE, name: de, widget: string, required: false }
+                  - { label: EN, name: en, widget: string, required: false }
+                  - { label: ES, name: es, widget: string, required: false }
+
+          - label: "CTA Title"
+            name: ctaTitle
+            widget: object
+            collapsed: true
+            fields:
+              - { label: DE, name: de, widget: string, required: false }
+              - { label: EN, name: en, widget: string, required: false }
+              - { label: ES, name: es, widget: string, required: false }
+
+          - label: "CTA Text"
+            name: ctaDescription
+            widget: object
+            collapsed: true
+            fields:
+              - { label: DE, name: de, widget: text, required: false }
+              - { label: EN, name: en, widget: text, required: false }
+              - { label: ES, name: es, widget: text, required: false }
+
+  # ====================
+  # PAGES
+  # ====================
   - name: pages
-    label: "📄 Pages"
-    label_singular: "Page"
+    label: "📄 Seiten"
     folder: content/pages
     create: true
     delete: true
     slug: "{{slug}}"
     identifier_field: slug
-    summary: "{{title.en}} ({{slug}})"
+    summary: "{{title.de}}"
     fields:
-      - { label: URL Slug, name: slug, widget: string, pattern: ['^[a-z0-9-]+$', 'Only lowercase letters, numbers, and hyphens'], hint: "e.g., about-us → /en/about-us" }
-
-      - label: Page Title
+      - { label: URL, name: slug, widget: string, required: false }
+      - label: Titel
         name: title
         widget: object
         fields:
-          - { label: English, name: en, widget: string }
-          - { label: German, name: de, widget: string }
-          - { label: Spanish, name: es, widget: string }
-
-      - label: Meta Description (SEO)
+          - { label: DE, name: de, widget: string, required: false }
+          - { label: EN, name: en, widget: string, required: false }
+          - { label: ES, name: es, widget: string, required: false }
+      - label: SEO
         name: description
         widget: object
+        collapsed: true
         fields:
-          - { label: English, name: en, widget: text }
-          - { label: German, name: de, widget: text }
-          - { label: Spanish, name: es, widget: text }
-
-      - { label: Featured Image, name: image, widget: image, required: false }
-
-      - label: Page Content
+          - { label: DE, name: de, widget: text, required: false }
+          - { label: EN, name: en, widget: text, required: false }
+          - { label: ES, name: es, widget: text, required: false }
+      - { label: Bild, name: image, widget: image, required: false }
+      - label: Inhalt
         name: content
         widget: object
         fields:
-          - { label: English, name: en, widget: markdown }
-          - { label: German, name: de, widget: markdown }
-          - { label: Spanish, name: es, widget: markdown }
+          - { label: DE, name: de, widget: markdown, required: false }
+          - { label: EN, name: en, widget: markdown, required: false }
+          - { label: ES, name: es, widget: markdown, required: false }
+      - { label: In Nav, name: showInNav, widget: boolean, default: false, required: false }
+      - { label: Reihenfolge, name: navOrder, widget: number, default: 99, required: false }
+      - { label: Online, name: published, widget: boolean, default: true, required: false }
 
-      - { label: Show in Navigation, name: showInNav, widget: boolean, default: false }
-      - { label: Navigation Order, name: navOrder, widget: number, default: 99, required: false }
-      - { label: Published, name: published, widget: boolean, default: true }
-
-  # --------------------
+  # ====================
   # ROOMS
-  # --------------------
+  # ====================
   - name: rooms
-    label: "🛏️ Rooms"
-    label_singular: "Room"
+    label: "🛏️ Zimmer"
     folder: content/rooms
     create: true
     delete: true
     slug: "{{id}}"
     identifier_field: id
-    summary: "{{name.en}} - CHF {{price}}"
-    sortable_fields: ['order', 'price', 'name.en']
+    summary: "{{name.de}} - CHF {{price}}"
     fields:
-      - { label: ID (URL slug), name: id, widget: string, pattern: ['^[a-z0-9-]+$', 'Only lowercase letters, numbers, and hyphens'], hint: "e.g., double-room-private" }
-
-      - label: Room Name
+      - { label: ID, name: id, widget: string, required: false }
+      - label: Name
         name: name
         widget: object
         fields:
-          - { label: English, name: en, widget: string }
-          - { label: German, name: de, widget: string }
-          - { label: Spanish, name: es, widget: string }
-
-      - label: Description
+          - { label: DE, name: de, widget: string, required: false }
+          - { label: EN, name: en, widget: string, required: false }
+          - { label: ES, name: es, widget: string, required: false }
+      - label: Beschreibung
         name: description
-        widget: object
-        fields:
-          - { label: English, name: en, widget: text }
-          - { label: German, name: de, widget: text }
-          - { label: Spanish, name: es, widget: text }
-
-      - { label: Price (CHF), name: price, widget: number, value_type: float, min: 0, step: 0.5 }
-      - label: Price Type
-        name: priceUnit
-        widget: select
-        options:
-          - { label: "Per Bed (dormitory)", value: "per_bed" }
-          - { label: "Per Room (private)", value: "per_room" }
-
-      - { label: Number of Beds, name: beds, widget: number, value_type: int, min: 1, max: 20 }
-      - label: Bathroom
-        name: bathType
-        widget: select
-        options:
-          - { label: "Shared Bathroom", value: "shared" }
-          - { label: "Private Bathroom", value: "private" }
-
-      - { label: Room Photo, name: image, widget: image, required: false, hint: "Recommended: 800x600px, <200KB" }
-
-      - label: Features
-        name: features
-        widget: list
-        required: false
-        label_singular: "Feature"
-        summary: "{{fields.en}}"
-        fields:
-          - { label: English, name: en, widget: string }
-          - { label: German, name: de, widget: string }
-          - { label: Spanish, name: es, widget: string }
-
-      - { label: Display Order, name: order, widget: number, value_type: int, default: 0, hint: "Lower = appears first" }
-      - { label: Available for Booking, name: available, widget: boolean, default: true }
-
-  # --------------------
-  # GALLERY
-  # --------------------
-  - name: gallery
-    label: "🖼️ Gallery"
-    label_singular: "Photo"
-    folder: content/gallery
-    create: true
-    delete: true
-    slug: "{{slug}}"
-    identifier_field: id
-    summary: "{{title}} ({{category}})"
-    sortable_fields: ['order', 'category', 'title']
-    fields:
-      - { label: ID, name: id, widget: string, pattern: ['^[a-z0-9-]+$', 'Lowercase letters, numbers, hyphens only'] }
-      - { label: Title, name: title, widget: string }
-      - { label: Image, name: image, widget: image, hint: "Recommended: 1200x800px, <300KB" }
-      - label: Category
-        name: category
-        widget: select
-        options:
-          - { label: "🛏️ Rooms", value: "rooms" }
-          - { label: "🏢 Facilities", value: "facilities" }
-          - { label: "🛋️ Common Areas", value: "common_areas" }
-          - { label: "🏛️ Exterior/Building", value: "exterior" }
-          - { label: "📍 Location/Neighborhood", value: "location" }
-      - { label: Display Order, name: order, widget: number, value_type: int, default: 0 }
-      - label: Alt Text (Accessibility)
-        name: alt
         widget: object
         collapsed: true
         fields:
-          - { label: English, name: en, widget: string, required: false }
-          - { label: German, name: de, widget: string, required: false }
-          - { label: Spanish, name: es, widget: string, required: false }
+          - { label: DE, name: de, widget: text, required: false }
+          - { label: EN, name: en, widget: text, required: false }
+          - { label: ES, name: es, widget: text, required: false }
+      - { label: Preis CHF, name: price, widget: number, required: false }
+      - { label: Preistyp, name: priceUnit, widget: select, required: false, options: [{label: "Pro Bett", value: "per_bed"}, {label: "Pro Zimmer", value: "per_room"}] }
+      - { label: Betten, name: beds, widget: number, required: false }
+      - { label: Bad, name: bathType, widget: select, required: false, options: [{label: "Geteilt", value: "shared"}, {label: "Privat", value: "private"}] }
+      - { label: Foto, name: image, widget: image, required: false }
+      - label: Extras
+        name: features
+        widget: list
+        required: false
+        collapsed: true
+        fields:
+          - { label: DE, name: de, widget: string, required: false }
+          - { label: EN, name: en, widget: string, required: false }
+          - { label: ES, name: es, widget: string, required: false }
+      - { label: Reihenfolge, name: order, widget: number, default: 0, required: false }
+      - { label: Verfügbar, name: available, widget: boolean, default: true, required: false }
 
-  # --------------------
-  # DOCUMENTS & FILES
-  # --------------------
-  - name: documents
-    label: "📄 Documents"
-    label_singular: "Document"
-    folder: content/documents
+  # ====================
+  # GALLERY
+  # ====================
+  - name: gallery
+    label: "🖼️ Galerie"
+    folder: content/gallery
     create: true
     delete: true
-    slug: "{{slug}}"
-    summary: "{{title}} ({{type}})"
+    slug: "{{id}}"
+    identifier_field: id
+    summary: "{{title}}"
     fields:
-      - { label: Title, name: title, widget: string }
-      - { label: Description, name: description, widget: text, required: false }
-      - label: Document Type
-        name: type
-        widget: select
-        options:
-          - { label: "📋 Terms & Conditions", value: "terms" }
-          - { label: "🔒 Privacy Policy", value: "privacy" }
-          - { label: "📜 House Rules", value: "house_rules" }
-          - { label: "📄 Price List", value: "prices" }
-          - { label: "🗺️ Map/Directions", value: "map" }
-          - { label: "📰 Brochure", value: "brochure" }
-          - { label: "📎 Other", value: "other" }
-      - { label: File (PDF/Image), name: file, widget: file, hint: "PDF, JPG, PNG - max 5MB" }
-      - { label: Published, name: published, widget: boolean, default: true }
-      - { label: Order, name: order, widget: number, default: 0, required: false }
+      - { label: ID, name: id, widget: string, required: false }
+      - { label: Titel, name: title, widget: string, required: false }
+      - { label: Bild, name: image, widget: image, required: false }
+      - { label: Kategorie, name: category, widget: select, required: false, options: ["rooms", "facilities", "common_areas", "exterior", "location"] }
+      - { label: Reihenfolge, name: order, widget: number, default: 0, required: false }
+      - label: Alt Text
+        name: alt
+        widget: object
+        collapsed: true
+        required: false
+        fields:
+          - { label: DE, name: de, widget: string, required: false }
+          - { label: EN, name: en, widget: string, required: false }
+          - { label: ES, name: es, widget: string, required: false }
 
-  # --------------------
-  # SITE SETTINGS
-  # --------------------
+  # ====================
+  # SETTINGS
+  # ====================
   - name: settings
-    label: "⚙️ Settings"
+    label: "⚙️ Einstellungen"
     files:
       - name: general
-        label: General Settings
+        label: Allgemein
         file: content/settings/general.json
         fields:
-          - { label: Site Name, name: siteName, widget: string }
-          - label: "Contact Info"
+          - { label: Site Name, name: siteName, widget: string, required: false }
+          - label: Kontakt
             name: contact
             widget: object
             fields:
-              - { label: Phone, name: phone, widget: string }
+              - { label: Telefon, name: phone, widget: string, required: false }
               - { label: Fax, name: fax, widget: string, required: false }
-              - { label: Email, name: email, widget: string }
-              - { label: Address, name: address, widget: text }
-          - label: "Hours"
+              - { label: Email, name: email, widget: string, required: false }
+              - { label: Adresse, name: address, widget: text, required: false }
+          - label: Zeiten
             name: hours
             widget: object
             fields:
-              - { label: Reception Hours, name: receptionHours, widget: string }
+              - { label: Rezeption, name: receptionHours, widget: string, required: false }
               - { label: Check-in, name: checkIn, widget: string, required: false }
               - { label: Check-out, name: checkOut, widget: string, required: false }
-              - { label: Quiet Hours, name: quietHours, widget: string, required: false }
-          - { label: Booking System URL, name: bookingUrl, widget: string, hint: "External booking URL" }
+              - { label: Nachtruhe, name: quietHours, widget: string, required: false }
+          - { label: Booking URL, name: bookingUrl, widget: string, required: false }
 
       - name: social
         label: Social Media
@@ -376,48 +278,21 @@ collections:
           - { label: Google Maps, name: googleMaps, widget: string, required: false }
 
       - name: seo
-        label: SEO & Metadata
+        label: SEO
         file: content/settings/seo.json
         fields:
-          - label: Default Meta Title
+          - label: Meta Title
             name: title
             widget: object
             fields:
-              - { label: English, name: en, widget: string }
-              - { label: German, name: de, widget: string }
-              - { label: Spanish, name: es, widget: string }
-          - label: Default Meta Description
+              - { label: DE, name: de, widget: string, required: false }
+              - { label: EN, name: en, widget: string, required: false }
+              - { label: ES, name: es, widget: string, required: false }
+          - label: Meta Description
             name: description
             widget: object
             fields:
-              - { label: English, name: en, widget: text }
-              - { label: German, name: de, widget: text }
-              - { label: Spanish, name: es, widget: text }
-          - { label: OG Image, name: ogImage, widget: image, required: false, hint: "Social share image (1200x630px)" }
-
-  # --------------------
-  # BLOG / NEWS
-  # --------------------
-  - name: blog
-    label: "📰 News & Updates"
-    label_singular: "Post"
-    folder: content/blog
-    create: true
-    delete: true
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
-    summary: "{{title}} ({{date | date('YYYY-MM-DD')}})"
-    sortable_fields: ['date', 'title']
-    fields:
-      - { label: Title, name: title, widget: string }
-      - { label: Publish Date, name: date, widget: datetime }
-      - { label: Featured Image, name: image, widget: image, required: false }
-      - { label: Excerpt/Summary, name: excerpt, widget: text, required: false, hint: "Short description for listings" }
-      - label: Content
-        name: body
-        widget: object
-        fields:
-          - { label: English, name: en, widget: markdown }
-          - { label: German, name: de, widget: markdown }
-          - { label: Spanish, name: es, widget: markdown }
-      - { label: Published, name: published, widget: boolean, default: false }
-      - { label: Tags, name: tags, widget: list, required: false }
+              - { label: DE, name: de, widget: text, required: false }
+              - { label: EN, name: en, widget: text, required: false }
+              - { label: ES, name: es, widget: text, required: false }
+          - { label: OG Image, name: ogImage, widget: image, required: false }
