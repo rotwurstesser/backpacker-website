@@ -1,0 +1,12 @@
+{
+  "id": "reception",
+  "title": "Rezeption",
+  "image": "/images/gallery/reception.jpg",
+  "category": "common_areas",
+  "order": 1,
+  "alt": {
+    "de": "Rezeption des Bern Backpackers",
+    "en": "Bern Backpackers Reception",
+    "es": "Recepcion Bern Backpackers"
+  }
+}

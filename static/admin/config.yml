@@ -6,6 +6,10 @@ backend:
 media_folder: static/images
 public_folder: /images
 
+# Allow all subfolders in the media library
+media_library:
+  folder_support: true
+
 site_url: https://bernbackpackers.ch
 display_url: https://bernbackpackers.ch
 logo_url: /images/logos/logo.png
@@ -133,6 +137,8 @@ collections:
   - name: pages
     label: "📄 Seiten"
     folder: content/pages
+    extension: json
+    format: json
     create: true
     delete: true
     slug: "{{slug}}"
@@ -173,6 +179,8 @@ collections:
   - name: rooms
     label: "🛏️ Zimmer"
     folder: content/rooms
+    extension: json
+    format: json
     create: true
     delete: true
     slug: "{{id}}"
@@ -218,6 +226,8 @@ collections:
   - name: gallery
     label: "🖼️ Galerie"
     folder: content/gallery
+    extension: json
+    format: json
     create: true
     delete: true
     slug: "{{id}}"
@@ -268,6 +278,16 @@ collections:
           - { label: Instagram, name: instagram, widget: string, required: false }
           - { label: TripAdvisor, name: tripadvisor, widget: string, required: false }
           - { label: Google Maps, name: googleMaps, widget: string, required: false }
+
+      - name: branding
+        label: Branding & Logos
+        file: content/settings/branding.json
+        fields:
+          - { label: Logo, name: logo, widget: image, required: false }
+          - { label: Logo (klein), name: logoSmall, widget: image, required: false }
+          - { label: Swiss Hostels Logo, name: swissHostelsLogo, widget: image, required: false }
+          - { label: Hero Bild, name: heroImage, widget: image, required: false }
+          - { label: Favicon, name: favicon, widget: image, required: false }
 
       - name: seo
         label: SEO
