@@ -131,6 +131,20 @@
 	h6 {
 		@apply text-sm md:text-base;
 	}
+
+	/* Inline markdown links - styled nicely with primary color */
+	a:not([class]) {
+		@apply text-primary font-medium;
+		text-decoration: underline;
+		text-decoration-color: hsl(var(--primary) / 0.4);
+		text-underline-offset: 2px;
+		text-decoration-thickness: 1.5px;
+		transition: text-decoration-color 0.2s ease;
+	}
+
+	a:not([class]):hover {
+		text-decoration-color: hsl(var(--primary));
+	}
 }
 
 @layer utilities {
