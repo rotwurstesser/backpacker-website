@@ -36,8 +36,8 @@
 <!-- Hero -->
 <section class="py-16 bg-gradient-to-br from-primary/10 via-background to-primary/5">
 	<div class="container text-center">
-		<h1 class="text-4xl font-bold mb-4">{translate(locationContent.title, lang)}</h1>
-		<p class="text-lg text-muted-foreground">{translate(locationContent.subtitle, lang)}</p>
+		<h1 class="text-4xl font-bold mb-4">{@html md(translate(locationContent.title, lang))}</h1>
+		<p class="text-lg text-muted-foreground">{@html md(translate(locationContent.subtitle, lang))}</p>
 	</div>
 </section>
 
@@ -64,7 +64,7 @@
 			<!-- Address Card -->
 			<div>
 				<Card class="p-6">
-					<h2 class="text-xl font-semibold mb-6">{translate(locationContent.addressCardTitle, lang)}</h2>
+					<h2 class="text-xl font-semibold mb-6">{@html md(translate(locationContent.addressCardTitle, lang))}</h2>
 					<div class="space-y-4">
 						<div class="flex items-start gap-3">
 							<MapPin class="h-5 w-5 text-primary flex-shrink-0 mt-0.5" aria-hidden="true" />
@@ -77,7 +77,7 @@
 						<div class="flex items-center gap-3">
 							<Phone class="h-5 w-5 text-primary" aria-hidden="true" />
 							<div>
-								<p class="text-sm text-muted-foreground">{translate(locationContent.phoneLabel, lang)}</p>
+								<p class="text-sm text-muted-foreground">{@html md(translate(locationContent.phoneLabel, lang))}</p>
 								<a href="tel:{settings?.phone?.replace(/\s/g, '') || '+41313113771'}" class="hover:text-primary">
 									{settings?.phone || '+41 31 311 37 71'}
 								</a>
@@ -87,7 +87,7 @@
 						<div class="flex items-center gap-3">
 							<Mail class="h-5 w-5 text-primary" aria-hidden="true" />
 							<div>
-								<p class="text-sm text-muted-foreground">{translate(locationContent.emailLabel, lang)}</p>
+								<p class="text-sm text-muted-foreground">{@html md(translate(locationContent.emailLabel, lang))}</p>
 								<a href="mailto:{settings?.email || 'info@bernbackpackers.ch'}" class="hover:text-primary">
 									{settings?.email || 'info@bernbackpackers.ch'}
 								</a>
@@ -97,7 +97,7 @@
 						<div class="flex items-center gap-3">
 							<Clock class="h-5 w-5 text-primary" aria-hidden="true" />
 							<div>
-								<p class="text-sm text-muted-foreground">{translate(locationContent.hoursLabel, lang)}</p>
+								<p class="text-sm text-muted-foreground">{@html md(translate(locationContent.hoursLabel, lang))}</p>
 								<p>{settings?.receptionHours}</p>
 							</div>
 						</div>
@@ -111,7 +111,7 @@
 <!-- Directions -->
 <section class="py-16 bg-muted/30">
 	<div class="container">
-		<h2 class="text-2xl font-bold text-center mb-12">{translate(locationContent.directionsTitle, lang)}</h2>
+		<h2 class="text-2xl font-bold text-center mb-12">{@html md(translate(locationContent.directionsTitle, lang))}</h2>
 		<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
 			{#each directions as direction, i (i)}
 				<Card class="p-6">
@@ -119,7 +119,7 @@
 						<div class="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center">
 							<svelte:component this={direction.icon} class="h-5 w-5 text-primary" aria-hidden="true" />
 						</div>
-						<h3 class="text-lg font-semibold">{translate(direction.title, lang)}</h3>
+						<h3 class="text-lg font-semibold">{@html md(translate(direction.title, lang))}</h3>
 					</div>
 					<p class="text-muted-foreground text-sm leading-relaxed">{@html md(translate(direction.description, lang))}</p>
 				</Card>
@@ -134,7 +134,7 @@
 		<Card class="p-6">
 			<div class="flex items-center gap-3 mb-4">
 				<Train class="h-6 w-6 text-primary" aria-hidden="true" />
-				<h2 class="text-xl font-semibold">{translate(locationContent.sbbTitle, lang)}</h2>
+				<h2 class="text-xl font-semibold">{@html md(translate(locationContent.sbbTitle, lang))}</h2>
 			</div>
 			<p class="text-muted-foreground mb-4">
 				{@html md(translate(locationContent.sbbDescription, lang))}
@@ -145,7 +145,7 @@
 				rel="noopener noreferrer"
 				class="inline-flex items-center gap-2 text-primary hover:underline"
 			>
-				{translate(locationContent.sbbLinkText, lang)}
+				{@html md(translate(locationContent.sbbLinkText, lang))}
 				<svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
 					<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
 				</svg>
@@ -157,13 +157,13 @@
 <!-- Landmarks -->
 <section class="py-16 bg-muted/30">
 	<div class="container">
-		<h2 class="text-2xl font-bold text-center mb-4">{translate(locationContent.landmarksTitle, lang)}</h2>
+		<h2 class="text-2xl font-bold text-center mb-4">{@html md(translate(locationContent.landmarksTitle, lang))}</h2>
 		<p class="text-center text-muted-foreground mb-12">{@html md(translate(locationContent.landmarksSubtitle, lang))}</p>
 		<div class="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
 			{#each locationContent.landmarks as landmark, i (i)}
 				<div class="text-center">
-					<p class="font-medium">{translate(landmark.name, lang)}</p>
-					<p class="text-sm text-muted-foreground">{translate(landmark.distance, lang)}</p>
+					<p class="font-medium">{@html md(translate(landmark.name, lang))}</p>
+					<p class="text-sm text-muted-foreground">{@html md(translate(landmark.distance, lang))}</p>
 				</div>
 			{/each}
 		</div>

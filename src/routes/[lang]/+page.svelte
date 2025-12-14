@@ -44,13 +44,13 @@
 				<span
 					class="inline-block px-4 py-1.5 bg-primary/10 text-primary rounded-full text-sm font-medium"
 				>
-					{translate(homeContent.heroTagline, lang)}
+					{@html md(translate(homeContent.heroTagline, lang))}
 				</span>
 				<h1>
-					{translate(homeContent.heroTitle, lang)}
+					{@html md(translate(homeContent.heroTitle, lang))}
 				</h1>
 				<p class="text-xl text-muted-foreground">
-					{translate(homeContent.heroSubtitle, lang)}
+					{@html md(translate(homeContent.heroSubtitle, lang))}
 				</p>
 				<div class="flex flex-col sm:flex-row gap-4 justify-center pt-4">
 					<Button size="lg" href={bookingUrl} target="_blank" rel="noopener noreferrer">
@@ -77,7 +77,7 @@
 						>
 							<Icon class="h-6 w-6 text-primary" aria-hidden="true" />
 						</div>
-						<h3 class="font-semibold mb-2">{translate(feature.title, lang)}</h3>
+						<h3 class="font-semibold mb-2">{@html md(translate(feature.title, lang))}</h3>
 						<p class="text-sm text-muted-foreground">{@html md(translate(feature.description, lang))}</p>
 					</Card>
 				{/each}
@@ -98,7 +98,7 @@
 					<Card class="p-6 hover:shadow-lg transition-shadow">
 						<div class="flex items-start justify-between mb-4">
 							<div>
-								<h3 class="font-semibold">{translate(room.name, lang)}</h3>
+								<h3 class="font-semibold">{@html md(translate(room.name, lang))}</h3>
 								<p class="text-sm text-muted-foreground">
 									{room.bathType === 'shared' ? t.rooms.sharedBath : t.rooms.privateBath}
 								</p>
@@ -130,7 +130,7 @@
 	<!-- Amenities Section -->
 	<section class="py-20 bg-muted/30">
 		<div class="container">
-			<h2 class="text-center mb-12">{translate(homeContent.amenitiesTitle, lang)}</h2>
+			<h2 class="text-center mb-12">{@html md(translate(homeContent.amenitiesTitle, lang))}</h2>
 			<div class="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
 				{#each homeContent.amenities as amenity (amenity.icon)}
 					{@const Icon = getIcon(amenity.icon)}
@@ -138,7 +138,7 @@
 						<div class="w-14 h-14 bg-primary/10 rounded-full flex items-center justify-center mb-3">
 							<Icon class="h-6 w-6 text-primary" aria-hidden="true" />
 						</div>
-						<span class="text-sm font-medium">{translate(amenity.name, lang)}</span>
+						<span class="text-sm font-medium">{@html md(translate(amenity.name, lang))}</span>
 					</div>
 				{/each}
 			</div>
@@ -148,7 +148,7 @@
 	<!-- CTA Section -->
 	<section class="py-20 bg-primary text-primary-foreground">
 		<div class="container text-center">
-			<h2 class="mb-4">{translate(homeContent.ctaTitle, lang)}</h2>
+			<h2 class="mb-4">{@html md(translate(homeContent.ctaTitle, lang))}</h2>
 			<p class="text-lg opacity-90 mb-8 max-w-2xl mx-auto">
 				{@html md(translate(homeContent.ctaDescription, lang))}
 			</p>

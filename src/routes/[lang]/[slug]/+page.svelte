@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { t as translate, safeMarkdown } from '$lib/content';
+	import { md } from '$lib/utils';
 	import type { PageData } from './$types';
 
 	export let data: PageData;
@@ -21,7 +22,7 @@
 				class="w-full max-w-3xl mx-auto rounded-lg shadow-lg mb-8"
 			/>
 		{/if}
-		<h1 class="text-4xl font-bold mb-4">{translate(page.title, lang)}</h1>
+		<h1 class="text-4xl font-bold mb-4">{@html md(translate(page.title, lang))}</h1>
 	</div>
 </section>
 

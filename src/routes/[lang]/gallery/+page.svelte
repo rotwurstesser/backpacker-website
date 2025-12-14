@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { t as translate } from '$lib/content';
+	import { md } from '$lib/utils';
 	import type { PageData } from './$types';
 
 	export let data: PageData;
@@ -73,8 +74,8 @@
 <!-- Hero -->
 <section class="py-16 bg-gradient-to-br from-primary/10 via-background to-primary/5">
 	<div class="container text-center">
-		<h1 class="text-4xl font-bold mb-4">{translate(galleryPageContent.title, lang)}</h1>
-		<p class="text-lg text-muted-foreground">{translate(galleryPageContent.subtitle, lang)}</p>
+		<h1 class="text-4xl font-bold mb-4">{@html md(translate(galleryPageContent.title, lang))}</h1>
+		<p class="text-lg text-muted-foreground">{@html md(translate(galleryPageContent.subtitle, lang))}</p>
 	</div>
 </section>
 
@@ -131,7 +132,7 @@
 			</div>
 		{:else}
 			<p class="text-center text-muted-foreground">
-				{translate(galleryPageContent.noImagesMessage, lang)}
+				{@html md(translate(galleryPageContent.noImagesMessage, lang))}
 			</p>
 		{/if}
 	</div>

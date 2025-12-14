@@ -59,8 +59,8 @@
 <!-- Hero -->
 <section class="py-16 bg-gradient-to-br from-primary/10 via-background to-primary/5">
 	<div class="container text-center">
-		<h1 class="text-4xl font-bold mb-4">{translate(contactPageContent.title, lang)}</h1>
-		<p class="text-lg text-muted-foreground">{translate(contactPageContent.subtitle, lang)}</p>
+		<h1 class="text-4xl font-bold mb-4">{@html md(translate(contactPageContent.title, lang))}</h1>
+		<p class="text-lg text-muted-foreground">{@html md(translate(contactPageContent.subtitle, lang))}</p>
 	</div>
 </section>
 
@@ -70,7 +70,7 @@
 		<div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
 			<!-- Contact Information -->
 			<div>
-				<h2 class="text-2xl font-bold mb-6">{translate(contactPageContent.getInTouchTitle, lang)}</h2>
+				<h2 class="text-2xl font-bold mb-6">{@html md(translate(contactPageContent.getInTouchTitle, lang))}</h2>
 				<div class="space-y-6">
 					<Card class="p-6">
 						<div class="flex items-start gap-4">
@@ -78,7 +78,7 @@
 								<MapPin class="h-5 w-5 text-primary" aria-hidden="true" />
 							</div>
 							<div>
-								<h3 class="font-semibold mb-1">{translate(contactPageContent.addressLabel, lang)}</h3>
+								<h3 class="font-semibold mb-1">{@html md(translate(contactPageContent.addressLabel, lang))}</h3>
 								<p class="text-muted-foreground">{settings?.siteName}</p>
 								<p class="text-muted-foreground whitespace-pre-line">{settings?.address}</p>
 							</div>
@@ -91,12 +91,12 @@
 								<Phone class="h-5 w-5 text-primary" aria-hidden="true" />
 							</div>
 							<div>
-								<h3 class="font-semibold mb-1">{translate(contactPageContent.phoneLabel, lang)}</h3>
+								<h3 class="font-semibold mb-1">{@html md(translate(contactPageContent.phoneLabel, lang))}</h3>
 								<a href="tel:{settings?.phone?.replace(/\s/g, '')}" class="text-muted-foreground hover:text-primary">
 									{settings?.phone}
 								</a>
 								{#if settings?.fax}
-									<p class="text-sm text-muted-foreground mt-1">{translate(contactPageContent.faxLabel, lang)}: {settings.fax}</p>
+									<p class="text-sm text-muted-foreground mt-1">{@html md(translate(contactPageContent.faxLabel, lang))}: {settings.fax}</p>
 								{/if}
 							</div>
 						</div>
@@ -108,7 +108,7 @@
 								<Mail class="h-5 w-5 text-primary" aria-hidden="true" />
 							</div>
 							<div>
-								<h3 class="font-semibold mb-1">{translate(contactPageContent.emailLabel, lang)}</h3>
+								<h3 class="font-semibold mb-1">{@html md(translate(contactPageContent.emailLabel, lang))}</h3>
 								<a href="mailto:{settings?.email}" class="text-muted-foreground hover:text-primary">
 									{settings?.email}
 								</a>
@@ -122,7 +122,7 @@
 								<Clock class="h-5 w-5 text-primary" aria-hidden="true" />
 							</div>
 							<div>
-								<h3 class="font-semibold mb-1">{translate(contactPageContent.hoursLabel, lang)}</h3>
+								<h3 class="font-semibold mb-1">{@html md(translate(contactPageContent.hoursLabel, lang))}</h3>
 								<p class="text-muted-foreground">{settings?.receptionHours}</p>
 							</div>
 						</div>
@@ -132,7 +132,7 @@
 
 			<!-- Contact Form -->
 			<div>
-				<h2 class="text-2xl font-bold mb-6">{translate(contactPageContent.sendMessageTitle, lang)}</h2>
+				<h2 class="text-2xl font-bold mb-6">{@html md(translate(contactPageContent.sendMessageTitle, lang))}</h2>
 				<Card class="p-6">
 					<form
 						name="contact"
@@ -152,7 +152,7 @@
 						</div>
 
 						<div>
-							<label for="name" class="block text-sm font-medium mb-1.5">{translate(contactPageContent.formLabels.name, lang)}</label>
+							<label for="name" class="block text-sm font-medium mb-1.5">{@html md(translate(contactPageContent.formLabels.name, lang))}</label>
 							<input
 								type="text"
 								id="name"
@@ -165,7 +165,7 @@
 						</div>
 
 						<div>
-							<label for="email" class="block text-sm font-medium mb-1.5">{translate(contactPageContent.formLabels.email, lang)}</label>
+							<label for="email" class="block text-sm font-medium mb-1.5">{@html md(translate(contactPageContent.formLabels.email, lang))}</label>
 							<input
 								type="email"
 								id="email"
@@ -178,7 +178,7 @@
 						</div>
 
 						<div>
-							<label for="subject" class="block text-sm font-medium mb-1.5">{translate(contactPageContent.formLabels.subject, lang)}</label>
+							<label for="subject" class="block text-sm font-medium mb-1.5">{@html md(translate(contactPageContent.formLabels.subject, lang))}</label>
 							<input
 								type="text"
 								id="subject"
@@ -191,7 +191,7 @@
 						</div>
 
 						<div>
-							<label for="message" class="block text-sm font-medium mb-1.5">{translate(contactPageContent.formLabels.message, lang)}</label>
+							<label for="message" class="block text-sm font-medium mb-1.5">{@html md(translate(contactPageContent.formLabels.message, lang))}</label>
 							<textarea
 								id="message"
 								name="message"
@@ -215,10 +215,10 @@
 
 						<Button type="submit" class="w-full" disabled={formStatus === 'sending'}>
 							{#if formStatus === 'sending'}
-								{translate(contactPageContent.sendingButton, lang)}
+								{@html md(translate(contactPageContent.sendingButton, lang))}
 							{:else}
 								<Send class="h-4 w-4 mr-2" aria-hidden="true" />
-								{translate(contactPageContent.sendButton, lang)}
+								{@html md(translate(contactPageContent.sendButton, lang))}
 							{/if}
 						</Button>
 					</form>

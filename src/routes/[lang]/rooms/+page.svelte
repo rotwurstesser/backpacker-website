@@ -22,8 +22,8 @@
 	<!-- Hero -->
 	<section class="py-16 bg-gradient-to-br from-primary/10 via-background to-primary/5">
 		<div class="container text-center">
-			<h1 class="text-4xl font-bold mb-4">{translate(roomsPageContent.title, lang)}</h1>
-			<p class="text-lg text-muted-foreground">{translate(roomsPageContent.subtitle, lang)}</p>
+			<h1 class="text-4xl font-bold mb-4">{@html md(translate(roomsPageContent.title, lang))}</h1>
+			<p class="text-lg text-muted-foreground">{@html md(translate(roomsPageContent.subtitle, lang))}</p>
 		</div>
 	</section>
 
@@ -46,7 +46,7 @@
 						<div class="p-6">
 							<div class="flex items-start justify-between mb-4">
 								<div>
-									<h3 class="text-xl font-semibold">{translate(room.name, lang)}</h3>
+									<h3 class="text-xl font-semibold">{@html md(translate(room.name, lang))}</h3>
 									<p class="text-sm text-muted-foreground mt-1">
 										{@html md(translate(room.description, lang))}
 									</p>
@@ -57,11 +57,11 @@
 								<span class="flex items-center gap-1">
 									<Bed class="h-4 w-4" aria-hidden="true" />
 									{room.beds}
-									{room.beds > 1 ? translate(roomsPageContent.beds, lang) : translate(roomsPageContent.bed, lang)}
+									{@html md(room.beds > 1 ? translate(roomsPageContent.beds, lang) : translate(roomsPageContent.bed, lang))}
 								</span>
 								<span class="flex items-center gap-1">
 									<Bath class="h-4 w-4" aria-hidden="true" />
-									{room.bathType === 'shared' ? translate(roomsPageContent.sharedBath, lang) : translate(roomsPageContent.privateBath, lang)}
+									{@html md(room.bathType === 'shared' ? translate(roomsPageContent.sharedBath, lang) : translate(roomsPageContent.privateBath, lang))}
 								</span>
 							</div>
 
@@ -70,7 +70,7 @@
 									{#each room.features as feature, i (i)}
 										<span class="inline-flex items-center gap-1 text-xs bg-muted px-2 py-1 rounded">
 											<Check class="h-3 w-3 text-primary" aria-hidden="true" />
-											{translate(feature, lang)}
+											{@html md(translate(feature, lang))}
 										</span>
 									{/each}
 								</div>
@@ -80,11 +80,11 @@
 								<div>
 									<span class="text-2xl font-bold">{t.common.currency} {room.price}.-</span>
 									<span class="text-sm text-muted-foreground ml-1">
-										{room.priceUnit === 'per_bed' ? translate(roomsPageContent.perBed, lang) : translate(roomsPageContent.perRoom, lang)}
+										{@html md(room.priceUnit === 'per_bed' ? translate(roomsPageContent.perBed, lang) : translate(roomsPageContent.perRoom, lang))}
 									</span>
 								</div>
 								<Button href={bookingUrl} target="_blank" rel="noopener noreferrer">
-									{translate(roomsPageContent.bookButton, lang)}
+									{@html md(translate(roomsPageContent.bookButton, lang))}
 								</Button>
 							</div>
 						</div>
@@ -101,20 +101,20 @@
 				<div class="flex items-start gap-4">
 					<Info class="h-6 w-6 text-primary flex-shrink-0 mt-0.5" aria-hidden="true" />
 					<div>
-						<h3 class="font-semibold mb-2">{translate(roomsPageContent.priceInfoTitle, lang)}</h3>
+						<h3 class="font-semibold mb-2">{@html md(translate(roomsPageContent.priceInfoTitle, lang))}</h3>
 						<ul class="space-y-2 text-sm text-muted-foreground">
-							<li>{translate(roomsPageContent.priceNote, lang)}</li>
+							<li>{@html md(translate(roomsPageContent.priceNote, lang))}</li>
 							<li class="flex items-center gap-2">
 								<Check class="h-4 w-4 text-primary" aria-hidden="true" />
-								{translate(roomsPageContent.sheetsIncluded, lang)}
+								{@html md(translate(roomsPageContent.sheetsIncluded, lang))}
 							</li>
 							<li class="flex items-center gap-2">
 								<Check class="h-4 w-4 text-primary" aria-hidden="true" />
-								{translate(roomsPageContent.towelsAvailable, lang)}
+								{@html md(translate(roomsPageContent.towelsAvailable, lang))}
 							</li>
 							<li class="flex items-center gap-2">
 								<Check class="h-4 w-4 text-primary" aria-hidden="true" />
-								{translate(roomsPageContent.paymentMethods, lang)}
+								{@html md(translate(roomsPageContent.paymentMethods, lang))}
 							</li>
 						</ul>
 					</div>
@@ -126,7 +126,7 @@
 	<!-- CTA -->
 	<section class="py-16 bg-primary text-primary-foreground">
 		<div class="container text-center">
-			<h2 class="text-2xl font-bold mb-4">{translate(roomsPageContent.ctaTitle, lang)}</h2>
+			<h2 class="text-2xl font-bold mb-4">{@html md(translate(roomsPageContent.ctaTitle, lang))}</h2>
 			<p class="mb-6 opacity-90">{@html md(translate(roomsPageContent.ctaDescription, lang))}</p>
 			<Button
 				size="lg"
@@ -135,7 +135,7 @@
 				target="_blank"
 				rel="noopener noreferrer"
 			>
-				{translate(roomsPageContent.bookButton, lang)}
+				{@html md(translate(roomsPageContent.bookButton, lang))}
 			</Button>
 		</div>
 	</section>

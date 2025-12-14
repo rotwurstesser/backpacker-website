@@ -32,33 +32,33 @@ collections:
             name: heroTitle
             widget: object
             fields:
-              - { label: Deutsch, name: de, widget: string, required: false }
-              - { label: Englisch, name: en, widget: string, required: false }
-              - { label: Spanisch, name: es, widget: string, required: false }
+              - { label: Deutsch, name: de, widget: markdown, minimal: true, required: false }
+              - { label: Englisch, name: en, widget: markdown, minimal: true, required: false }
+              - { label: Spanisch, name: es, widget: markdown, minimal: true, required: false }
           - label: "Hero Untertitel"
             name: heroSubtitle
             widget: object
             collapsed: true
             fields:
-              - { label: Deutsch, name: de, widget: string, required: false }
-              - { label: Englisch, name: en, widget: string, required: false }
-              - { label: Spanisch, name: es, widget: string, required: false }
+              - { label: Deutsch, name: de, widget: markdown, minimal: true, required: false }
+              - { label: Englisch, name: en, widget: markdown, minimal: true, required: false }
+              - { label: Spanisch, name: es, widget: markdown, minimal: true, required: false }
           - label: "Badge Text"
             name: heroTagline
             widget: object
             collapsed: true
             fields:
-              - { label: Deutsch, name: de, widget: string, required: false }
-              - { label: Englisch, name: en, widget: string, required: false }
-              - { label: Spanisch, name: es, widget: string, required: false }
+              - { label: Deutsch, name: de, widget: markdown, minimal: true, required: false }
+              - { label: Englisch, name: en, widget: markdown, minimal: true, required: false }
+              - { label: Spanisch, name: es, widget: markdown, minimal: true, required: false }
           - label: "Button Text"
             name: heroCta
             widget: object
             collapsed: true
             fields:
-              - { label: Deutsch, name: de, widget: string, required: false }
-              - { label: Englisch, name: en, widget: string, required: false }
-              - { label: Spanisch, name: es, widget: string, required: false }
+              - { label: Deutsch, name: de, widget: markdown, minimal: true, required: false }
+              - { label: Englisch, name: en, widget: markdown, minimal: true, required: false }
+              - { label: Spanisch, name: es, widget: markdown, minimal: true, required: false }
           - label: "Vorteile"
             name: features
             widget: list
@@ -72,9 +72,9 @@ collections:
                 widget: object
                 required: false
                 fields:
-                  - { label: Deutsch, name: de, widget: string, required: false }
-                  - { label: Englisch, name: en, widget: string, required: false }
-                  - { label: Spanisch, name: es, widget: string, required: false }
+                  - { label: Deutsch, name: de, widget: markdown, minimal: true, required: false }
+                  - { label: Englisch, name: en, widget: markdown, minimal: true, required: false }
+                  - { label: Spanisch, name: es, widget: markdown, minimal: true, required: false }
               - label: Beschreibung
                 name: description
                 widget: object
@@ -88,9 +88,9 @@ collections:
             widget: object
             collapsed: true
             fields:
-              - { label: Deutsch, name: de, widget: string, required: false }
-              - { label: Englisch, name: en, widget: string, required: false }
-              - { label: Spanisch, name: es, widget: string, required: false }
+              - { label: Deutsch, name: de, widget: markdown, minimal: true, required: false }
+              - { label: Englisch, name: en, widget: markdown, minimal: true, required: false }
+              - { label: Spanisch, name: es, widget: markdown, minimal: true, required: false }
           - label: "Ausstattung"
             name: amenities
             widget: list
@@ -104,17 +104,17 @@ collections:
                 widget: object
                 required: false
                 fields:
-                  - { label: Deutsch, name: de, widget: string, required: false }
-                  - { label: Englisch, name: en, widget: string, required: false }
-                  - { label: Spanisch, name: es, widget: string, required: false }
+                  - { label: Deutsch, name: de, widget: markdown, minimal: true, required: false }
+                  - { label: Englisch, name: en, widget: markdown, minimal: true, required: false }
+                  - { label: Spanisch, name: es, widget: markdown, minimal: true, required: false }
           - label: "CTA Titel"
             name: ctaTitle
             widget: object
             collapsed: true
             fields:
-              - { label: Deutsch, name: de, widget: string, required: false }
-              - { label: Englisch, name: en, widget: string, required: false }
-              - { label: Spanisch, name: es, widget: string, required: false }
+              - { label: Deutsch, name: de, widget: markdown, minimal: true, required: false }
+              - { label: Englisch, name: en, widget: markdown, minimal: true, required: false }
+              - { label: Spanisch, name: es, widget: markdown, minimal: true, required: false }
           - label: "CTA Text"
             name: ctaDescription
             widget: object
@@ -141,9 +141,9 @@ collections:
         name: name
         widget: object
         fields:
-          - { label: Deutsch, name: de, widget: string, required: false }
-          - { label: Englisch, name: en, widget: string, required: false }
-          - { label: Spanisch, name: es, widget: string, required: false }
+          - { label: Deutsch, name: de, widget: markdown, minimal: true, required: false }
+          - { label: Englisch, name: en, widget: markdown, minimal: true, required: false }
+          - { label: Spanisch, name: es, widget: markdown, minimal: true, required: false }
       - label: Beschreibung
         name: description
         widget: object
@@ -163,9 +163,9 @@ collections:
         required: false
         collapsed: true
         fields:
-          - { label: Deutsch, name: de, widget: string, required: false }
-          - { label: Englisch, name: en, widget: string, required: false }
-          - { label: Spanisch, name: es, widget: string, required: false }
+          - { label: Deutsch, name: de, widget: markdown, minimal: true, required: false }
+          - { label: Englisch, name: en, widget: markdown, minimal: true, required: false }
+          - { label: Spanisch, name: es, widget: markdown, minimal: true, required: false }
       - { label: Reihenfolge, name: order, widget: number, default: 0, required: false }
       - { label: Verfügbar, name: available, widget: boolean, default: true, required: false }
 
@@ -183,120 +183,120 @@ collections:
             name: title
             widget: object
             fields:
-              - { label: Deutsch, name: de, widget: string, required: false }
-              - { label: Englisch, name: en, widget: string, required: false }
-              - { label: Spanisch, name: es, widget: string, required: false }
+              - { label: Deutsch, name: de, widget: markdown, minimal: true, required: false }
+              - { label: Englisch, name: en, widget: markdown, minimal: true, required: false }
+              - { label: Spanisch, name: es, widget: markdown, minimal: true, required: false }
           - label: "Untertitel"
             name: subtitle
             widget: object
             fields:
-              - { label: Deutsch, name: de, widget: string, required: false }
-              - { label: Englisch, name: en, widget: string, required: false }
-              - { label: Spanisch, name: es, widget: string, required: false }
+              - { label: Deutsch, name: de, widget: markdown, minimal: true, required: false }
+              - { label: Englisch, name: en, widget: markdown, minimal: true, required: false }
+              - { label: Spanisch, name: es, widget: markdown, minimal: true, required: false }
           - label: "Button Text"
             name: bookButton
             widget: object
             collapsed: true
             fields:
-              - { label: Deutsch, name: de, widget: string, required: false }
-              - { label: Englisch, name: en, widget: string, required: false }
-              - { label: Spanisch, name: es, widget: string, required: false }
+              - { label: Deutsch, name: de, widget: markdown, minimal: true, required: false }
+              - { label: Englisch, name: en, widget: markdown, minimal: true, required: false }
+              - { label: Spanisch, name: es, widget: markdown, minimal: true, required: false }
           - label: "Pro Bett Text"
             name: perBed
             widget: object
             collapsed: true
             fields:
-              - { label: Deutsch, name: de, widget: string, required: false }
-              - { label: Englisch, name: en, widget: string, required: false }
-              - { label: Spanisch, name: es, widget: string, required: false }
+              - { label: Deutsch, name: de, widget: markdown, minimal: true, required: false }
+              - { label: Englisch, name: en, widget: markdown, minimal: true, required: false }
+              - { label: Spanisch, name: es, widget: markdown, minimal: true, required: false }
           - label: "Pro Zimmer Text"
             name: perRoom
             widget: object
             collapsed: true
             fields:
-              - { label: Deutsch, name: de, widget: string, required: false }
-              - { label: Englisch, name: en, widget: string, required: false }
-              - { label: Spanisch, name: es, widget: string, required: false }
+              - { label: Deutsch, name: de, widget: markdown, minimal: true, required: false }
+              - { label: Englisch, name: en, widget: markdown, minimal: true, required: false }
+              - { label: Spanisch, name: es, widget: markdown, minimal: true, required: false }
           - label: "Bett (Einzahl)"
             name: bed
             widget: object
             collapsed: true
             fields:
-              - { label: Deutsch, name: de, widget: string, required: false }
-              - { label: Englisch, name: en, widget: string, required: false }
-              - { label: Spanisch, name: es, widget: string, required: false }
+              - { label: Deutsch, name: de, widget: markdown, minimal: true, required: false }
+              - { label: Englisch, name: en, widget: markdown, minimal: true, required: false }
+              - { label: Spanisch, name: es, widget: markdown, minimal: true, required: false }
           - label: "Betten (Mehrzahl)"
             name: beds
             widget: object
             collapsed: true
             fields:
-              - { label: Deutsch, name: de, widget: string, required: false }
-              - { label: Englisch, name: en, widget: string, required: false }
-              - { label: Spanisch, name: es, widget: string, required: false }
+              - { label: Deutsch, name: de, widget: markdown, minimal: true, required: false }
+              - { label: Englisch, name: en, widget: markdown, minimal: true, required: false }
+              - { label: Spanisch, name: es, widget: markdown, minimal: true, required: false }
           - label: "Geteiltes Bad"
             name: sharedBath
             widget: object
             collapsed: true
             fields:
-              - { label: Deutsch, name: de, widget: string, required: false }
-              - { label: Englisch, name: en, widget: string, required: false }
-              - { label: Spanisch, name: es, widget: string, required: false }
+              - { label: Deutsch, name: de, widget: markdown, minimal: true, required: false }
+              - { label: Englisch, name: en, widget: markdown, minimal: true, required: false }
+              - { label: Spanisch, name: es, widget: markdown, minimal: true, required: false }
           - label: "Eigenes Bad"
             name: privateBath
             widget: object
             collapsed: true
             fields:
-              - { label: Deutsch, name: de, widget: string, required: false }
-              - { label: Englisch, name: en, widget: string, required: false }
-              - { label: Spanisch, name: es, widget: string, required: false }
+              - { label: Deutsch, name: de, widget: markdown, minimal: true, required: false }
+              - { label: Englisch, name: en, widget: markdown, minimal: true, required: false }
+              - { label: Spanisch, name: es, widget: markdown, minimal: true, required: false }
           - label: "Preisinformation Titel"
             name: priceInfoTitle
             widget: object
             collapsed: true
             fields:
-              - { label: Deutsch, name: de, widget: string, required: false }
-              - { label: Englisch, name: en, widget: string, required: false }
-              - { label: Spanisch, name: es, widget: string, required: false }
+              - { label: Deutsch, name: de, widget: markdown, minimal: true, required: false }
+              - { label: Englisch, name: en, widget: markdown, minimal: true, required: false }
+              - { label: Spanisch, name: es, widget: markdown, minimal: true, required: false }
           - label: "Preishinweis"
             name: priceNote
             widget: object
             collapsed: true
             fields:
-              - { label: Deutsch, name: de, widget: string, required: false }
-              - { label: Englisch, name: en, widget: string, required: false }
-              - { label: Spanisch, name: es, widget: string, required: false }
+              - { label: Deutsch, name: de, widget: markdown, minimal: true, required: false }
+              - { label: Englisch, name: en, widget: markdown, minimal: true, required: false }
+              - { label: Spanisch, name: es, widget: markdown, minimal: true, required: false }
           - label: "Bettwaesche inklusive"
             name: sheetsIncluded
             widget: object
             collapsed: true
             fields:
-              - { label: Deutsch, name: de, widget: string, required: false }
-              - { label: Englisch, name: en, widget: string, required: false }
-              - { label: Spanisch, name: es, widget: string, required: false }
+              - { label: Deutsch, name: de, widget: markdown, minimal: true, required: false }
+              - { label: Englisch, name: en, widget: markdown, minimal: true, required: false }
+              - { label: Spanisch, name: es, widget: markdown, minimal: true, required: false }
           - label: "Handtuecher verfuegbar"
             name: towelsAvailable
             widget: object
             collapsed: true
             fields:
-              - { label: Deutsch, name: de, widget: string, required: false }
-              - { label: Englisch, name: en, widget: string, required: false }
-              - { label: Spanisch, name: es, widget: string, required: false }
+              - { label: Deutsch, name: de, widget: markdown, minimal: true, required: false }
+              - { label: Englisch, name: en, widget: markdown, minimal: true, required: false }
+              - { label: Spanisch, name: es, widget: markdown, minimal: true, required: false }
           - label: "Zahlungsmethoden"
             name: paymentMethods
             widget: object
             collapsed: true
             fields:
-              - { label: Deutsch, name: de, widget: string, required: false }
-              - { label: Englisch, name: en, widget: string, required: false }
-              - { label: Spanisch, name: es, widget: string, required: false }
+              - { label: Deutsch, name: de, widget: markdown, minimal: true, required: false }
+              - { label: Englisch, name: en, widget: markdown, minimal: true, required: false }
+              - { label: Spanisch, name: es, widget: markdown, minimal: true, required: false }
           - label: "CTA Titel"
             name: ctaTitle
             widget: object
             collapsed: true
             fields:
-              - { label: Deutsch, name: de, widget: string, required: false }
-              - { label: Englisch, name: en, widget: string, required: false }
-              - { label: Spanisch, name: es, widget: string, required: false }
+              - { label: Deutsch, name: de, widget: markdown, minimal: true, required: false }
+              - { label: Englisch, name: en, widget: markdown, minimal: true, required: false }
+              - { label: Spanisch, name: es, widget: markdown, minimal: true, required: false }
           - label: "CTA Beschreibung"
             name: ctaDescription
             widget: object
@@ -319,7 +319,7 @@ collections:
     slug: "{{title | slug}}"
     summary: "{{title}}"
     fields:
-      - { label: Titel, name: title, widget: string, required: false }
+      - { label: Titel, name: title, widget: markdown, minimal: true, required: false }
       - { label: Bild, name: image, widget: image, required: false }
       - { label: Kategorie, name: category, widget: select, required: false, options: [{label: "Zimmer", value: "rooms"}, {label: "Einrichtungen", value: "facilities"}, {label: "Gemeinschaftsräume", value: "common_areas"}, {label: "Aussenbereich", value: "exterior"}, {label: "Lage", value: "location"}] }
       - { label: Reihenfolge, name: order, widget: number, default: 0, required: false }
@@ -329,9 +329,9 @@ collections:
         collapsed: true
         required: false
         fields:
-          - { label: Deutsch, name: de, widget: string, required: false }
-          - { label: Englisch, name: en, widget: string, required: false }
-          - { label: Spanisch, name: es, widget: string, required: false }
+          - { label: Deutsch, name: de, widget: markdown, minimal: true, required: false }
+          - { label: Englisch, name: en, widget: markdown, minimal: true, required: false }
+          - { label: Spanisch, name: es, widget: markdown, minimal: true, required: false }
 
   # ====================
   # GALERIE SEITE (Texte)
@@ -347,24 +347,24 @@ collections:
             name: title
             widget: object
             fields:
-              - { label: Deutsch, name: de, widget: string, required: false }
-              - { label: Englisch, name: en, widget: string, required: false }
-              - { label: Spanisch, name: es, widget: string, required: false }
+              - { label: Deutsch, name: de, widget: markdown, minimal: true, required: false }
+              - { label: Englisch, name: en, widget: markdown, minimal: true, required: false }
+              - { label: Spanisch, name: es, widget: markdown, minimal: true, required: false }
           - label: "Untertitel"
             name: subtitle
             widget: object
             fields:
-              - { label: Deutsch, name: de, widget: string, required: false }
-              - { label: Englisch, name: en, widget: string, required: false }
-              - { label: Spanisch, name: es, widget: string, required: false }
+              - { label: Deutsch, name: de, widget: markdown, minimal: true, required: false }
+              - { label: Englisch, name: en, widget: markdown, minimal: true, required: false }
+              - { label: Spanisch, name: es, widget: markdown, minimal: true, required: false }
           - label: "Keine Bilder Nachricht"
             name: noImagesMessage
             widget: object
             collapsed: true
             fields:
-              - { label: Deutsch, name: de, widget: string, required: false }
-              - { label: Englisch, name: en, widget: string, required: false }
-              - { label: Spanisch, name: es, widget: string, required: false }
+              - { label: Deutsch, name: de, widget: markdown, minimal: true, required: false }
+              - { label: Englisch, name: en, widget: markdown, minimal: true, required: false }
+              - { label: Spanisch, name: es, widget: markdown, minimal: true, required: false }
           - label: "Kategorien (Filter-Buttons)"
             name: categories
             widget: object
@@ -374,44 +374,44 @@ collections:
                 name: all
                 widget: object
                 fields:
-                  - { label: Deutsch, name: de, widget: string, required: false }
-                  - { label: Englisch, name: en, widget: string, required: false }
-                  - { label: Spanisch, name: es, widget: string, required: false }
+                  - { label: Deutsch, name: de, widget: markdown, minimal: true, required: false }
+                  - { label: Englisch, name: en, widget: markdown, minimal: true, required: false }
+                  - { label: Spanisch, name: es, widget: markdown, minimal: true, required: false }
               - label: "Zimmer"
                 name: rooms
                 widget: object
                 fields:
-                  - { label: Deutsch, name: de, widget: string, required: false }
-                  - { label: Englisch, name: en, widget: string, required: false }
-                  - { label: Spanisch, name: es, widget: string, required: false }
+                  - { label: Deutsch, name: de, widget: markdown, minimal: true, required: false }
+                  - { label: Englisch, name: en, widget: markdown, minimal: true, required: false }
+                  - { label: Spanisch, name: es, widget: markdown, minimal: true, required: false }
               - label: "Einrichtungen"
                 name: facilities
                 widget: object
                 fields:
-                  - { label: Deutsch, name: de, widget: string, required: false }
-                  - { label: Englisch, name: en, widget: string, required: false }
-                  - { label: Spanisch, name: es, widget: string, required: false }
+                  - { label: Deutsch, name: de, widget: markdown, minimal: true, required: false }
+                  - { label: Englisch, name: en, widget: markdown, minimal: true, required: false }
+                  - { label: Spanisch, name: es, widget: markdown, minimal: true, required: false }
               - label: "Gemeinschaftsraeume"
                 name: common_areas
                 widget: object
                 fields:
-                  - { label: Deutsch, name: de, widget: string, required: false }
-                  - { label: Englisch, name: en, widget: string, required: false }
-                  - { label: Spanisch, name: es, widget: string, required: false }
+                  - { label: Deutsch, name: de, widget: markdown, minimal: true, required: false }
+                  - { label: Englisch, name: en, widget: markdown, minimal: true, required: false }
+                  - { label: Spanisch, name: es, widget: markdown, minimal: true, required: false }
               - label: "Aussenbereich"
                 name: exterior
                 widget: object
                 fields:
-                  - { label: Deutsch, name: de, widget: string, required: false }
-                  - { label: Englisch, name: en, widget: string, required: false }
-                  - { label: Spanisch, name: es, widget: string, required: false }
+                  - { label: Deutsch, name: de, widget: markdown, minimal: true, required: false }
+                  - { label: Englisch, name: en, widget: markdown, minimal: true, required: false }
+                  - { label: Spanisch, name: es, widget: markdown, minimal: true, required: false }
               - label: "Lage"
                 name: location
                 widget: object
                 fields:
-                  - { label: Deutsch, name: de, widget: string, required: false }
-                  - { label: Englisch, name: en, widget: string, required: false }
-                  - { label: Spanisch, name: es, widget: string, required: false }
+                  - { label: Deutsch, name: de, widget: markdown, minimal: true, required: false }
+                  - { label: Englisch, name: en, widget: markdown, minimal: true, required: false }
+                  - { label: Spanisch, name: es, widget: markdown, minimal: true, required: false }
 
   # ====================
   # LAGE & ANFAHRT
@@ -427,16 +427,16 @@ collections:
             name: title
             widget: object
             fields:
-              - { label: Deutsch, name: de, widget: string, required: false }
-              - { label: Englisch, name: en, widget: string, required: false }
-              - { label: Spanisch, name: es, widget: string, required: false }
+              - { label: Deutsch, name: de, widget: markdown, minimal: true, required: false }
+              - { label: Englisch, name: en, widget: markdown, minimal: true, required: false }
+              - { label: Spanisch, name: es, widget: markdown, minimal: true, required: false }
           - label: "Untertitel"
             name: subtitle
             widget: object
             fields:
-              - { label: Deutsch, name: de, widget: string, required: false }
-              - { label: Englisch, name: en, widget: string, required: false }
-              - { label: Spanisch, name: es, widget: string, required: false }
+              - { label: Deutsch, name: de, widget: markdown, minimal: true, required: false }
+              - { label: Englisch, name: en, widget: markdown, minimal: true, required: false }
+              - { label: Spanisch, name: es, widget: markdown, minimal: true, required: false }
           - label: "Google Maps Embed URL"
             name: mapEmbedUrl
             widget: string
@@ -447,49 +447,49 @@ collections:
             widget: object
             collapsed: true
             fields:
-              - { label: Deutsch, name: de, widget: string, required: false }
-              - { label: Englisch, name: en, widget: string, required: false }
-              - { label: Spanisch, name: es, widget: string, required: false }
+              - { label: Deutsch, name: de, widget: markdown, minimal: true, required: false }
+              - { label: Englisch, name: en, widget: markdown, minimal: true, required: false }
+              - { label: Spanisch, name: es, widget: markdown, minimal: true, required: false }
           - label: "Telefon Label"
             name: phoneLabel
             widget: object
             collapsed: true
             fields:
-              - { label: Deutsch, name: de, widget: string, required: false }
-              - { label: Englisch, name: en, widget: string, required: false }
-              - { label: Spanisch, name: es, widget: string, required: false }
+              - { label: Deutsch, name: de, widget: markdown, minimal: true, required: false }
+              - { label: Englisch, name: en, widget: markdown, minimal: true, required: false }
+              - { label: Spanisch, name: es, widget: markdown, minimal: true, required: false }
           - label: "E-Mail Label"
             name: emailLabel
             widget: object
             collapsed: true
             fields:
-              - { label: Deutsch, name: de, widget: string, required: false }
-              - { label: Englisch, name: en, widget: string, required: false }
-              - { label: Spanisch, name: es, widget: string, required: false }
+              - { label: Deutsch, name: de, widget: markdown, minimal: true, required: false }
+              - { label: Englisch, name: en, widget: markdown, minimal: true, required: false }
+              - { label: Spanisch, name: es, widget: markdown, minimal: true, required: false }
           - label: "Öffnungszeiten Label"
             name: hoursLabel
             widget: object
             collapsed: true
             fields:
-              - { label: Deutsch, name: de, widget: string, required: false }
-              - { label: Englisch, name: en, widget: string, required: false }
-              - { label: Spanisch, name: es, widget: string, required: false }
+              - { label: Deutsch, name: de, widget: markdown, minimal: true, required: false }
+              - { label: Englisch, name: en, widget: markdown, minimal: true, required: false }
+              - { label: Spanisch, name: es, widget: markdown, minimal: true, required: false }
           - label: "Anfahrt Titel"
             name: directionsTitle
             widget: object
             collapsed: true
             fields:
-              - { label: Deutsch, name: de, widget: string, required: false }
-              - { label: Englisch, name: en, widget: string, required: false }
-              - { label: Spanisch, name: es, widget: string, required: false }
+              - { label: Deutsch, name: de, widget: markdown, minimal: true, required: false }
+              - { label: Englisch, name: en, widget: markdown, minimal: true, required: false }
+              - { label: Spanisch, name: es, widget: markdown, minimal: true, required: false }
           - label: "Mit Tram - Titel"
             name: byTramTitle
             widget: object
             collapsed: true
             fields:
-              - { label: Deutsch, name: de, widget: string, required: false }
-              - { label: Englisch, name: en, widget: string, required: false }
-              - { label: Spanisch, name: es, widget: string, required: false }
+              - { label: Deutsch, name: de, widget: markdown, minimal: true, required: false }
+              - { label: Englisch, name: en, widget: markdown, minimal: true, required: false }
+              - { label: Spanisch, name: es, widget: markdown, minimal: true, required: false }
           - label: "Mit Tram - Beschreibung"
             name: byTram
             widget: object
@@ -503,9 +503,9 @@ collections:
             widget: object
             collapsed: true
             fields:
-              - { label: Deutsch, name: de, widget: string, required: false }
-              - { label: Englisch, name: en, widget: string, required: false }
-              - { label: Spanisch, name: es, widget: string, required: false }
+              - { label: Deutsch, name: de, widget: markdown, minimal: true, required: false }
+              - { label: Englisch, name: en, widget: markdown, minimal: true, required: false }
+              - { label: Spanisch, name: es, widget: markdown, minimal: true, required: false }
           - label: "Zu Fuss - Beschreibung"
             name: byFoot
             widget: object
@@ -519,9 +519,9 @@ collections:
             widget: object
             collapsed: true
             fields:
-              - { label: Deutsch, name: de, widget: string, required: false }
-              - { label: Englisch, name: en, widget: string, required: false }
-              - { label: Spanisch, name: es, widget: string, required: false }
+              - { label: Deutsch, name: de, widget: markdown, minimal: true, required: false }
+              - { label: Englisch, name: en, widget: markdown, minimal: true, required: false }
+              - { label: Spanisch, name: es, widget: markdown, minimal: true, required: false }
           - label: "Mit Auto - Beschreibung"
             name: byCar
             widget: object
@@ -535,9 +535,9 @@ collections:
             widget: object
             collapsed: true
             fields:
-              - { label: Deutsch, name: de, widget: string, required: false }
-              - { label: Englisch, name: en, widget: string, required: false }
-              - { label: Spanisch, name: es, widget: string, required: false }
+              - { label: Deutsch, name: de, widget: markdown, minimal: true, required: false }
+              - { label: Englisch, name: en, widget: markdown, minimal: true, required: false }
+              - { label: Spanisch, name: es, widget: markdown, minimal: true, required: false }
           - label: "SBB Beschreibung"
             name: sbbDescription
             widget: object
@@ -551,18 +551,18 @@ collections:
             widget: object
             collapsed: true
             fields:
-              - { label: Deutsch, name: de, widget: string, required: false }
-              - { label: Englisch, name: en, widget: string, required: false }
-              - { label: Spanisch, name: es, widget: string, required: false }
-          - { label: "SBB Link URL", name: sbbLinkUrl, widget: string, required: false }
+              - { label: Deutsch, name: de, widget: markdown, minimal: true, required: false }
+              - { label: Englisch, name: en, widget: markdown, minimal: true, required: false }
+              - { label: Spanisch, name: es, widget: markdown, minimal: true, required: false }
+          - { label: "SBB Link URL", name: sbbLinkUrl, widget: markdown, minimal: true, required: false }
           - label: "Sehenswürdigkeiten Titel"
             name: landmarksTitle
             widget: object
             collapsed: true
             fields:
-              - { label: Deutsch, name: de, widget: string, required: false }
-              - { label: Englisch, name: en, widget: string, required: false }
-              - { label: Spanisch, name: es, widget: string, required: false }
+              - { label: Deutsch, name: de, widget: markdown, minimal: true, required: false }
+              - { label: Englisch, name: en, widget: markdown, minimal: true, required: false }
+              - { label: Spanisch, name: es, widget: markdown, minimal: true, required: false }
           - label: "Sehenswürdigkeiten Untertitel"
             name: landmarksSubtitle
             widget: object
@@ -581,16 +581,16 @@ collections:
                 name: name
                 widget: object
                 fields:
-                  - { label: Deutsch, name: de, widget: string, required: false }
-                  - { label: Englisch, name: en, widget: string, required: false }
-                  - { label: Spanisch, name: es, widget: string, required: false }
+                  - { label: Deutsch, name: de, widget: markdown, minimal: true, required: false }
+                  - { label: Englisch, name: en, widget: markdown, minimal: true, required: false }
+                  - { label: Spanisch, name: es, widget: markdown, minimal: true, required: false }
               - label: Entfernung
                 name: distance
                 widget: object
                 fields:
-                  - { label: Deutsch, name: de, widget: string, required: false }
-                  - { label: Englisch, name: en, widget: string, required: false }
-                  - { label: Spanisch, name: es, widget: string, required: false }
+                  - { label: Deutsch, name: de, widget: markdown, minimal: true, required: false }
+                  - { label: Englisch, name: en, widget: markdown, minimal: true, required: false }
+                  - { label: Spanisch, name: es, widget: markdown, minimal: true, required: false }
 
   # ====================
   # KONTAKT
@@ -606,72 +606,72 @@ collections:
             name: title
             widget: object
             fields:
-              - { label: Deutsch, name: de, widget: string, required: false }
-              - { label: Englisch, name: en, widget: string, required: false }
-              - { label: Spanisch, name: es, widget: string, required: false }
+              - { label: Deutsch, name: de, widget: markdown, minimal: true, required: false }
+              - { label: Englisch, name: en, widget: markdown, minimal: true, required: false }
+              - { label: Spanisch, name: es, widget: markdown, minimal: true, required: false }
           - label: "Untertitel"
             name: subtitle
             widget: object
             fields:
-              - { label: Deutsch, name: de, widget: string, required: false }
-              - { label: Englisch, name: en, widget: string, required: false }
-              - { label: Spanisch, name: es, widget: string, required: false }
+              - { label: Deutsch, name: de, widget: markdown, minimal: true, required: false }
+              - { label: Englisch, name: en, widget: markdown, minimal: true, required: false }
+              - { label: Spanisch, name: es, widget: markdown, minimal: true, required: false }
           - label: "Kontaktieren Sie uns Titel"
             name: getInTouchTitle
             widget: object
             collapsed: true
             fields:
-              - { label: Deutsch, name: de, widget: string, required: false }
-              - { label: Englisch, name: en, widget: string, required: false }
-              - { label: Spanisch, name: es, widget: string, required: false }
+              - { label: Deutsch, name: de, widget: markdown, minimal: true, required: false }
+              - { label: Englisch, name: en, widget: markdown, minimal: true, required: false }
+              - { label: Spanisch, name: es, widget: markdown, minimal: true, required: false }
           - label: "Adresse Label"
             name: addressLabel
             widget: object
             collapsed: true
             fields:
-              - { label: Deutsch, name: de, widget: string, required: false }
-              - { label: Englisch, name: en, widget: string, required: false }
-              - { label: Spanisch, name: es, widget: string, required: false }
+              - { label: Deutsch, name: de, widget: markdown, minimal: true, required: false }
+              - { label: Englisch, name: en, widget: markdown, minimal: true, required: false }
+              - { label: Spanisch, name: es, widget: markdown, minimal: true, required: false }
           - label: "Telefon Label"
             name: phoneLabel
             widget: object
             collapsed: true
             fields:
-              - { label: Deutsch, name: de, widget: string, required: false }
-              - { label: Englisch, name: en, widget: string, required: false }
-              - { label: Spanisch, name: es, widget: string, required: false }
+              - { label: Deutsch, name: de, widget: markdown, minimal: true, required: false }
+              - { label: Englisch, name: en, widget: markdown, minimal: true, required: false }
+              - { label: Spanisch, name: es, widget: markdown, minimal: true, required: false }
           - label: "Fax Label"
             name: faxLabel
             widget: object
             collapsed: true
             fields:
-              - { label: Deutsch, name: de, widget: string, required: false }
-              - { label: Englisch, name: en, widget: string, required: false }
-              - { label: Spanisch, name: es, widget: string, required: false }
+              - { label: Deutsch, name: de, widget: markdown, minimal: true, required: false }
+              - { label: Englisch, name: en, widget: markdown, minimal: true, required: false }
+              - { label: Spanisch, name: es, widget: markdown, minimal: true, required: false }
           - label: "E-Mail Label"
             name: emailLabel
             widget: object
             collapsed: true
             fields:
-              - { label: Deutsch, name: de, widget: string, required: false }
-              - { label: Englisch, name: en, widget: string, required: false }
-              - { label: Spanisch, name: es, widget: string, required: false }
+              - { label: Deutsch, name: de, widget: markdown, minimal: true, required: false }
+              - { label: Englisch, name: en, widget: markdown, minimal: true, required: false }
+              - { label: Spanisch, name: es, widget: markdown, minimal: true, required: false }
           - label: "Rezeption Label"
             name: hoursLabel
             widget: object
             collapsed: true
             fields:
-              - { label: Deutsch, name: de, widget: string, required: false }
-              - { label: Englisch, name: en, widget: string, required: false }
-              - { label: Spanisch, name: es, widget: string, required: false }
+              - { label: Deutsch, name: de, widget: markdown, minimal: true, required: false }
+              - { label: Englisch, name: en, widget: markdown, minimal: true, required: false }
+              - { label: Spanisch, name: es, widget: markdown, minimal: true, required: false }
           - label: "Nachricht senden Titel"
             name: sendMessageTitle
             widget: object
             collapsed: true
             fields:
-              - { label: Deutsch, name: de, widget: string, required: false }
-              - { label: Englisch, name: en, widget: string, required: false }
-              - { label: Spanisch, name: es, widget: string, required: false }
+              - { label: Deutsch, name: de, widget: markdown, minimal: true, required: false }
+              - { label: Englisch, name: en, widget: markdown, minimal: true, required: false }
+              - { label: Spanisch, name: es, widget: markdown, minimal: true, required: false }
           - label: "Formular Labels"
             name: formLabels
             widget: object
@@ -681,46 +681,46 @@ collections:
                 name: name
                 widget: object
                 fields:
-                  - { label: Deutsch, name: de, widget: string, required: false }
-                  - { label: Englisch, name: en, widget: string, required: false }
-                  - { label: Spanisch, name: es, widget: string, required: false }
+                  - { label: Deutsch, name: de, widget: markdown, minimal: true, required: false }
+                  - { label: Englisch, name: en, widget: markdown, minimal: true, required: false }
+                  - { label: Spanisch, name: es, widget: markdown, minimal: true, required: false }
               - label: "E-Mail"
                 name: email
                 widget: object
                 fields:
-                  - { label: Deutsch, name: de, widget: string, required: false }
-                  - { label: Englisch, name: en, widget: string, required: false }
-                  - { label: Spanisch, name: es, widget: string, required: false }
+                  - { label: Deutsch, name: de, widget: markdown, minimal: true, required: false }
+                  - { label: Englisch, name: en, widget: markdown, minimal: true, required: false }
+                  - { label: Spanisch, name: es, widget: markdown, minimal: true, required: false }
               - label: "Betreff"
                 name: subject
                 widget: object
                 fields:
-                  - { label: Deutsch, name: de, widget: string, required: false }
-                  - { label: Englisch, name: en, widget: string, required: false }
-                  - { label: Spanisch, name: es, widget: string, required: false }
+                  - { label: Deutsch, name: de, widget: markdown, minimal: true, required: false }
+                  - { label: Englisch, name: en, widget: markdown, minimal: true, required: false }
+                  - { label: Spanisch, name: es, widget: markdown, minimal: true, required: false }
               - label: "Nachricht"
                 name: message
                 widget: object
                 fields:
-                  - { label: Deutsch, name: de, widget: string, required: false }
-                  - { label: Englisch, name: en, widget: string, required: false }
-                  - { label: Spanisch, name: es, widget: string, required: false }
+                  - { label: Deutsch, name: de, widget: markdown, minimal: true, required: false }
+                  - { label: Englisch, name: en, widget: markdown, minimal: true, required: false }
+                  - { label: Spanisch, name: es, widget: markdown, minimal: true, required: false }
           - label: "Senden Button"
             name: sendButton
             widget: object
             collapsed: true
             fields:
-              - { label: Deutsch, name: de, widget: string, required: false }
-              - { label: Englisch, name: en, widget: string, required: false }
-              - { label: Spanisch, name: es, widget: string, required: false }
+              - { label: Deutsch, name: de, widget: markdown, minimal: true, required: false }
+              - { label: Englisch, name: en, widget: markdown, minimal: true, required: false }
+              - { label: Spanisch, name: es, widget: markdown, minimal: true, required: false }
           - label: "Wird gesendet Button"
             name: sendingButton
             widget: object
             collapsed: true
             fields:
-              - { label: Deutsch, name: de, widget: string, required: false }
-              - { label: Englisch, name: en, widget: string, required: false }
-              - { label: Spanisch, name: es, widget: string, required: false }
+              - { label: Deutsch, name: de, widget: markdown, minimal: true, required: false }
+              - { label: Englisch, name: en, widget: markdown, minimal: true, required: false }
+              - { label: Spanisch, name: es, widget: markdown, minimal: true, required: false }
           - label: "Erfolgs-Nachricht"
             name: successMessage
             widget: object
@@ -752,24 +752,24 @@ collections:
             name: title
             widget: object
             fields:
-              - { label: Deutsch, name: de, widget: string, required: false }
-              - { label: Englisch, name: en, widget: string, required: false }
-              - { label: Spanisch, name: es, widget: string, required: false }
+              - { label: Deutsch, name: de, widget: markdown, minimal: true, required: false }
+              - { label: Englisch, name: en, widget: markdown, minimal: true, required: false }
+              - { label: Spanisch, name: es, widget: markdown, minimal: true, required: false }
           - label: "Untertitel"
             name: subtitle
             widget: object
             fields:
-              - { label: Deutsch, name: de, widget: string, required: false }
-              - { label: Englisch, name: en, widget: string, required: false }
-              - { label: Spanisch, name: es, widget: string, required: false }
+              - { label: Deutsch, name: de, widget: markdown, minimal: true, required: false }
+              - { label: Englisch, name: en, widget: markdown, minimal: true, required: false }
+              - { label: Spanisch, name: es, widget: markdown, minimal: true, required: false }
           - label: "Partner Titel"
             name: partnersTitle
             widget: object
             collapsed: true
             fields:
-              - { label: Deutsch, name: de, widget: string, required: false }
-              - { label: Englisch, name: en, widget: string, required: false }
-              - { label: Spanisch, name: es, widget: string, required: false }
+              - { label: Deutsch, name: de, widget: markdown, minimal: true, required: false }
+              - { label: Englisch, name: en, widget: markdown, minimal: true, required: false }
+              - { label: Spanisch, name: es, widget: markdown, minimal: true, required: false }
           - label: "Link Kategorien"
             name: categories
             widget: list
@@ -780,16 +780,16 @@ collections:
                 name: name
                 widget: object
                 fields:
-                  - { label: Deutsch, name: de, widget: string, required: false }
-                  - { label: Englisch, name: en, widget: string, required: false }
-                  - { label: Spanisch, name: es, widget: string, required: false }
+                  - { label: Deutsch, name: de, widget: markdown, minimal: true, required: false }
+                  - { label: Englisch, name: en, widget: markdown, minimal: true, required: false }
+                  - { label: Spanisch, name: es, widget: markdown, minimal: true, required: false }
               - label: Links
                 name: links
                 widget: list
                 summary: "{{fields.name}}"
                 fields:
-                  - { label: Name, name: name, widget: string, required: false }
-                  - { label: URL, name: url, widget: string, required: false }
+                  - { label: Name, name: name, widget: markdown, minimal: true, required: false }
+                  - { label: URL, name: url, widget: markdown, minimal: true, required: false }
 
   # ====================
   # EINSTELLUNGEN
@@ -801,25 +801,25 @@ collections:
         label: "Allgemein"
         file: content/settings/general.json
         fields:
-          - { label: Name der Website, name: siteName, widget: string, required: false }
-          - { label: Telefonnummer, name: phone, widget: string, required: false }
-          - { label: Faxnummer, name: fax, widget: string, required: false }
-          - { label: E-Mail Adresse, name: email, widget: string, required: false }
+          - { label: Name der Website, name: siteName, widget: markdown, minimal: true, required: false }
+          - { label: Telefonnummer, name: phone, widget: markdown, minimal: true, required: false }
+          - { label: Faxnummer, name: fax, widget: markdown, minimal: true, required: false }
+          - { label: E-Mail Adresse, name: email, widget: markdown, minimal: true, required: false }
           - { label: Adresse, name: address, widget: text, required: false }
-          - { label: Rezeptionszeiten, name: receptionHours, widget: string, required: false }
-          - { label: Check-in Zeit, name: checkIn, widget: string, required: false }
-          - { label: Check-out Zeit, name: checkOut, widget: string, required: false }
-          - { label: Nachtruhe, name: quietHours, widget: string, required: false }
-          - { label: Buchungs-URL, name: bookingUrl, widget: string, required: false }
+          - { label: Rezeptionszeiten, name: receptionHours, widget: markdown, minimal: true, required: false }
+          - { label: Check-in Zeit, name: checkIn, widget: markdown, minimal: true, required: false }
+          - { label: Check-out Zeit, name: checkOut, widget: markdown, minimal: true, required: false }
+          - { label: Nachtruhe, name: quietHours, widget: markdown, minimal: true, required: false }
+          - { label: Buchungs-URL, name: bookingUrl, widget: markdown, minimal: true, required: false }
 
       - name: social
         label: "Social Media"
         file: content/settings/social.json
         fields:
-          - { label: Facebook URL, name: facebook, widget: string, required: false }
-          - { label: Instagram URL, name: instagram, widget: string, required: false }
-          - { label: TripAdvisor URL, name: tripadvisor, widget: string, required: false }
-          - { label: Google Maps URL, name: googleMaps, widget: string, required: false }
+          - { label: Facebook URL, name: facebook, widget: markdown, minimal: true, required: false }
+          - { label: Instagram URL, name: instagram, widget: markdown, minimal: true, required: false }
+          - { label: TripAdvisor URL, name: tripadvisor, widget: markdown, minimal: true, required: false }
+          - { label: Google Maps URL, name: googleMaps, widget: markdown, minimal: true, required: false }
 
       - name: branding
         label: "Branding & Logos"
@@ -839,9 +839,9 @@ collections:
             name: title
             widget: object
             fields:
-              - { label: Deutsch, name: de, widget: string, required: false }
-              - { label: Englisch, name: en, widget: string, required: false }
-              - { label: Spanisch, name: es, widget: string, required: false }
+              - { label: Deutsch, name: de, widget: markdown, minimal: true, required: false }
+              - { label: Englisch, name: en, widget: markdown, minimal: true, required: false }
+              - { label: Spanisch, name: es, widget: markdown, minimal: true, required: false }
           - label: Meta Beschreibung
             name: description
             widget: object
