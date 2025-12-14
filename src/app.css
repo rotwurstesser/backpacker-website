@@ -4,77 +4,77 @@
 
 @layer base {
 	:root {
-		/* Brand Colors from Farbpalette */
-		/* #F0EDE5 - Cream (background) */
-		--background: 40 29% 92%;
-		/* #1F3345 - Navy (foreground/text) */
-		--foreground: 213 38% 20%;
+		/*
+		 * Brand Color Palette from Farbpalette
+		 * Cream: #F0EDE5 | Copper: #C78F57 | Teal: #85ABAB | Burgundy: #854745 | Navy: #1F3345
+		 */
 
-		/* Cards use cream background */
-		--card: 40 29% 92%;
-		--card-foreground: 213 38% 20%;
-
+		/* Backgrounds */
+		--background: 40 26% 92%; /* #F0EDE5 Cream - main page background */
+		--card: 0 0% 100%; /* White - cards float above cream */
 		--popover: 0 0% 100%;
+
+		/* Text colors - Navy based */
+		--foreground: 213 38% 20%; /* #1F3345 Navy */
+		--card-foreground: 213 38% 20%;
 		--popover-foreground: 213 38% 20%;
 
-		/* #85ABAB - Teal (primary) */
-		--primary: 180 19% 60%;
+		/* Primary - Teal #85ABAB */
+		--primary: 180 17% 60%;
 		--primary-foreground: 0 0% 100%;
 
-		/* #854745 - Burgundy (secondary) */
+		/* Secondary - Burgundy #854745 */
 		--secondary: 2 31% 40%;
 		--secondary-foreground: 0 0% 100%;
 
-		/* #C78F57 - Copper (accent) */
+		/* Accent - Copper #C78F57 */
 		--accent: 29 52% 56%;
 		--accent-foreground: 0 0% 100%;
 
-		/* Muted uses light teal */
-		--muted: 180 15% 90%;
-		--muted-foreground: 213 20% 40%;
+		/* Muted - Warm grays derived from cream */
+		--muted: 40 20% 96%; /* Very light warm gray */
+		--muted-foreground: 213 20% 46%; /* Warm gray text */
 
-		--destructive: 0 72.2% 50.6%;
-		--destructive-foreground: 210 40% 98%;
+		/* UI elements */
+		--destructive: 0 72% 51%;
+		--destructive-foreground: 0 0% 100%;
 
-		/* Border uses subtle teal */
-		--border: 180 15% 80%;
-		--input: 180 15% 85%;
-		--ring: 180 19% 60%;
+		/* Borders - Warm gray */
+		--border: 40 15% 85%; /* Warm gray border */
+		--input: 40 20% 94%; /* Slightly tinted input bg */
+		--ring: 180 17% 60%; /* Teal for focus rings */
+
 		--radius: 0.5rem;
 	}
 
 	.dark {
-		/* Dark mode uses Navy as background */
-		--background: 213 38% 12%;
-		--foreground: 40 29% 92%;
+		/* Dark mode - Navy based backgrounds */
+		--background: 213 38% 10%;
+		--card: 213 35% 14%;
+		--popover: 213 35% 14%;
 
-		--card: 213 38% 15%;
-		--card-foreground: 40 29% 92%;
+		--foreground: 40 26% 92%; /* Cream text */
+		--card-foreground: 40 26% 92%;
+		--popover-foreground: 40 26% 92%;
 
-		--popover: 213 38% 15%;
-		--popover-foreground: 40 29% 92%;
+		--primary: 180 17% 60%;
+		--primary-foreground: 213 38% 10%;
 
-		/* Teal stays as primary */
-		--primary: 180 19% 60%;
-		--primary-foreground: 213 38% 12%;
-
-		/* Burgundy secondary */
 		--secondary: 2 31% 50%;
-		--secondary-foreground: 40 29% 92%;
+		--secondary-foreground: 40 26% 92%;
 
-		/* Copper accent */
 		--accent: 29 52% 56%;
-		--accent-foreground: 213 38% 12%;
+		--accent-foreground: 213 38% 10%;
 
-		--muted: 213 30% 20%;
-		--muted-foreground: 40 20% 70%;
+		--muted: 213 30% 18%;
+		--muted-foreground: 40 15% 65%;
 
-		--destructive: 0 62.8% 40%;
-		--destructive-foreground: 40 29% 92%;
+		--destructive: 0 62% 45%;
+		--destructive-foreground: 40 26% 92%;
 
-		--border: 213 30% 25%;
-		--input: 213 30% 25%;
-		--ring: 180 19% 60%;
+		--border: 213 25% 22%;
+		--input: 213 30% 18%;
+		--ring: 180 17% 60%;
 	}
 }
 
@@ -82,20 +82,55 @@
 	* {
 		@apply border-border;
 	}
+
 	body {
 		@apply bg-background text-foreground;
+		font-family: 'Work Sans', system-ui, sans-serif;
 	}
 
-	/* Headlines use Anton font */
-	h1, h2, h3, h4, h5, h6 {
+	/* Typography hierarchy */
+	h1, h2 {
 		font-family: 'Anton', sans-serif;
 		text-transform: uppercase;
-		letter-spacing: 0.02em;
+		letter-spacing: 0.06em;
+		line-height: 1.1;
+	}
+
+	h1 {
+		@apply text-4xl md:text-5xl lg:text-6xl;
+		letter-spacing: 0.08em;
+	}
+
+	h2 {
+		@apply text-2xl md:text-3xl lg:text-4xl;
+		letter-spacing: 0.06em;
+	}
+
+	/* h3-h6 use body font for better readability at smaller sizes */
+	h3, h4, h5, h6 {
+		font-family: 'Work Sans', system-ui, sans-serif;
+		font-weight: 600;
+		line-height: 1.3;
+	}
+
+	h3 {
+		@apply text-xl md:text-2xl;
+	}
+
+	h4 {
+		@apply text-lg md:text-xl;
+	}
+
+	h5 {
+		@apply text-base md:text-lg;
+	}
+
+	h6 {
+		@apply text-sm md:text-base;
 	}
 }
 
 @layer utilities {
-	/* Screen reader only - hides element visually but keeps it accessible */
 	.sr-only {
 		position: absolute;
 		width: 1px;
@@ -108,7 +143,6 @@
 		border-width: 0;
 	}
 
-	/* Remove sr-only styles when focused */
 	.focus\:not-sr-only:focus {
 		position: static;
 		width: auto;
@@ -120,14 +154,11 @@
 		white-space: normal;
 	}
 
-	/* Brand font classes */
-	.font-heading {
+	/* Display heading utility - for when you want Anton style on any element */
+	.font-display {
 		font-family: 'Anton', sans-serif;
 		text-transform: uppercase;
-		letter-spacing: 0.02em;
-	}
-
-	.font-body {
-		font-family: 'Work Sans', sans-serif;
+		letter-spacing: 0.06em;
+		line-height: 1.1;
 	}
 }

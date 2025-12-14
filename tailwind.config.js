@@ -15,6 +15,7 @@ const config = {
 		},
 		extend: {
 			colors: {
+				/* CSS variable-based colors for theming */
 				border: 'hsl(var(--border) / <alpha-value>)',
 				input: 'hsl(var(--input) / <alpha-value>)',
 				ring: 'hsl(var(--ring) / <alpha-value>)',
@@ -48,12 +49,15 @@ const config = {
 					DEFAULT: 'hsl(var(--card) / <alpha-value>)',
 					foreground: 'hsl(var(--card-foreground) / <alpha-value>)'
 				},
-				/* Brand colors as direct values for convenience */
-				cream: '#F0EDE5',
-				copper: '#C78F57',
-				teal: '#85ABAB',
-				burgundy: '#854745',
-				navy: '#1F3345'
+
+				/* Brand colors - direct hex values for convenience */
+				brand: {
+					cream: '#F0EDE5',
+					copper: '#C78F57',
+					teal: '#85ABAB',
+					burgundy: '#854745',
+					navy: '#1F3345'
+				}
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
@@ -62,7 +66,7 @@ const config = {
 			},
 			fontFamily: {
 				sans: ['Work Sans', ...fontFamily.sans],
-				heading: ['Anton', 'sans-serif']
+				display: ['Anton', 'sans-serif']
 			}
 		}
 	}
