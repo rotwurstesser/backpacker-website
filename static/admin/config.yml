@@ -80,9 +80,9 @@ collections:
                 widget: object
                 required: false
                 fields:
-                  - { label: Deutsch, name: de, widget: text, required: false }
-                  - { label: Englisch, name: en, widget: text, required: false }
-                  - { label: Spanisch, name: es, widget: text, required: false }
+                  - { label: Deutsch, name: de, widget: markdown, minimal: true, required: false }
+                  - { label: Englisch, name: en, widget: markdown, minimal: true, required: false }
+                  - { label: Spanisch, name: es, widget: markdown, minimal: true, required: false }
           - label: "Ausstattung Titel"
             name: amenitiesTitle
             widget: object
@@ -120,9 +120,9 @@ collections:
             widget: object
             collapsed: true
             fields:
-              - { label: Deutsch, name: de, widget: text, required: false }
-              - { label: Englisch, name: en, widget: text, required: false }
-              - { label: Spanisch, name: es, widget: text, required: false }
+              - { label: Deutsch, name: de, widget: markdown, minimal: true, required: false }
+              - { label: Englisch, name: en, widget: markdown, minimal: true, required: false }
+              - { label: Spanisch, name: es, widget: markdown, minimal: true, required: false }
 
   # ====================
   # ZIMMER
@@ -149,9 +149,9 @@ collections:
         widget: object
         collapsed: true
         fields:
-          - { label: Deutsch, name: de, widget: text, required: false }
-          - { label: Englisch, name: en, widget: text, required: false }
-          - { label: Spanisch, name: es, widget: text, required: false }
+          - { label: Deutsch, name: de, widget: markdown, minimal: true, required: false }
+          - { label: Englisch, name: en, widget: markdown, minimal: true, required: false }
+          - { label: Spanisch, name: es, widget: markdown, minimal: true, required: false }
       - { label: Preis CHF, name: price, widget: number, required: false }
       - { label: Preistyp, name: priceUnit, widget: select, required: false, options: [{label: "Pro Bett", value: "per_bed"}, {label: "Pro Zimmer", value: "per_room"}] }
       - { label: Anzahl Betten, name: beds, widget: number, required: false }
@@ -302,9 +302,9 @@ collections:
             widget: object
             collapsed: true
             fields:
-              - { label: Deutsch, name: de, widget: text, required: false }
-              - { label: Englisch, name: en, widget: text, required: false }
-              - { label: Spanisch, name: es, widget: text, required: false }
+              - { label: Deutsch, name: de, widget: markdown, minimal: true, required: false }
+              - { label: Englisch, name: en, widget: markdown, minimal: true, required: false }
+              - { label: Spanisch, name: es, widget: markdown, minimal: true, required: false }
 
   # ====================
   # GALERIE BILDER
@@ -495,9 +495,9 @@ collections:
             widget: object
             collapsed: true
             fields:
-              - { label: Deutsch, name: de, widget: text, required: false }
-              - { label: Englisch, name: en, widget: text, required: false }
-              - { label: Spanisch, name: es, widget: text, required: false }
+              - { label: Deutsch, name: de, widget: markdown, minimal: true, required: false }
+              - { label: Englisch, name: en, widget: markdown, minimal: true, required: false }
+              - { label: Spanisch, name: es, widget: markdown, minimal: true, required: false }
           - label: "Zu Fuss - Titel"
             name: byFootTitle
             widget: object
@@ -511,9 +511,9 @@ collections:
             widget: object
             collapsed: true
             fields:
-              - { label: Deutsch, name: de, widget: text, required: false }
-              - { label: Englisch, name: en, widget: text, required: false }
-              - { label: Spanisch, name: es, widget: text, required: false }
+              - { label: Deutsch, name: de, widget: markdown, minimal: true, required: false }
+              - { label: Englisch, name: en, widget: markdown, minimal: true, required: false }
+              - { label: Spanisch, name: es, widget: markdown, minimal: true, required: false }
           - label: "Mit Auto - Titel"
             name: byCarTitle
             widget: object
@@ -527,9 +527,9 @@ collections:
             widget: object
             collapsed: true
             fields:
-              - { label: Deutsch, name: de, widget: text, required: false }
-              - { label: Englisch, name: en, widget: text, required: false }
-              - { label: Spanisch, name: es, widget: text, required: false }
+              - { label: Deutsch, name: de, widget: markdown, minimal: true, required: false }
+              - { label: Englisch, name: en, widget: markdown, minimal: true, required: false }
+              - { label: Spanisch, name: es, widget: markdown, minimal: true, required: false }
           - label: "SBB Bereich Titel"
             name: sbbTitle
             widget: object
@@ -543,9 +543,9 @@ collections:
             widget: object
             collapsed: true
             fields:
-              - { label: Deutsch, name: de, widget: text, required: false }
-              - { label: Englisch, name: en, widget: text, required: false }
-              - { label: Spanisch, name: es, widget: text, required: false }
+              - { label: Deutsch, name: de, widget: markdown, minimal: true, required: false }
+              - { label: Englisch, name: en, widget: markdown, minimal: true, required: false }
+              - { label: Spanisch, name: es, widget: markdown, minimal: true, required: false }
           - label: "SBB Link Text"
             name: sbbLinkText
             widget: object
@@ -568,9 +568,9 @@ collections:
             widget: object
             collapsed: true
             fields:
-              - { label: Deutsch, name: de, widget: text, required: false }
-              - { label: Englisch, name: en, widget: text, required: false }
-              - { label: Spanisch, name: es, widget: text, required: false }
+              - { label: Deutsch, name: de, widget: markdown, minimal: true, required: false }
+              - { label: Englisch, name: en, widget: markdown, minimal: true, required: false }
+              - { label: Spanisch, name: es, widget: markdown, minimal: true, required: false }
           - label: "Sehenswürdigkeiten"
             name: landmarks
             widget: list
@@ -726,17 +726,17 @@ collections:
             widget: object
             collapsed: true
             fields:
-              - { label: Deutsch, name: de, widget: text, required: false }
-              - { label: Englisch, name: en, widget: text, required: false }
-              - { label: Spanisch, name: es, widget: text, required: false }
+              - { label: Deutsch, name: de, widget: markdown, minimal: true, required: false }
+              - { label: Englisch, name: en, widget: markdown, minimal: true, required: false }
+              - { label: Spanisch, name: es, widget: markdown, minimal: true, required: false }
           - label: "Fehler-Nachricht"
             name: errorMessage
             widget: object
             collapsed: true
             fields:
-              - { label: Deutsch, name: de, widget: text, required: false }
-              - { label: Englisch, name: en, widget: text, required: false }
-              - { label: Spanisch, name: es, widget: text, required: false }
+              - { label: Deutsch, name: de, widget: markdown, minimal: true, required: false }
+              - { label: Englisch, name: en, widget: markdown, minimal: true, required: false }
+              - { label: Spanisch, name: es, widget: markdown, minimal: true, required: false }
 
   # ====================
   # LINKS

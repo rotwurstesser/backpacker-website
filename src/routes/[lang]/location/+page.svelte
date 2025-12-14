@@ -2,6 +2,7 @@
 	import { Card } from '$lib/components/ui';
 	import { Train, Footprints, Car, MapPin, Phone, Mail, Clock } from 'lucide-svelte';
 	import { t as translate } from '$lib/content';
+	import { md } from '$lib/utils';
 	import type { PageData } from './$types';
 
 	export let data: PageData;
@@ -120,7 +121,7 @@
 						</div>
 						<h3 class="text-lg font-semibold">{translate(direction.title, lang)}</h3>
 					</div>
-					<p class="text-muted-foreground text-sm leading-relaxed">{translate(direction.description, lang)}</p>
+					<p class="text-muted-foreground text-sm leading-relaxed">{@html md(translate(direction.description, lang))}</p>
 				</Card>
 			{/each}
 		</div>
@@ -136,7 +137,7 @@
 				<h2 class="text-xl font-semibold">{translate(locationContent.sbbTitle, lang)}</h2>
 			</div>
 			<p class="text-muted-foreground mb-4">
-				{translate(locationContent.sbbDescription, lang)}
+				{@html md(translate(locationContent.sbbDescription, lang))}
 			</p>
 			<a
 				href={locationContent.sbbLinkUrl}
@@ -157,7 +158,7 @@
 <section class="py-16 bg-muted/30">
 	<div class="container">
 		<h2 class="text-2xl font-bold text-center mb-4">{translate(locationContent.landmarksTitle, lang)}</h2>
-		<p class="text-center text-muted-foreground mb-12">{translate(locationContent.landmarksSubtitle, lang)}</p>
+		<p class="text-center text-muted-foreground mb-12">{@html md(translate(locationContent.landmarksSubtitle, lang))}</p>
 		<div class="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
 			{#each locationContent.landmarks as landmark, i (i)}
 				<div class="text-center">

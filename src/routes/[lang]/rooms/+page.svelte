@@ -2,6 +2,7 @@
 	import { Button, Card } from '$lib/components/ui';
 	import { Bed, Bath, Check, Info } from 'lucide-svelte';
 	import { t as translate } from '$lib/content';
+	import { md } from '$lib/utils';
 	import type { PageData } from './$types';
 
 	export let data: PageData;
@@ -47,7 +48,7 @@
 								<div>
 									<h3 class="text-xl font-semibold">{translate(room.name, lang)}</h3>
 									<p class="text-sm text-muted-foreground mt-1">
-										{translate(room.description, lang)}
+										{@html md(translate(room.description, lang))}
 									</p>
 								</div>
 							</div>
@@ -126,7 +127,7 @@
 	<section class="py-16 bg-primary text-primary-foreground">
 		<div class="container text-center">
 			<h2 class="text-2xl font-bold mb-4">{translate(roomsPageContent.ctaTitle, lang)}</h2>
-			<p class="mb-6 opacity-90">{translate(roomsPageContent.ctaDescription, lang)}</p>
+			<p class="mb-6 opacity-90">{@html md(translate(roomsPageContent.ctaDescription, lang))}</p>
 			<Button
 				size="lg"
 				variant="secondary"

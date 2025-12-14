@@ -2,6 +2,7 @@
 	import { Button, Card } from '$lib/components/ui';
 	import { MapPin, Phone, Mail, Clock, Send } from 'lucide-svelte';
 	import { t as translate } from '$lib/content';
+	import { md } from '$lib/utils';
 	import type { PageData } from './$types';
 
 	export let data: PageData;
@@ -204,11 +205,11 @@
 
 						{#if formStatus === 'success'}
 							<div class="p-4 bg-primary/10 text-primary rounded-md" role="alert" aria-live="polite">
-								{translate(contactPageContent.successMessage, lang)}
+								{@html md(translate(contactPageContent.successMessage, lang))}
 							</div>
 						{:else if formStatus === 'error'}
 							<div class="p-4 bg-destructive/10 text-destructive rounded-md" role="alert" aria-live="assertive">
-								{translate(contactPageContent.errorMessage, lang)}
+								{@html md(translate(contactPageContent.errorMessage, lang))}
 							</div>
 						{/if}
 

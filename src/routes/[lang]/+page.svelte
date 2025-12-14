@@ -2,6 +2,7 @@
 	import { Button, Card } from '$lib/components/ui';
 	import { MapPin, Wifi, Shield, CreditCard, Bed, Users, Coffee, Home } from 'lucide-svelte';
 	import { t as translate } from '$lib/content';
+	import { md } from '$lib/utils';
 	import type { PageData } from './$types';
 
 	export let data: PageData;
@@ -77,7 +78,7 @@
 							<Icon class="h-6 w-6 text-primary" aria-hidden="true" />
 						</div>
 						<h3 class="font-semibold mb-2">{translate(feature.title, lang)}</h3>
-						<p class="text-sm text-muted-foreground">{translate(feature.description, lang)}</p>
+						<p class="text-sm text-muted-foreground">{@html md(translate(feature.description, lang))}</p>
 					</Card>
 				{/each}
 			</div>
@@ -149,7 +150,7 @@
 		<div class="container text-center">
 			<h2 class="mb-4">{translate(homeContent.ctaTitle, lang)}</h2>
 			<p class="text-lg opacity-90 mb-8 max-w-2xl mx-auto">
-				{translate(homeContent.ctaDescription, lang)}
+				{@html md(translate(homeContent.ctaDescription, lang))}
 			</p>
 			<Button size="lg" variant="secondary" href={bookingUrl} target="_blank" rel="noopener noreferrer">
 				{t.common.bookNow}

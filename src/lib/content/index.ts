@@ -75,7 +75,9 @@ export function safeMarkdown(field: TranslatedField | undefined, lang: Lang): st
 	if (!field) return '';
 	const content = field[lang] || field.en || '';
 	// Parse markdown to HTML - marked escapes raw HTML by default
-	return marked.parse(content, { async: false }) as string;
+	const html = marked.parse(content, { async: false }) as string;
+	// Remove javascript: URLs to prevent XSS
+	return html.replace(/href="javascript:[^"]*"/gi, 'href="#"');
 }
 
 // Load home page content
