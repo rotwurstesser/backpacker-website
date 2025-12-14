@@ -1,0 +1,21 @@
+{
+  "slug": "location",
+  "title": {
+    "de": "Lage & Anfahrt",
+    "en": "Location & Directions",
+    "es": "Ubicación y Cómo Llegar"
+  },
+  "description": {
+    "de": "So finden Sie uns - Bern Backpackers Hotel Glocke in der Altstadt",
+    "en": "How to find us - Bern Backpackers Hotel Glocke in the Old Town",
+    "es": "Cómo encontrarnos - Bern Backpackers Hotel Glocke en el casco antiguo"
+  },
+  "content": {
+    "de": "## Vom Bahnhofplatz\n\nTram 9 Richtung Guisanplatz. Beim 2. Halt „Zytglogge" aussteigen. Sie stehen direkt vor der Rathausgasse. Der Hoteleingang liegt nach etwa 20 Metern auf der rechten Seite (1. Stock).\n\n## Zu Fuss vom Bahnhof\n\nVom Bahnhofplatz die Spitalgasse und Marktgasse runtergehen. Am Ende der Marktgasse liegt der Zytglogge Turm. Links vom Turm hat es einen McDonald's. Nach links abbiegen und gegen die Kornhausbrücke weitergehen. Nach weiteren 50 Metern rechts in die Rathausgasse einbiegen.\n\n## Mit dem Auto\n\nAusfahrt Wankdorf. Signalisation „Zentrum" und „Bärengraben" folgen. Am „Bärengraben" die „Nydeggbrücke" überqueren und geradeaus in die Altstadt einfahren (Gerechtigkeitsgasse und Kramgasse). Vor dem Zytglogge Turm rechts einbiegen (Hotelgasse). Nach 50 Metern links in die Rathausgasse abbiegen. Die Hotelladezone ist direkt nach der Kurve.",
+    "en": "## From the Train Station\n\nTake Tram 9 towards Guisanplatz. Get off at the 2nd stop \"Zytglogge\". You'll be right in front of Rathausgasse. The hotel entrance is about 20 meters on the right side (1st floor).\n\n## Walking from the Train Station\n\nFrom Bahnhofplatz, walk down Spitalgasse and Marktgasse. At the end of Marktgasse is the Zytglogge tower. There's a McDonald's to the left of the tower. Turn left and continue towards Kornhausbrücke. After another 50 meters, turn right into Rathausgasse.\n\n## By Car\n\nExit at Wankdorf. Follow signs for \"Zentrum\" and \"Bärengraben\". At \"Bärengraben\" cross the \"Nydeggbrücke\" and drive straight into the Old Town (Gerechtigkeitsgasse and Kramgasse). Turn right before the Zytglogge tower (Hotelgasse). After 50 meters turn left into Rathausgasse. The hotel loading zone is right after the curve.",
+    "es": "## Desde la Estación de Tren\n\nTome el Tram 9 hacia Guisanplatz. Bájese en la 2da parada \"Zytglogge\". Estará justo frente a Rathausgasse. La entrada del hotel está a unos 20 metros a la derecha (1er piso).\n\n## Caminando desde la Estación\n\nDesde Bahnhofplatz, camine por Spitalgasse y Marktgasse. Al final de Marktgasse está la torre Zytglogge. Hay un McDonald's a la izquierda de la torre. Gire a la izquierda y continúe hacia Kornhausbrücke. Después de otros 50 metros, gire a la derecha en Rathausgasse.\n\n## En Coche\n\nSalida Wankdorf. Siga las señales de \"Zentrum\" y \"Bärengraben\". En \"Bärengraben\" cruce el \"Nydeggbrücke\" y entre directamente al casco antiguo. Gire a la derecha antes de la torre Zytglogge. Después de 50 metros gire a la izquierda en Rathausgasse."
+  },
+  "showInNav": true,
+  "navOrder": 3,
+  "published": true
+}

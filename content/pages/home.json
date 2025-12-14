@@ -1,92 +1,105 @@
 {
   "heroTitle": {
-    "en": "Bern's Best Budget Stay",
-    "de": "Berns beste Budget-Unterkunft",
-    "es": "La Mejor Estancia Económica en Berna"
+    "de": "Das zentralste Budget-Hotel von Bern",
+    "en": "Bern's Most Central Budget Hotel",
+    "es": "El Hotel Budget Más Central de Berna"
   },
   "heroSubtitle": {
-    "en": "Welcome to Bern's better alternative to the Youth Hostel",
-    "de": "Willkommen zur besseren Alternative zur Jugendherberge",
-    "es": "Bienvenido al primer Hotel Budget de Berna"
+    "de": "Die jugendliche Herberge für junge und junggebliebene Traveller",
+    "en": "The youthful hostel for young and young-at-heart travelers",
+    "es": "El albergue juvenil para viajeros jóvenes y jóvenes de corazón"
   },
   "heroTagline": {
-    "en": "Member of Swiss Hostels",
     "de": "Mitglied von Swiss Hostels",
+    "en": "Member of Swiss Hostels",
     "es": "Miembro de Swiss Hostels"
   },
   "heroCta": {
-    "en": "Book Your Stay",
     "de": "Jetzt Buchen",
+    "en": "Book Now",
     "es": "Reservar Ahora"
   },
   "features": [
     {
       "icon": "MapPin",
       "title": {
+        "de": "Tolle Lage",
         "en": "Perfect Location",
-        "de": "Perfekte Lage",
         "es": "Ubicación Perfecta"
       },
       "description": {
-        "en": "Located in the center of the old town, only 10 min walk from the train station",
         "de": "Mitten in der Altstadt, nur 10 Min. zu Fuss vom Bahnhof",
-        "es": "En el centro del casco antiguo, a solo 15 min a pie de la estación"
+        "en": "In the heart of the Old Town, only 10 min walk from the train station",
+        "es": "En el corazón del casco antiguo, a solo 10 min a pie de la estación"
       }
     },
     {
-      "icon": "Wifi",
+      "icon": "Bed",
       "title": {
-        "en": "Great Amenities",
+        "de": "Verschiedene Zimmer",
+        "en": "Room Options",
+        "es": "Opciones de Habitación"
+      },
+      "description": {
+        "de": "Einzelzimmer, Doppelzimmer, Mehrbettzimmer (max. 6 Betten pro Zimmer)",
+        "en": "Single rooms, double rooms, dormitories (max. 6 beds per room)",
+        "es": "Habitaciones individuales, dobles, dormitorios (máx. 6 camas por habitación)"
+      }
+    },
+    {
+      "icon": "Coffee",
+      "title": {
         "de": "Tolle Ausstattung",
+        "en": "Great Amenities",
         "es": "Excelentes Servicios"
       },
       "description": {
-        "en": "Free WLAN, kitchen facilities, common room with TV, games, and gift shop",
-        "de": "Gratis WLAN, Gästeküche, Aufenthaltsraum mit TV, Spielen und Shop",
-        "es": "WLAN gratis, cocina, sala común con TV, juegos y tienda"
+        "de": "Gästeküche, grosser Aufenthaltsraum mit TV, Spielen...",
+        "en": "Guest kitchen, large common room with TV, games...",
+        "es": "Cocina para huéspedes, gran sala común con TV, juegos..."
       }
     },
     {
       "icon": "Shield",
       "title": {
-        "en": "Safe & Clean",
-        "de": "Sicher & Sauber",
-        "es": "Seguro y Limpio"
+        "de": "Nichtraucher Hostel",
+        "en": "Non-Smoking Hostel",
+        "es": "Hostel para No Fumadores"
       },
       "description": {
-        "en": "Solid security, non-smoking throughout, max 6 beds per room",
-        "de": "Solide Sicherheit, komplett rauchfrei, max. 6 Betten pro Zimmer",
-        "es": "Buena seguridad, totalmente libre de humo, máx. 6 camas por habitación"
+        "de": "Wir sind ein NICHTRAUCHER Hostel (Zimmer und allgemeine Räume)",
+        "en": "We are a NON-SMOKING hostel (rooms and common areas)",
+        "es": "Somos un hostel para NO FUMADORES (habitaciones y áreas comunes)"
       }
     },
     {
       "icon": "CreditCard",
       "title": {
-        "en": "Best Value",
-        "de": "Bestes Preis-Leistung",
-        "es": "Mejor Valor"
+        "de": "Flexible Zahlung",
+        "en": "Flexible Payment",
+        "es": "Pago Flexible"
       },
       "description": {
-        "en": "Competitive prices including sheets, all taxes. Credit cards & EURO accepted",
-        "de": "Günstige Preise inkl. Bettwäsche und Steuern. Kreditkarten & EURO akzeptiert",
-        "es": "Precios competitivos con sábanas e impuestos incluidos. Aceptamos tarjetas y EURO"
+        "de": "Wir akzeptieren Kreditkarten (Visa, Mastercard), Maestro, EC, Postcard und EURO",
+        "en": "We accept credit cards (Visa, Mastercard), Maestro, EC, Postcard and EURO",
+        "es": "Aceptamos tarjetas de crédito (Visa, Mastercard), Maestro, EC, Postcard y EURO"
       }
     }
   ],
   "amenities": [
-    { "icon": "Wifi", "name": { "en": "Free WLAN", "de": "Gratis WLAN", "es": "WLAN Gratis" } },
-    { "icon": "Coffee", "name": { "en": "Kitchen", "de": "Küche", "es": "Cocina" } },
-    { "icon": "Users", "name": { "en": "Common Room", "de": "Aufenthaltsraum", "es": "Sala Común" } },
-    { "icon": "Home", "name": { "en": "Laundry", "de": "Wäscherei", "es": "Lavandería" } }
+    { "icon": "Wifi", "name": { "de": "Gratis WLAN", "en": "Free WiFi", "es": "WiFi Gratis" } },
+    { "icon": "Coffee", "name": { "de": "Gästeküche", "en": "Guest Kitchen", "es": "Cocina" } },
+    { "icon": "Users", "name": { "de": "Aufenthaltsraum", "en": "Common Room", "es": "Sala Común" } },
+    { "icon": "Lock", "name": { "de": "Schliessfächer", "en": "Lockers", "es": "Taquillas" } }
   ],
   "ctaTitle": {
-    "en": "Ready to book your stay?",
-    "de": "Bereit zu buchen?",
-    "es": "¿Listo para reservar?"
+    "de": "Preise inkl. Bettwäsche & Taxen",
+    "en": "Prices incl. bedding & taxes",
+    "es": "Precios incl. ropa de cama e impuestos"
   },
   "ctaDescription": {
-    "en": "Experience the best of Bern's Old Town from our central location. Book directly for the best rates.",
-    "de": "Erleben Sie das Beste der Berner Altstadt von unserer zentralen Lage. Buchen Sie direkt für die besten Preise.",
-    "es": "Experimente lo mejor del casco antiguo de Berna desde nuestra ubicación central. Reserve directamente para las mejores tarifas."
+    "de": "Alle Preise in Schweizer Franken. KEIN Frühstück. Duschtücher gegen Fr. 3.- erhältlich.",
+    "en": "All prices in Swiss Francs. NO breakfast. Towels available for CHF 3.-",
+    "es": "Todos los precios en francos suizos. SIN desayuno. Toallas disponibles por CHF 3.-"
   }
 }

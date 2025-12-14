@@ -1,0 +1,21 @@
+{
+  "id": "dorm-4",
+  "name": {
+    "en": "4-Bed Dormitory",
+    "de": "4-Bett Mehrbettzimmer",
+    "es": "Dormitorio de 4 camas"
+  },
+  "description": {
+    "en": "Comfortable dormitory room with 4 beds, shared bathroom facilities.",
+    "de": "Komfortables Mehrbettzimmer mit 4 Betten und Etagendusche.",
+    "es": "Dormitorio cómodo con 4 camas y baño compartido."
+  },
+  "price": 37,
+  "priceUnit": "per_bed",
+  "beds": 4,
+  "bathType": "shared",
+  "image": "/images/gallery/4-bed-dorm.jpg",
+  "features": [],
+  "order": 2,
+  "available": true
+}

@@ -3,8 +3,8 @@ backend:
   repo: rotwurstesser/backpacker-website
   branch: main
 
-media_folder: static/images/uploads
-public_folder: /images/uploads
+media_folder: static/images
+public_folder: /images
 
 site_url: https://bernbackpackers.ch
 display_url: https://bernbackpackers.ch
@@ -250,22 +250,14 @@ collections:
         file: content/settings/general.json
         fields:
           - { label: Site Name, name: siteName, widget: string, required: false }
-          - label: Kontakt
-            name: contact
-            widget: object
-            fields:
-              - { label: Telefon, name: phone, widget: string, required: false }
-              - { label: Fax, name: fax, widget: string, required: false }
-              - { label: Email, name: email, widget: string, required: false }
-              - { label: Adresse, name: address, widget: text, required: false }
-          - label: Zeiten
-            name: hours
-            widget: object
-            fields:
-              - { label: Rezeption, name: receptionHours, widget: string, required: false }
-              - { label: Check-in, name: checkIn, widget: string, required: false }
-              - { label: Check-out, name: checkOut, widget: string, required: false }
-              - { label: Nachtruhe, name: quietHours, widget: string, required: false }
+          - { label: Telefon, name: phone, widget: string, required: false }
+          - { label: Fax, name: fax, widget: string, required: false }
+          - { label: Email, name: email, widget: string, required: false }
+          - { label: Adresse, name: address, widget: text, required: false }
+          - { label: Rezeption, name: receptionHours, widget: string, required: false }
+          - { label: Check-in, name: checkIn, widget: string, required: false }
+          - { label: Check-out, name: checkOut, widget: string, required: false }
+          - { label: Nachtruhe, name: quietHours, widget: string, required: false }
           - { label: Booking URL, name: bookingUrl, widget: string, required: false }
 
       - name: social
