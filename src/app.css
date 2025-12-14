@@ -88,22 +88,25 @@
 		font-family: 'Work Sans', system-ui, sans-serif;
 	}
 
-	/* Typography hierarchy */
+	/*
+	 * Typography hierarchy
+	 * Anton has tight default spacing - needs generous letter-spacing for readability
+	 * Reference: The Bivvi hostel uses 0.1-0.2em for uppercase headings
+	 */
 	h1, h2 {
 		font-family: 'Anton', sans-serif;
 		text-transform: uppercase;
-		letter-spacing: 0.06em;
 		line-height: 1.1;
 	}
 
 	h1 {
 		@apply text-4xl md:text-5xl lg:text-6xl;
-		letter-spacing: 0.08em;
+		letter-spacing: 0.15em; /* Wide spacing for hero headlines */
 	}
 
 	h2 {
 		@apply text-2xl md:text-3xl lg:text-4xl;
-		letter-spacing: 0.06em;
+		letter-spacing: 0.12em; /* Slightly less for section headings */
 	}
 
 	/* h3-h6 use body font for better readability at smaller sizes */
@@ -158,7 +161,7 @@
 	.font-display {
 		font-family: 'Anton', sans-serif;
 		text-transform: uppercase;
-		letter-spacing: 0.06em;
+		letter-spacing: 0.12em;
 		line-height: 1.1;
 	}
 }
