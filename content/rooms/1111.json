@@ -1,0 +1,27 @@
+{
+  "id": "1111",
+  "name": {
+    "de": "dasas",
+    "en": "dasdsa",
+    "es": "dassa"
+  },
+  "description": {
+    "de": "dasdas",
+    "en": "dasasd",
+    "es": "ads"
+  },
+  "price": 111,
+  "priceUnit": "per_bed",
+  "beds": 2,
+  "bathType": "shared",
+  "image": "/images/image.png",
+  "features": [
+    {
+      "de": "ads",
+      "en": "ads",
+      "es": "das"
+    }
+  ],
+  "order": 2,
+  "available": true
+}
