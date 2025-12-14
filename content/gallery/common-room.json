@@ -1,0 +1,11 @@
+{
+  "title": "common-room",
+  "image": "/images/gallery/common-room.jpg",
+  "category": "common_areas",
+  "order": 1,
+  "alt": {
+    "de": "Aufenthaltsraum",
+    "en": "Common Room",
+    "es": "Sala comun"
+  }
+}

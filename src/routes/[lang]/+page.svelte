@@ -129,7 +129,7 @@
 	<!-- Amenities Section -->
 	<section class="py-20 bg-muted/30">
 		<div class="container">
-			<h2 class="text-3xl font-bold text-center mb-12">Amenities</h2>
+			<h2 class="text-3xl font-bold text-center mb-12">{translate(homeContent.amenitiesTitle, lang)}</h2>
 			<div class="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
 				{#each homeContent.amenities as amenity (amenity.icon)}
 					{@const Icon = getIcon(amenity.icon)}

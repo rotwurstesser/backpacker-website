@@ -1,0 +1,82 @@
+{
+  "title": {
+    "de": "Unsere Zimmer",
+    "en": "Our Rooms",
+    "es": "Nuestras Habitaciones"
+  },
+  "subtitle": {
+    "de": "Finden Sie das perfekte Zimmer fuer Ihren Aufenthalt",
+    "en": "Find the perfect room for your stay",
+    "es": "Encuentra la habitacion perfecta para tu estadia"
+  },
+  "bookButton": {
+    "de": "Jetzt Buchen",
+    "en": "Book Now",
+    "es": "Reservar Ahora"
+  },
+  "perBed": {
+    "de": "pro Bett",
+    "en": "per bed",
+    "es": "por cama"
+  },
+  "perRoom": {
+    "de": "pro Zimmer",
+    "en": "per room",
+    "es": "por habitacion"
+  },
+  "bed": {
+    "de": "Bett",
+    "en": "bed",
+    "es": "cama"
+  },
+  "beds": {
+    "de": "Betten",
+    "en": "beds",
+    "es": "camas"
+  },
+  "sharedBath": {
+    "de": "Geteiltes Bad",
+    "en": "Shared bathroom",
+    "es": "Bano compartido"
+  },
+  "privateBath": {
+    "de": "Eigenes Bad",
+    "en": "Private bathroom",
+    "es": "Bano privado"
+  },
+  "priceInfoTitle": {
+    "de": "Preisinformationen",
+    "en": "Price Information",
+    "es": "Informacion de Precios"
+  },
+  "priceNote": {
+    "de": "Preise pro Nacht, inklusive Fruehstueck",
+    "en": "Prices per night, breakfast included",
+    "es": "Precios por noche, desayuno incluido"
+  },
+  "sheetsIncluded": {
+    "de": "Bettwaesche inklusive",
+    "en": "Sheets included",
+    "es": "Sabanas incluidas"
+  },
+  "towelsAvailable": {
+    "de": "Handtuecher verfuegbar",
+    "en": "Towels available",
+    "es": "Toallas disponibles"
+  },
+  "paymentMethods": {
+    "de": "Kreditkarten (Visa, Mastercard), Maestro, EC, Postcard und EURO akzeptiert",
+    "en": "Credit cards (Visa, Mastercard), Maestro, EC, Postcard and EURO accepted",
+    "es": "Tarjetas de credito (Visa, Mastercard), Maestro, EC, Postcard y EURO aceptados"
+  },
+  "ctaTitle": {
+    "de": "Bereit zu buchen?",
+    "en": "Ready to book?",
+    "es": "Listo para reservar?"
+  },
+  "ctaDescription": {
+    "de": "Buchen Sie direkt fuer die besten Preise - keine Buchungsgebuehren!",
+    "en": "Book directly for the best rates - no booking fees!",
+    "es": "Reserve directamente para las mejores tarifas - sin cargos de reserva!"
+  }
+}

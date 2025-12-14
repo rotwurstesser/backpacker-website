@@ -1,0 +1,11 @@
+{
+  "title": "4-bed-dorm",
+  "image": "/images/gallery/4-bed-dorm.jpg",
+  "category": "rooms",
+  "order": 8,
+  "alt": {
+    "de": "4-Bett Schlafsaal",
+    "en": "4-Bed Dormitory",
+    "es": "Dormitorio de 4 Camas"
+  }
+}

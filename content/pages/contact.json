@@ -1,0 +1,89 @@
+{
+  "title": {
+    "de": "Kontakt",
+    "en": "Contact",
+    "es": "Contacto"
+  },
+  "subtitle": {
+    "de": "Wir freuen uns auf Ihre Nachricht",
+    "en": "We look forward to hearing from you",
+    "es": "Esperamos su mensaje"
+  },
+  "getInTouchTitle": {
+    "de": "Kontaktieren Sie uns",
+    "en": "Get in Touch",
+    "es": "Contactenos"
+  },
+  "addressLabel": {
+    "de": "Adresse",
+    "en": "Address",
+    "es": "Direccion"
+  },
+  "phoneLabel": {
+    "de": "Telefon",
+    "en": "Phone",
+    "es": "Telefono"
+  },
+  "faxLabel": {
+    "de": "Fax",
+    "en": "Fax",
+    "es": "Fax"
+  },
+  "emailLabel": {
+    "de": "E-Mail",
+    "en": "Email",
+    "es": "Correo electronico"
+  },
+  "hoursLabel": {
+    "de": "Rezeption",
+    "en": "Reception",
+    "es": "Recepcion"
+  },
+  "sendMessageTitle": {
+    "de": "Nachricht senden",
+    "en": "Send a Message",
+    "es": "Enviar mensaje"
+  },
+  "formLabels": {
+    "name": {
+      "de": "Name",
+      "en": "Name",
+      "es": "Nombre"
+    },
+    "email": {
+      "de": "E-Mail",
+      "en": "Email",
+      "es": "Correo electronico"
+    },
+    "subject": {
+      "de": "Betreff",
+      "en": "Subject",
+      "es": "Asunto"
+    },
+    "message": {
+      "de": "Nachricht",
+      "en": "Message",
+      "es": "Mensaje"
+    }
+  },
+  "sendButton": {
+    "de": "Nachricht senden",
+    "en": "Send Message",
+    "es": "Enviar mensaje"
+  },
+  "sendingButton": {
+    "de": "Wird gesendet...",
+    "en": "Sending...",
+    "es": "Enviando..."
+  },
+  "successMessage": {
+    "de": "Vielen Dank! Ihre Nachricht wurde erfolgreich gesendet.",
+    "en": "Thank you! Your message has been sent successfully.",
+    "es": "Gracias! Su mensaje ha sido enviado con exito."
+  },
+  "errorMessage": {
+    "de": "Entschuldigung, es gab einen Fehler. Bitte versuchen Sie es erneut oder senden Sie uns eine E-Mail.",
+    "en": "Sorry, there was an error. Please try again or email us directly.",
+    "es": "Lo sentimos, hubo un error. Por favor intente de nuevo o envienos un correo electronico."
+  }
+}

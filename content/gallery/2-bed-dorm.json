@@ -1,0 +1,11 @@
+{
+  "title": "2-bed-dorm",
+  "image": "/images/gallery/2-bed-dorm.jpg",
+  "category": "rooms",
+  "order": 7,
+  "alt": {
+    "de": "2-Bett Schlafsaal",
+    "en": "2-Bed Dormitory",
+    "es": "Dormitorio de 2 Camas"
+  }
+}

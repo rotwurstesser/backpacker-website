@@ -1,0 +1,11 @@
+{
+  "title": "double-room",
+  "image": "/images/gallery/double-room.jpg",
+  "category": "rooms",
+  "order": 5,
+  "alt": {
+    "de": "Doppelzimmer",
+    "en": "Double Room",
+    "es": "Habitacion Doble"
+  }
+}

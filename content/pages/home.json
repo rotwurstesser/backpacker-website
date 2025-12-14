@@ -86,6 +86,11 @@
       }
     }
   ],
+  "amenitiesTitle": {
+    "de": "Ausstattung",
+    "en": "Amenities",
+    "es": "Servicios"
+  },
   "amenities": [
     {
       "icon": "Wifi",

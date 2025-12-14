@@ -1,0 +1,11 @@
+{
+  "title": "single-room",
+  "image": "/images/gallery/single-room.jpg",
+  "category": "rooms",
+  "order": 4,
+  "alt": {
+    "de": "Einzelzimmer",
+    "en": "Single Room",
+    "es": "Habitacion Individual"
+  }
+}

@@ -1,0 +1,49 @@
+{
+  "title": {
+    "de": "Galerie",
+    "en": "Gallery",
+    "es": "Galeria"
+  },
+  "subtitle": {
+    "de": "Entdecken Sie unser Hostel",
+    "en": "Discover our hostel",
+    "es": "Descubre nuestro hostal"
+  },
+  "noImagesMessage": {
+    "de": "Keine Bilder gefunden",
+    "en": "No images found",
+    "es": "No se encontraron imágenes"
+  },
+  "categories": {
+    "all": {
+      "de": "Alle",
+      "en": "All",
+      "es": "Todos"
+    },
+    "rooms": {
+      "de": "Zimmer",
+      "en": "Rooms",
+      "es": "Habitaciones"
+    },
+    "facilities": {
+      "de": "Einrichtungen",
+      "en": "Facilities",
+      "es": "Instalaciones"
+    },
+    "common_areas": {
+      "de": "Gemeinschaftsräume",
+      "en": "Common Areas",
+      "es": "Areas comunes"
+    },
+    "exterior": {
+      "de": "Aussenbereich",
+      "en": "Exterior",
+      "es": "Exterior"
+    },
+    "location": {
+      "de": "Lage",
+      "en": "Location",
+      "es": "Ubicacion"
+    }
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "title": "6-bed-dorm",
+  "image": "/images/gallery/6-bed-dorm.jpg",
+  "category": "rooms",
+  "order": 9,
+  "alt": {
+    "de": "6-Bett Schlafsaal",
+    "en": "6-Bed Dormitory",
+    "es": "Dormitorio de 6 Camas"
+  }
+}

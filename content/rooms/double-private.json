@@ -1,5 +1,4 @@
 {
-  "id": "double-private",
   "name": {
     "en": "Double Room (Private Bath)",
     "de": "Doppelzimmer (mit Bad)",
@@ -16,7 +15,11 @@
   "bathType": "private",
   "image": "/images/gallery/double-room.jpg",
   "features": [
-    { "en": "Private bathroom", "de": "Eigenes Bad", "es": "Baño privado" }
+    {
+      "en": "Private bathroom",
+      "de": "Eigenes Bad",
+      "es": "Baño privado"
+    }
   ],
   "order": 4,
   "available": true

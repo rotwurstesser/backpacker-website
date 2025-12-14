@@ -1,0 +1,11 @@
+{
+  "title": "double-room-view",
+  "image": "/images/gallery/double-room-view.jpg",
+  "category": "rooms",
+  "order": 6,
+  "alt": {
+    "de": "Doppelzimmer mit Muensterblick",
+    "en": "Double Room with Minster View",
+    "es": "Habitacion Doble con Vista a la Catedral"
+  }
+}

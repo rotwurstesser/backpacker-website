@@ -1,5 +1,4 @@
 {
-  "id": "dorm-6",
   "name": {
     "en": "6-Bed Dormitory",
     "de": "6-Bett Mehrbettzimmer",
@@ -16,8 +15,16 @@
   "bathType": "shared",
   "image": "/images/gallery/6-bed-dorm.jpg",
   "features": [
-    { "en": "Locker included", "de": "Schliessfach inklusive", "es": "Taquilla incluida" },
-    { "en": "Reading light", "de": "Leselampe", "es": "Luz de lectura" }
+    {
+      "en": "Locker included",
+      "de": "Schliessfach inklusive",
+      "es": "Taquilla incluida"
+    },
+    {
+      "en": "Reading light",
+      "de": "Leselampe",
+      "es": "Luz de lectura"
+    }
   ],
   "order": 1,
   "available": true

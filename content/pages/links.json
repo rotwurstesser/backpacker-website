@@ -1,0 +1,104 @@
+{
+  "title": {
+    "de": "Links",
+    "en": "Links",
+    "es": "Enlaces"
+  },
+  "subtitle": {
+    "de": "Nützliche Ressourcen für Ihre Reise nach Bern",
+    "en": "Useful resources for your trip to Bern",
+    "es": "Recursos utiles para su viaje a Berna"
+  },
+  "partnersTitle": {
+    "de": "Unsere Partner",
+    "en": "Our Partners",
+    "es": "Nuestros socios"
+  },
+  "categories": [
+    {
+      "name": {
+        "de": "Partner Hostels",
+        "en": "Partner Hostels",
+        "es": "Hostales asociados"
+      },
+      "links": [
+        {
+          "name": "City Backpacker - Hotel Biber (Zürich)",
+          "url": "https://www.city-backpacker.ch/"
+        }
+      ]
+    },
+    {
+      "name": {
+        "de": "Verbände",
+        "en": "Affiliations",
+        "es": "Afiliaciones"
+      },
+      "links": [
+        {
+          "name": "Swiss Hostels",
+          "url": "https://www.swisshostels.com/"
+        }
+      ]
+    },
+    {
+      "name": {
+        "de": "Tourismus & Information",
+        "en": "Tourism & Information",
+        "es": "Turismo e informacion"
+      },
+      "links": [
+        {
+          "name": "Bern Tourism Office",
+          "url": "https://www.bern.com/"
+        },
+        {
+          "name": "Switzerland Tourism",
+          "url": "https://www.myswitzerland.com/"
+        },
+        {
+          "name": "Swiss Backpackers",
+          "url": "https://www.swissbackpackers.ch/"
+        }
+      ]
+    },
+    {
+      "name": {
+        "de": "Reise-Ressourcen",
+        "en": "Travel Resources",
+        "es": "Recursos de viaje"
+      },
+      "links": [
+        {
+          "name": "Swiss Federal Railways (SBB)",
+          "url": "https://www.sbb.ch/"
+        },
+        {
+          "name": "Hostelworld",
+          "url": "https://www.hostelworld.com/"
+        },
+        {
+          "name": "Booking.com",
+          "url": "https://www.booking.com/"
+        }
+      ]
+    },
+    {
+      "name": {
+        "de": "Lokale Events",
+        "en": "Local Events",
+        "es": "Eventos locales"
+      },
+      "links": [
+        {
+          "name": "Gurten Festival",
+          "url": "https://www.gurtenfestival.ch/"
+        },
+        {
+          "name": "Bern Events Calendar",
+          "url": "https://www.bern.com/en/events"
+        }
+      ]
+    }
+  ]
+}

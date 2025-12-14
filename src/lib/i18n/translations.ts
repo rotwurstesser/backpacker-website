@@ -1,12 +1,12 @@
 export type Lang = 'en' | 'de' | 'es';
 
 export const languages: { code: Lang; name: string; flag: string }[] = [
-	{ code: 'en', name: 'English', flag: '🇬🇧' },
 	{ code: 'de', name: 'Deutsch', flag: '🇩🇪' },
+	{ code: 'en', name: 'English', flag: '🇬🇧' },
 	{ code: 'es', name: 'Español', flag: '🇪🇸' }
 ];
 
-export const defaultLang: Lang = 'en';
+export const defaultLang: Lang = 'de';
 
 export const translations = {
 	en: {
@@ -77,7 +77,11 @@ export const translations = {
 			reception: 'Reception',
 			singleRoom: 'Single Room',
 			doubleRoom: 'Double Room',
-			dormitory: 'Dormitory'
+			dormitory: 'Dormitory',
+			dormitory2: '2-Bed Dormitory',
+			dormitory4: '4-Bed Dormitory',
+			dormitory6: '6-Bed Dormitory',
+			munsterView: 'Münster View'
 		},
 		// Location
 		location: {
@@ -95,6 +99,7 @@ export const translations = {
 		contact: {
 			title: 'Contact Us',
 			subtitle: 'We\'d love to hear from you',
+			getInTouch: 'Get in Touch',
 			phone: 'Phone',
 			fax: 'Fax',
 			email: 'Email',
@@ -102,8 +107,12 @@ export const translations = {
 			hoursValue: '08:00 - 12:00 and 15:00 - 22:00',
 			sendMessage: 'Send Message',
 			name: 'Name',
+			subject: 'Subject',
 			message: 'Message',
-			send: 'Send'
+			send: 'Send',
+			sending: 'Sending...',
+			success: 'Thank you! Your message has been sent successfully.',
+			error: 'Sorry, there was an error. Please try again or email us directly.'
 		},
 		// Footer
 		footer: {
@@ -188,7 +197,11 @@ export const translations = {
 			reception: 'Rezeption',
 			singleRoom: 'Einzelzimmer',
 			doubleRoom: 'Doppelzimmer',
-			dormitory: 'Mehrbettzimmer'
+			dormitory: 'Mehrbettzimmer',
+			dormitory2: '2-Bett Zimmer',
+			dormitory4: '4-Bett Zimmer',
+			dormitory6: '6-Bett Zimmer',
+			munsterView: 'Münsterblick'
 		},
 		// Location
 		location: {
@@ -206,6 +219,7 @@ export const translations = {
 		contact: {
 			title: 'Kontakt',
 			subtitle: 'Wir freuen uns auf Ihre Nachricht',
+			getInTouch: 'Kontaktieren Sie uns',
 			phone: 'Telefon',
 			fax: 'Fax',
 			email: 'E-Mail',
@@ -213,8 +227,12 @@ export const translations = {
 			hoursValue: '08:00 - 12:00 und 15:00 - 22:00',
 			sendMessage: 'Nachricht senden',
 			name: 'Name',
+			subject: 'Betreff',
 			message: 'Nachricht',
-			send: 'Senden'
+			send: 'Senden',
+			sending: 'Wird gesendet...',
+			success: 'Vielen Dank! Ihre Nachricht wurde erfolgreich gesendet.',
+			error: 'Entschuldigung, es gab einen Fehler. Bitte versuchen Sie es erneut oder senden Sie uns eine E-Mail.'
 		},
 		// Footer
 		footer: {
@@ -299,7 +317,11 @@ export const translations = {
 			reception: 'Recepción',
 			singleRoom: 'Habitación Individual',
 			doubleRoom: 'Habitación Doble',
-			dormitory: 'Dormitorio'
+			dormitory: 'Dormitorio',
+			dormitory2: 'Dormitorio de 2 camas',
+			dormitory4: 'Dormitorio de 4 camas',
+			dormitory6: 'Dormitorio de 6 camas',
+			munsterView: 'Vista al Münster'
 		},
 		// Location
 		location: {
@@ -317,6 +339,7 @@ export const translations = {
 		contact: {
 			title: 'Contáctenos',
 			subtitle: 'Nos encantaría saber de usted',
+			getInTouch: 'Póngase en contacto',
 			phone: 'Teléfono',
 			fax: 'Fax',
 			email: 'Correo',
@@ -324,8 +347,12 @@ export const translations = {
 			hoursValue: '08:00 - 12:00 y 15:00 - 22:00',
 			sendMessage: 'Enviar Mensaje',
 			name: 'Nombre',
+			subject: 'Asunto',
 			message: 'Mensaje',
-			send: 'Enviar'
+			send: 'Enviar',
+			sending: 'Enviando...',
+			success: '¡Gracias! Su mensaje ha sido enviado con éxito.',
+			error: 'Lo sentimos, hubo un error. Por favor intente de nuevo o envíenos un correo electrónico.'
 		},
 		// Footer
 		footer: {

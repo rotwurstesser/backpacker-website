@@ -1,0 +1,14 @@
+import { loadLocationContent, loadSettings } from '$lib/content';
+import type { PageServerLoad } from './$types';
+
+export const load: PageServerLoad = async () => {
+	const [locationContent, settings] = await Promise.all([
+		loadLocationContent(),
+		loadSettings()
+	]);
+
+	return {
+		locationContent,
+		settings
+	};
+};

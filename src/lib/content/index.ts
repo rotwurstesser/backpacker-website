@@ -18,6 +18,7 @@ export interface HomeContent {
 		title: TranslatedField;
 		description: TranslatedField;
 	}>;
+	amenitiesTitle: TranslatedField;
 	amenities: Array<{
 		icon: string;
 		name: TranslatedField;
@@ -27,7 +28,6 @@ export interface HomeContent {
 }
 
 export interface RoomContent {
-	id: string;
 	name: TranslatedField;
 	description: TranslatedField;
 	price: number;
@@ -54,7 +54,6 @@ export interface GeneralSettings {
 }
 
 export interface CustomPage {
-	slug: string;
 	title: TranslatedField;
 	description: TranslatedField;
 	content: TranslatedField;
@@ -103,6 +102,152 @@ export async function loadRooms(): Promise<RoomContent[]> {
 export async function loadSettings(): Promise<GeneralSettings> {
 	const content = await import('../../../content/settings/general.json');
 	return content.default as GeneralSettings;
+}
+
+// Location page content interface
+export interface LocationContent {
+	title: TranslatedField;
+	subtitle: TranslatedField;
+	mapEmbedUrl: string;
+	directionsTitle: TranslatedField;
+	byTramTitle: TranslatedField;
+	byTram: TranslatedField;
+	byFootTitle: TranslatedField;
+	byFoot: TranslatedField;
+	byCarTitle: TranslatedField;
+	byCar: TranslatedField;
+	sbbTitle: TranslatedField;
+	sbbDescription: TranslatedField;
+	sbbLinkText: TranslatedField;
+	sbbLinkUrl: string;
+	landmarksTitle: TranslatedField;
+	landmarksSubtitle: TranslatedField;
+	addressCardTitle: TranslatedField;
+	phoneLabel: TranslatedField;
+	emailLabel: TranslatedField;
+	hoursLabel: TranslatedField;
+	landmarks: Array<{
+		name: TranslatedField;
+		distance: TranslatedField;
+	}>;
+}
+
+// Load location page content
+export async function loadLocationContent(): Promise<LocationContent> {
+	const content = await import('../../../content/pages/location.json');
+	return content.default as LocationContent;
+}
+
+// Gallery page content interface
+export interface GalleryPageContent {
+	title: TranslatedField;
+	subtitle: TranslatedField;
+	noImagesMessage: TranslatedField;
+	categories: Record<string, TranslatedField>;
+}
+
+// Gallery image interface
+export interface GalleryImage {
+	title: string;
+	image: string;
+	category: string;
+	order: number;
+	alt: TranslatedField;
+}
+
+// Load gallery page content
+export async function loadGalleryPageContent(): Promise<GalleryPageContent> {
+	const content = await import('../../../content/pages/gallery.json');
+	return content.default as GalleryPageContent;
+}
+
+// Load all gallery images
+export async function loadGalleryImages(): Promise<GalleryImage[]> {
+	const imageModules = import.meta.glob('../../../content/gallery/*.json', { eager: true });
+	const images: GalleryImage[] = [];
+
+	for (const path in imageModules) {
+		const module = imageModules[path] as { default: GalleryImage };
+		images.push(module.default);
+	}
+
+	// Sort by order field
+	return images.sort((a, b) => (a.order || 0) - (b.order || 0));
+}
+
+// Links page content interface
+export interface LinksContent {
+	title: TranslatedField;
+	subtitle: TranslatedField;
+	partnersTitle: TranslatedField;
+	categories: Array<{
+		name: TranslatedField;
+		links: Array<{
+			name: string;
+			url: string;
+		}>;
+	}>;
+}
+
+// Load links page content
+export async function loadLinksContent(): Promise<LinksContent> {
+	const content = await import('../../../content/pages/links.json');
+	return content.default as LinksContent;
+}
+
+// Rooms page content interface
+export interface RoomsPageContent {
+	title: TranslatedField;
+	subtitle: TranslatedField;
+	bookButton: TranslatedField;
+	perBed: TranslatedField;
+	perRoom: TranslatedField;
+	bed: TranslatedField;
+	beds: TranslatedField;
+	sharedBath: TranslatedField;
+	privateBath: TranslatedField;
+	priceInfoTitle: TranslatedField;
+	priceNote: TranslatedField;
+	sheetsIncluded: TranslatedField;
+	towelsAvailable: TranslatedField;
+	paymentMethods: TranslatedField;
+	ctaTitle: TranslatedField;
+	ctaDescription: TranslatedField;
+}
+
+// Load rooms page content
+export async function loadRoomsPageContent(): Promise<RoomsPageContent> {
+	const content = await import('../../../content/pages/rooms.json');
+	return content.default as RoomsPageContent;
+}
+
+// Contact page content interface
+export interface ContactPageContent {
+	title: TranslatedField;
+	subtitle: TranslatedField;
+	getInTouchTitle: TranslatedField;
+	addressLabel: TranslatedField;
+	phoneLabel: TranslatedField;
+	faxLabel: TranslatedField;
+	emailLabel: TranslatedField;
+	hoursLabel: TranslatedField;
+	sendMessageTitle: TranslatedField;
+	formLabels: {
+		name: TranslatedField;
+		email: TranslatedField;
+		subject: TranslatedField;
+		message: TranslatedField;
+	};
+	sendButton: TranslatedField;
+	sendingButton: TranslatedField;
+	successMessage: TranslatedField;
+	errorMessage: TranslatedField;
+}
+
+// Load contact page content
+export async function loadContactPageContent(): Promise<ContactPageContent> {
+	const content = await import('../../../content/pages/contact.json');
+	return content.default as ContactPageContent;
 }
 
 // Load custom pages (excludes home.json which has different structure)

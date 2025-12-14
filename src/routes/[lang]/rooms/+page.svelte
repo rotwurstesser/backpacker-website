@@ -5,7 +5,7 @@
 	import type { PageData } from './$types';
 
 	export let data: PageData;
-	$: ({ lang, t, rooms, settings } = data);
+	$: ({ lang, t, rooms, settings, roomsPageContent } = data);
 
 	$: bookingUrl = settings?.bookingUrl
 		? `${settings.bookingUrl}&lang=${lang}`
@@ -13,16 +13,16 @@
 </script>
 
 <svelte:head>
-	<title>{t?.rooms?.title || 'Rooms'} | Bern Backpackers</title>
-	<meta name="description" content={t?.rooms?.subtitle || ''} />
+	<title>{translate(roomsPageContent?.title, lang) || 'Rooms'} | Bern Backpackers</title>
+	<meta name="description" content={translate(roomsPageContent?.subtitle, lang) || ''} />
 </svelte:head>
 
-{#if t && rooms}
+{#if t && rooms && roomsPageContent}
 	<!-- Hero -->
 	<section class="py-16 bg-gradient-to-br from-primary/10 via-background to-primary/5">
 		<div class="container text-center">
-			<h1 class="text-4xl font-bold mb-4">{t.rooms.title}</h1>
-			<p class="text-lg text-muted-foreground">{t.rooms.subtitle}</p>
+			<h1 class="text-4xl font-bold mb-4">{translate(roomsPageContent.title, lang)}</h1>
+			<p class="text-lg text-muted-foreground">{translate(roomsPageContent.subtitle, lang)}</p>
 		</div>
 	</section>
 
@@ -56,11 +56,11 @@
 								<span class="flex items-center gap-1">
 									<Bed class="h-4 w-4" aria-hidden="true" />
 									{room.beds}
-									{room.beds > 1 ? 'beds' : 'bed'}
+									{room.beds > 1 ? translate(roomsPageContent.beds, lang) : translate(roomsPageContent.bed, lang)}
 								</span>
 								<span class="flex items-center gap-1">
 									<Bath class="h-4 w-4" aria-hidden="true" />
-									{room.bathType === 'shared' ? t.rooms.sharedBath : t.rooms.privateBath}
+									{room.bathType === 'shared' ? translate(roomsPageContent.sharedBath, lang) : translate(roomsPageContent.privateBath, lang)}
 								</span>
 							</div>
 
@@ -79,11 +79,11 @@
 								<div>
 									<span class="text-2xl font-bold">{t.common.currency} {room.price}.-</span>
 									<span class="text-sm text-muted-foreground ml-1">
-										{room.priceUnit === 'per_bed' ? t.rooms.perBed : t.rooms.perRoom}
+										{room.priceUnit === 'per_bed' ? translate(roomsPageContent.perBed, lang) : translate(roomsPageContent.perRoom, lang)}
 									</span>
 								</div>
 								<Button href={bookingUrl} target="_blank" rel="noopener noreferrer">
-									{t.common.bookNow}
+									{translate(roomsPageContent.bookButton, lang)}
 								</Button>
 							</div>
 						</div>
@@ -100,20 +100,20 @@
 				<div class="flex items-start gap-4">
 					<Info class="h-6 w-6 text-primary flex-shrink-0 mt-0.5" aria-hidden="true" />
 					<div>
-						<h3 class="font-semibold mb-2">Price Information</h3>
+						<h3 class="font-semibold mb-2">{translate(roomsPageContent.priceInfoTitle, lang)}</h3>
 						<ul class="space-y-2 text-sm text-muted-foreground">
-							<li>{t.rooms.priceNote}</li>
+							<li>{translate(roomsPageContent.priceNote, lang)}</li>
 							<li class="flex items-center gap-2">
 								<Check class="h-4 w-4 text-primary" aria-hidden="true" />
-								{t.rooms.sheetsIncluded}
+								{translate(roomsPageContent.sheetsIncluded, lang)}
 							</li>
 							<li class="flex items-center gap-2">
 								<Check class="h-4 w-4 text-primary" aria-hidden="true" />
-								{t.rooms.towelsAvailable}
+								{translate(roomsPageContent.towelsAvailable, lang)}
 							</li>
 							<li class="flex items-center gap-2">
 								<Check class="h-4 w-4 text-primary" aria-hidden="true" />
-								Credit cards (Visa, Mastercard), Maestro, EC, Postcard and EURO accepted
+								{translate(roomsPageContent.paymentMethods, lang)}
 							</li>
 						</ul>
 					</div>
@@ -125,8 +125,8 @@
 	<!-- CTA -->
 	<section class="py-16 bg-primary text-primary-foreground">
 		<div class="container text-center">
-			<h2 class="text-2xl font-bold mb-4">Ready to book?</h2>
-			<p class="mb-6 opacity-90">Book directly for the best rates - no booking fees!</p>
+			<h2 class="text-2xl font-bold mb-4">{translate(roomsPageContent.ctaTitle, lang)}</h2>
+			<p class="mb-6 opacity-90">{translate(roomsPageContent.ctaDescription, lang)}</p>
 			<Button
 				size="lg"
 				variant="secondary"
@@ -134,7 +134,7 @@
 				target="_blank"
 				rel="noopener noreferrer"
 			>
-				{t.common.bookNow}
+				{translate(roomsPageContent.bookButton, lang)}
 			</Button>
 		</div>
 	</section>

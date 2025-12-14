@@ -1,0 +1,11 @@
+{
+  "title": "kitchen",
+  "image": "/images/gallery/kitchen.jpg",
+  "category": "facilities",
+  "order": 2,
+  "alt": {
+    "de": "Kueche",
+    "en": "Kitchen",
+    "es": "Cocina"
+  }
+}

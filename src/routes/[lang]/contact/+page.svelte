@@ -1,10 +1,11 @@
 <script lang="ts">
 	import { Button, Card } from '$lib/components/ui';
 	import { MapPin, Phone, Mail, Clock, Send } from 'lucide-svelte';
+	import { t as translate } from '$lib/content';
 	import type { PageData } from './$types';
 
 	export let data: PageData;
-	$: ({ t } = data);
+	$: ({ lang, settings, contactPageContent } = data);
 
 	let formData = {
 		name: '',
@@ -49,16 +50,16 @@
 </script>
 
 <svelte:head>
-	<title>{t?.contact?.title || 'Contact'} | Bern Backpackers</title>
-	<meta name="description" content={t?.contact?.subtitle || ''} />
+	<title>{translate(contactPageContent?.title, lang) || 'Kontakt'} | Bern Backpackers</title>
+	<meta name="description" content={translate(contactPageContent?.subtitle, lang) || ''} />
 </svelte:head>
 
-{#if t}
+{#if contactPageContent}
 <!-- Hero -->
 <section class="py-16 bg-gradient-to-br from-primary/10 via-background to-primary/5">
 	<div class="container text-center">
-		<h1 class="text-4xl font-bold mb-4">{t.contact.title}</h1>
-		<p class="text-lg text-muted-foreground">{t.contact.subtitle}</p>
+		<h1 class="text-4xl font-bold mb-4">{translate(contactPageContent.title, lang)}</h1>
+		<p class="text-lg text-muted-foreground">{translate(contactPageContent.subtitle, lang)}</p>
 	</div>
 </section>
 
@@ -68,7 +69,7 @@
 		<div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
 			<!-- Contact Information -->
 			<div>
-				<h2 class="text-2xl font-bold mb-6">Get in Touch</h2>
+				<h2 class="text-2xl font-bold mb-6">{translate(contactPageContent.getInTouchTitle, lang)}</h2>
 				<div class="space-y-6">
 					<Card class="p-6">
 						<div class="flex items-start gap-4">
@@ -76,10 +77,9 @@
 								<MapPin class="h-5 w-5 text-primary" aria-hidden="true" />
 							</div>
 							<div>
-								<h3 class="font-semibold mb-1">{t.location.address}</h3>
-								<p class="text-muted-foreground">Hotel Glocke Backpackers Bern</p>
-								<p class="text-muted-foreground">Rathausgasse 75</p>
-								<p class="text-muted-foreground">CH-3011 Bern, Switzerland</p>
+								<h3 class="font-semibold mb-1">{translate(contactPageContent.addressLabel, lang)}</h3>
+								<p class="text-muted-foreground">{settings?.siteName}</p>
+								<p class="text-muted-foreground whitespace-pre-line">{settings?.address}</p>
 							</div>
 						</div>
 					</Card>
@@ -90,11 +90,13 @@
 								<Phone class="h-5 w-5 text-primary" aria-hidden="true" />
 							</div>
 							<div>
-								<h3 class="font-semibold mb-1">{t.contact.phone}</h3>
-								<a href="tel:+41313113771" class="text-muted-foreground hover:text-primary">
-									+41 31 311 37 71
+								<h3 class="font-semibold mb-1">{translate(contactPageContent.phoneLabel, lang)}</h3>
+								<a href="tel:{settings?.phone?.replace(/\s/g, '')}" class="text-muted-foreground hover:text-primary">
+									{settings?.phone}
 								</a>
-								<p class="text-sm text-muted-foreground mt-1">Fax: +41 31 311 10 08</p>
+								{#if settings?.fax}
+									<p class="text-sm text-muted-foreground mt-1">{translate(contactPageContent.faxLabel, lang)}: {settings.fax}</p>
+								{/if}
 							</div>
 						</div>
 					</Card>
@@ -105,9 +107,9 @@
 								<Mail class="h-5 w-5 text-primary" aria-hidden="true" />
 							</div>
 							<div>
-								<h3 class="font-semibold mb-1">{t.contact.email}</h3>
-								<a href="mailto:info@bernbackpackers.ch" class="text-muted-foreground hover:text-primary">
-									info@bernbackpackers.ch
+								<h3 class="font-semibold mb-1">{translate(contactPageContent.emailLabel, lang)}</h3>
+								<a href="mailto:{settings?.email}" class="text-muted-foreground hover:text-primary">
+									{settings?.email}
 								</a>
 							</div>
 						</div>
@@ -119,8 +121,8 @@
 								<Clock class="h-5 w-5 text-primary" aria-hidden="true" />
 							</div>
 							<div>
-								<h3 class="font-semibold mb-1">{t.contact.hours}</h3>
-								<p class="text-muted-foreground">{t.contact.hoursValue}</p>
+								<h3 class="font-semibold mb-1">{translate(contactPageContent.hoursLabel, lang)}</h3>
+								<p class="text-muted-foreground">{settings?.receptionHours}</p>
 							</div>
 						</div>
 					</Card>
@@ -129,7 +131,7 @@
 
 			<!-- Contact Form -->
 			<div>
-				<h2 class="text-2xl font-bold mb-6">{t.contact.sendMessage}</h2>
+				<h2 class="text-2xl font-bold mb-6">{translate(contactPageContent.sendMessageTitle, lang)}</h2>
 				<Card class="p-6">
 					<form
 						name="contact"
@@ -149,7 +151,7 @@
 						</div>
 
 						<div>
-							<label for="name" class="block text-sm font-medium mb-1.5">{t.contact.name}</label>
+							<label for="name" class="block text-sm font-medium mb-1.5">{translate(contactPageContent.formLabels.name, lang)}</label>
 							<input
 								type="text"
 								id="name"
@@ -162,7 +164,7 @@
 						</div>
 
 						<div>
-							<label for="email" class="block text-sm font-medium mb-1.5">{t.contact.email}</label>
+							<label for="email" class="block text-sm font-medium mb-1.5">{translate(contactPageContent.formLabels.email, lang)}</label>
 							<input
 								type="email"
 								id="email"
@@ -175,7 +177,7 @@
 						</div>
 
 						<div>
-							<label for="subject" class="block text-sm font-medium mb-1.5">Subject</label>
+							<label for="subject" class="block text-sm font-medium mb-1.5">{translate(contactPageContent.formLabels.subject, lang)}</label>
 							<input
 								type="text"
 								id="subject"
@@ -188,7 +190,7 @@
 						</div>
 
 						<div>
-							<label for="message" class="block text-sm font-medium mb-1.5">{t.contact.message}</label>
+							<label for="message" class="block text-sm font-medium mb-1.5">{translate(contactPageContent.formLabels.message, lang)}</label>
 							<textarea
 								id="message"
 								name="message"
@@ -202,20 +204,20 @@
 
 						{#if formStatus === 'success'}
 							<div class="p-4 bg-primary/10 text-primary rounded-md" role="alert" aria-live="polite">
-								Thank you! Your message has been sent successfully.
+								{translate(contactPageContent.successMessage, lang)}
 							</div>
 						{:else if formStatus === 'error'}
 							<div class="p-4 bg-destructive/10 text-destructive rounded-md" role="alert" aria-live="assertive">
-								Sorry, there was an error. Please try again or email us directly.
+								{translate(contactPageContent.errorMessage, lang)}
 							</div>
 						{/if}
 
 						<Button type="submit" class="w-full" disabled={formStatus === 'sending'}>
 							{#if formStatus === 'sending'}
-								Sending...
+								{translate(contactPageContent.sendingButton, lang)}
 							{:else}
 								<Send class="h-4 w-4 mr-2" aria-hidden="true" />
-								{t.contact.send}
+								{translate(contactPageContent.sendButton, lang)}
 							{/if}
 						</Button>
 					</form>

@@ -1,5 +1,4 @@
 {
-  "id": "dorm-2",
   "name": {
     "en": "2-Bed Dormitory",
     "de": "2er Dormitory",
@@ -16,7 +15,11 @@
   "bathType": "shared",
   "image": "/images/gallery/2-bed-dorm.jpg",
   "features": [
-    { "en": "Locker included", "de": "Schliessfach inklusive", "es": "Taquilla incluida" }
+    {
+      "en": "Locker included",
+      "de": "Schliessfach inklusive",
+      "es": "Taquilla incluida"
+    }
   ],
   "order": 2,
   "available": true
