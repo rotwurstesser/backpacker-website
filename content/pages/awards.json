@@ -7,10 +7,39 @@
   "awards": [
     {
       "title": "Swiss Hostels",
-      "image": "/images/logos/swiss-hostels.jpg"
+      "image": "/images/awards/swiss_hostels_hp.jpg"
     },
     {
-      "title": "TripAdvisor",
+      "title": "Top Rated Hostel 2008 by Gomio.com",
+      "image": "/images/awards/gomio_rated.gif",
+      "year": "2008"
+    },
+    {
+      "title": "Best Staff 2008 by Gomio.com",
+      "image": "/images/awards/gomio_staff.gif",
+      "year": "2008"
+    },
+    {
+      "title": "Top Location by Gomio.com",
+      "image": "/images/awards/gomio_location.gif"
+    },
+    {
+      "title": "No. 1 Hostel in Switzerland 2007 by Hostelworld",
+      "image": "/images/awards/hw_2007.jpg",
+      "year": "2007"
+    },
+    {
+      "title": "Cleanest Hostel 2008 by Gomio.com",
+      "image": "/images/awards/gomio_clean.gif",
+      "year": "2008"
+    },
+    {
+      "title": "Best Atmosphere Award Feb 08 by Hostelbookers",
+      "image": "/images/awards/hb_2008.jpg",
+      "year": "2008"
+    },
+    {
+      "title": "TripAdvisor Recommended",
       "image": "/images/logos/tripadvisor.jpg",
       "year": "Recommended"
     },
@@ -23,38 +52,6 @@
       "title": "Le Petit Futé",
       "image": "/images/logos/petit-fute.jpg",
       "year": "Recommended"
-    },
-    {
-      "title": "gomio.com",
-      "image": "/images/awards/gomio.gif"
-    },
-    {
-      "title": "Gurten Festival",
-      "image": "/images/awards/Gurten.gif"
-    },
-    {
-      "title": "Swiss Backpackers",
-      "image": "/images/awards/sbp.gif"
-    },
-    {
-      "title": "Bern Tourist Office",
-      "image": "/images/awards/btn.gif"
-    },
-    {
-      "title": "Bern Youth Guide",
-      "image": "/images/awards/byg_logo.gif"
-    },
-    {
-      "title": "Swiss Backpacker News",
-      "image": "/images/awards/news.gif"
-    },
-    {
-      "title": "BackpackingEurope.com",
-      "image": "/images/awards/bpe12060.gif"
-    },
-    {
-      "title": "Swiss Alps Retreat",
-      "image": "/images/awards/88x31a.gif"
     }
   ]
 }
