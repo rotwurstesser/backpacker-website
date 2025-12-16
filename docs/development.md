@@ -45,7 +45,7 @@ We rely on the GitHub API's native optimistic locking mechanism to handle concur
 1.  **SHA Parameter**: Every file update request via the GitHub API requires a `sha` parameter identifying the base version being edited.
 2.  **Conflict Rule (409)**: If the provided `sha` does not match the current `sha` on the HEAD of the branch (indicating an intervening commit), the GitHub API returns a **409 Conflict** error.
     > *"If you don't provide the current SHA, or provide a mismatching SHA, you will receive a 409 Conflict error."* — GitHub API Docs
-3.  **CMS Behavior**: when `Decap CMS` receives this 409 error during a save attempt, it aborts the operation and notifies the user via the UI ("Entry changed by another user").
+3.  **CMS Behavior**: when **Sveltia CMS** receives this 409 error during a save attempt, it aborts the operation and notifies the user via the UI ("Entry changed by another user").
 
 **Implication**: Silent data loss via overwrite is **impossible** at the protocol level.
 
