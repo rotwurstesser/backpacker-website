@@ -94,6 +94,27 @@ Verwalten Sie Ihre empfohlenen Partner und Freunde.
 
 ---
 
+## 🖼️ Medien- & Asset-Verwaltung
+
+Sie können alle Bilder und Dateien in der zentralen **Medienbibliothek** verwalten.
+
+### Zugriff auf die Bibliothek
+1.  Öffnen Sie den Reiter **Media** in der Hauptnavigation.
+2.  Hier sehen Sie alle hochgeladenen Dateien, die im System gespeichert sind.
+
+### Funktionen
+*   **Upload**: Klicken Sie auf **Upload New**, um Bilder für die spätere Verwendung hochzuladen.
+*   **Drag & Drop**: Sie können Bilder direkt von Ihrem Computer in die Bibliothek ziehen.
+*   **Suche**: Nutzen Sie die Suchleiste, um bestimmte Dateinamen zu finden.
+*   **Löschen**: Wählen Sie ein Bild aus und klicken Sie auf **Delete**, um es zu entfernen.
+    *   *Warnung*: Wenn Sie ein Bild löschen, das aktuell auf einer Seite verwendet wird, wird dieses Bild auf der Website nicht mehr angezeigt (Broken Link).
+
+### Best Practices
+*   **Dateinamen**: Verwenden Sie beschreibende Namen wie `zimmer-doppel-aussicht.jpg` anstatt `IMG_9923.jpg`. Das hilft der Suchmaschine (SEO) und beim Wiederfinden.
+*   **Größe**: Versuchen Sie, web-optimierte Bilder hochzuladen (JPG/WEBP, ca. 200KB - 800KB).
+
+---
+
 ## 📝 Tipps zur Bearbeitung
 
 ### Mehrsprachige Inhalte

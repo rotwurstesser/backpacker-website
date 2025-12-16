@@ -94,6 +94,27 @@ Manage your recommended partners and friends.
 
 ---
 
+## 🖼️ Media & Asset Management
+
+You can manage all images and files in the central **Media Library**.
+
+### Accessing the Library
+1.  Open the **Media** tab in the main navigation bar (top or left sidebar).
+2.  Here you see all uploaded files stored in the system.
+
+### Features
+*   **Upload**: Click **Upload New** to add images directly to the library for later use.
+*   **Drag & Drop**: You can drag images directly from your computer into the library.
+*   **Search**: Use the search bar to find specific filenames.
+*   **Delete**: Select an image and click **Delete** to remove it.
+    *   *Warning*: If you delete an image that is currently used on a page, that image will break (disappear) on the website.
+
+### Best Practices
+*   **Filenames**: Use descriptive names like `room-double-view.jpg` instead of `IMG_9923.jpg`. This helps with SEO and finding files later.
+*   **Size**: try to upload images that are web-optimized (JPG/WEBP, approx. 200KB - 800KB).
+
+---
+
 ## 📝 Editing Tips
 
 ### Multilingual Content
