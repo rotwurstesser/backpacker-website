@@ -55,8 +55,8 @@
     "es": "Informacion de Precios"
   },
   "priceNote": {
-    "de": "Preise pro Nacht, inklusive Fruehstueck",
-    "en": "Prices per night, breakfast included",
+    "de": "Preise pro Nacht, exklusive Frühstück. Küche verfügbar.",
+    "en": "Prices per night, breakfast not included. Kitchen available.",
     "es": "Precios por noche, desayuno incluido"
   },
   "sheetsIncluded": {
