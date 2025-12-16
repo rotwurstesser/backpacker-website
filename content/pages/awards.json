@@ -4,5 +4,57 @@
     "en": "Awards",
     "es": "Premios"
   },
-  "awards": []
+  "awards": [
+    {
+      "title": "Swiss Hostels",
+      "image": "/images/logos/swiss-hostels.jpg"
+    },
+    {
+      "title": "TripAdvisor",
+      "image": "/images/logos/tripadvisor.jpg",
+      "year": "Recommended"
+    },
+    {
+      "title": "Lonely Planet",
+      "image": "/images/logos/lonely-planet.jpg",
+      "year": "Recommended"
+    },
+    {
+      "title": "Le Petit Futé",
+      "image": "/images/logos/petit-fute.jpg",
+      "year": "Recommended"
+    },
+    {
+      "title": "gomio.com",
+      "image": "/images/awards/gomio.gif"
+    },
+    {
+      "title": "Gurten Festival",
+      "image": "/images/awards/Gurten.gif"
+    },
+    {
+      "title": "Swiss Backpackers",
+      "image": "/images/awards/sbp.gif"
+    },
+    {
+      "title": "Bern Tourist Office",
+      "image": "/images/awards/btn.gif"
+    },
+    {
+      "title": "Bern Youth Guide",
+      "image": "/images/awards/byg_logo.gif"
+    },
+    {
+      "title": "Swiss Backpacker News",
+      "image": "/images/awards/news.gif"
+    },
+    {
+      "title": "BackpackingEurope.com",
+      "image": "/images/awards/bpe12060.gif"
+    },
+    {
+      "title": "Swiss Alps Retreat",
+      "image": "/images/awards/88x31a.gif"
+    }
+  ]
 }
