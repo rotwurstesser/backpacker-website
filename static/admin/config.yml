@@ -9,8 +9,8 @@ public_folder: /images
 media_library:
   folder_support: true
 
-site_url: https://bernbackpackers.ch
-display_url: https://bernbackpackers.ch
+site_url: https://curious-fudge-dcd031.netlify.app
+display_url: https://curious-fudge-dcd031.netlify.app
 logo_url: /images/logos/logo.png
 
 slug:
