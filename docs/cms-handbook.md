@@ -14,6 +14,9 @@ Welcome to the Bern Backpackers Content Management System (CMS). This guide help
 
 ### 1. Select Content
 Once logged in, you will see a list of "Collections" on the left:
+
+![CMS Dashboard](images/cms-dashboard.png)
+
 *   **Startseite**: Homepage content (Hero, Features, etc.)
 *   **Zimmer**: Room details (Prices, Availability, Descriptions)
 *   **Zimmer Seite**: Text labels on the rooms page
@@ -26,6 +29,8 @@ Once logged in, you will see a list of "Collections" on the left:
 *   Click on the item you want to edit.
 *   **Multilingual Content**: Most fields have tabs for `Deutsch`, `Englisch`, and `Spanisch`. Ensure you update all relevant languages.
 *   **Markdown**: Use the formatting toolbar for Bold, Italic, Lists, and Headings.
+
+![Editing Content](images/cms-edit-page.png)
 
 ### 3. Publishing Changes
 1.  Click the **Publish** button at the top right.
