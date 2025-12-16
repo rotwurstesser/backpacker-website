@@ -1,6 +1,6 @@
 /// <reference types="vitest" />
 import { sveltekit } from '@sveltejs/kit/vite';
-import { defineConfig } from 'vite';
+import { defineConfig, type UserConfig } from 'vite';
 
 export default defineConfig({
   plugins: [sveltekit()],
@@ -13,4 +13,4 @@ export default defineConfig({
     include: ['src/**/*.{test,spec}.{js,ts}'],
     environment: 'node'
   }
-});
+} as UserConfig & { test?: any });

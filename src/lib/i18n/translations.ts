@@ -372,7 +372,7 @@ export const translations = {
       currency: 'CHF'
     }
   }
-} as const;
+};
 
 export type Translations = typeof translations.en;
 
