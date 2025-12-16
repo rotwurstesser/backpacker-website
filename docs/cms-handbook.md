@@ -1,5 +1,8 @@
 # CMS User Handbook 📘
 
+> [!IMPORTANT]
+> **Private Demo Instance**: This website is currently running in "Stealth Mode" (`noindex, nofollow`). It is **not findable** on Google or other search engines. You can safely edit and test content here without affecting public search results.
+
 Welcome to the Bern Backpackers Content Management System (CMS). This guide helps you update the website content safely and easily.
 
 ## Accessing the CMS
