@@ -778,6 +778,23 @@ collections:
               - { label: Deutsch, name: de, widget: markdown, minimal: true, required: false }
               - { label: Englisch, name: en, widget: markdown, minimal: true, required: false }
               - { label: Spanisch, name: es, widget: markdown, minimal: true, required: false }
+          - label: "Partner Logos"
+            name: partners
+            widget: list
+            collapsed: true
+            summary: "{{fields.name}}"
+            fields:
+              - { label: Name, name: name, widget: string }
+              - { label: Link URL, name: url, widget: string }
+              - { label: Logo Bild, name: logo, widget: image }
+              - label: "Alt Text"
+                name: alt
+                widget: object
+                collapsed: true
+                fields:
+                  - { label: Deutsch, name: de, widget: markdown, minimal: true, required: false }
+                  - { label: Englisch, name: en, widget: markdown, minimal: true, required: false }
+                  - { label: Spanisch, name: es, widget: markdown, minimal: true, required: false }
           - label: "Link Kategorien"
             name: categories
             widget: list
@@ -794,10 +811,11 @@ collections:
               - label: Links
                 name: links
                 widget: list
+                collapsed: true
                 summary: "{{fields.name}}"
                 fields:
-                  - { label: Name, name: name, widget: markdown, minimal: true, required: false }
-                  - { label: URL, name: url, widget: markdown, minimal: true, required: false }
+                  - { label: Name, name: name, widget: string }
+                  - { label: Link URL, name: url, widget: string }
 
   # ====================
   # EINSTELLUNGEN

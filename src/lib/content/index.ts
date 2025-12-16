@@ -184,6 +184,12 @@ export interface LinksContent {
   title: TranslatedField;
   subtitle: TranslatedField;
   partnersTitle: TranslatedField;
+  partners: Array<{
+    name: string;
+    url: string;
+    logo: string;
+    alt: TranslatedField;
+  }>;
   categories: Array<{
     name: TranslatedField;
     links: Array<{

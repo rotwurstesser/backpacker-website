@@ -14,6 +14,28 @@
     "en": "Our Partners",
     "es": "Nuestros socios"
   },
+  "partners": [
+    {
+      "name": "Swiss Hostels",
+      "url": "https://www.swisshostels.com/",
+      "logo": "/images/logos/swiss-hostels.jpg",
+      "alt": {
+        "de": "Swiss Hostels Partner Logo",
+        "en": "Swiss Hostels partner logo",
+        "es": "Logotipo de socio de Swiss Hostels"
+      }
+    },
+    {
+      "name": "Bern Tourism",
+      "url": "https://www.bern.com/",
+      "logo": "/images/logos/bern-tourism.jpg",
+      "alt": {
+        "de": "Bern Tourismus Partner Logo",
+        "en": "Bern Tourism partner logo",
+        "es": "Logotipo de socio de Bern Tourism"
+      }
+    }
+  ],
   "categories": [
     {
       "name": {
