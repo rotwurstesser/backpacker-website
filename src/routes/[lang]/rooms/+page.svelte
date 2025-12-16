@@ -31,14 +31,14 @@
 	<section class="py-16">
 		<div class="container">
 			<div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
-				{#each rooms.filter((r) => r.available) as room (room.id)}
-					<Card class="overflow-hidden hover:shadow-lg transition-shadow">
+				{#each rooms as room (room.id)}
+					<Card class="overflow-hidden hover:shadow-lg transition-shadow {room.available ? '' : 'opacity-75'}">
 						{#if room.image}
 							<div class="aspect-[16/9] bg-muted">
 								<img
 									src={room.image}
 									alt={translate(room.name, lang)}
-									class="w-full h-full object-cover"
+									class="w-full h-full object-cover {room.available ? '' : 'grayscale filter'}"
 									loading="lazy"
 								/>
 							</div>
@@ -83,7 +83,12 @@
 										{@html md(room.priceUnit === 'per_bed' ? translate(roomsPageContent.perBed, lang) : translate(roomsPageContent.perRoom, lang))}
 									</span>
 								</div>
-								<Button href={bookingUrl} target="_blank" rel="noopener noreferrer">
+								<Button
+									href={room.available ? bookingUrl : undefined}
+									disabled={!room.available}
+									target={room.available ? "_blank" : undefined}
+									rel={room.available ? "noopener noreferrer" : undefined}
+								>
 									{@html md(translate(roomsPageContent.bookButton, lang))}
 								</Button>
 							</div>
