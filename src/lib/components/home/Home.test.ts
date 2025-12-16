@@ -1,5 +1,6 @@
 import { render, screen } from '@testing-library/svelte';
 import { describe, it, expect } from 'vitest';
+import type { Translations } from '$lib/i18n';
 import Hero from './Hero.svelte';
 import Features from './Features.svelte';
 
@@ -14,12 +15,12 @@ describe('Home Components', () => {
     ]
   };
 
-  const mockT: any = {
+  const mockT = {
     hero: { learnMore: 'Learn More' },
     features: { title: 'Features' },
-    rooms: { title: 'Rooms' }, // Added to satisfy RoomsPreview if needed
+    rooms: { title: 'Rooms' },
     common: { viewAll: 'View All' }
-  };
+  } as unknown as Translations;
 
   it('renders Hero correctly', () => {
     render(Hero, {

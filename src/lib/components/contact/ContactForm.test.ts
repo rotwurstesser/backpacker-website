@@ -35,7 +35,7 @@ describe('ContactForm', () => {
 
   // Simple submission test
   it('submits form data', async () => {
-    (global.fetch as any).mockResolvedValueOnce({ ok: true });
+    (global.fetch as unknown as ReturnType<typeof vi.fn>).mockResolvedValueOnce({ ok: true });
 
     render(ContactForm, { contactPageContent: mockContent, lang: 'en' });
 
