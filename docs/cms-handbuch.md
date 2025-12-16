@@ -81,14 +81,32 @@ Laden Sie visuelle Inhalte für die Galerie-Seite hoch.
 *   **Filters**: Übersetzen Sie den Text für die Kategorie-Buttons (z. B. "Gemeinschaftsräume" in "Wohnzimmer" umbenennen).
 *   **No Images Message**: Text, der angezeigt wird, wenn eine Kategorie leer ist.
 
-### 🔗 Links (Partner)
-Verwalten Sie Ihre empfohlenen Partner und Freunde.
+### 🏆 Awards (Auszeichnungen)
+Verwalten Sie Ihre Auszeichnungen und Preise.
 
-*   **Partner Logos**: Ein spezieller Bereich für Logos (z. B. "Swiss Hostels").
-    *   **Name**: Name des Partners.
-    *   **Link URL**: Wohin das Logo verlinken soll.
+*   **Page Title**: Die Überschrift, die auf der Seite angezeigt wird.
+*   **Awards List**: Fügen Sie einzelne Auszeichnungen hinzu.
+    *   **Title**: Name der Auszeichnung (z. B. "TripAdvisor Gewinner").
+    *   **Image**: Laden Sie das Abzeichen/Logo hoch.
+    *   **Year**: (Optional) Das Jahr der Auszeichnung.
+
+### ⚖️ Rechtliches (Datenschutz & AGB)
+Bearbeiten Sie den Inhalt für "Datenschutz" und "AGB" (Allgemeine Geschäftsbedingungen).
+
+*   **Page Title**: Die Hauptüberschrift (z. B. "Datenschutzerklärung").
+*   **Content**: Der vollständige Text der Richtlinie.
+    *   **Rich Text**: Sie können Überschriften, Listen, **fetten** Text und Links verwenden.
+    *   **Bilder**: Sie können Bilder direkt über die Toolbar in den Text einfügen!
+
+### 🔗 Links (Partner)
+Verwalten Sie empfohlene Partner und nützliche Links.
+
+*   **Categories**: Gruppieren Sie Links nach Themen (z. B. "Reiseführer", "Events").
+    *   **Category Name**: Die Überschrift für die Gruppe.
+    *   **Links**: Fügen Sie eine Liste von URL + Name Paaren hinzu.
+*   **Partners**: Ein spezieller Bereich für Hauptpartner mit Logos.
     *   **Logo**: Laden Sie das Logo-Bild des Partners hoch.
-*   **Link Categories**: Erstellen Sie Gruppen von Textlinks (z. B. "Bern Tourismus", "Fahrpläne").
+    *   **Link URL**: Wohin das Logo verlinken soll.
 
 ### 📍 Lage (Standort)
 *   **Maps URL**: Der Google Maps Embed-Link.

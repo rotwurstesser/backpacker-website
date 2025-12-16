@@ -53,3 +53,15 @@ We rely on the GitHub API's native optimistic locking mechanism to handle concur
 *   **Backend**: `github` (Repo: `rotwurstesser/backpacker-website`)
 *   **Media**: Stored in `static/images`
 *   **Markdown**: Custom widget configuration limits buttons to safe options (Bold, Italic, Lists) to maintain design consistency.
+### Component Architecture
+*   **`LegalPage.svelte`**: A reusable layout wrapper for text-heavy pages (Privacy, Terms). It handles the consistent header styling and prose wrapping.
+*   **Loaders (`src/lib/content`)**: Strongly typed loaders ensure content integrity.
+    *   `loadPageContent`: Generic loader for legal pages.
+    *   `loadAwardsContent`: Specialized loader for the awards list.
+    *   `loadLinksContent`: Specialized loader for link categories and partners.
+
+### Markdown Handling (`src/lib/utils.ts`)
+We use specific utilities to render markdown safely:
+*   **`md(text)`**: Inline rendering. Use for titles and labels where paragraph tags `channel` break the layout.
+*   **`mdContent(text)`**: Block rendering. Use for main page content. Supports headers, lists, and images.
+    *   *Security*: Both functions strip dangerous protocols (`javascript:`) and force external links to open in new tabs (`rel="noopener"`).

@@ -81,14 +81,32 @@ Upload visual content for the gallery page.
 *   **Filters**: Translate the text for the category buttons (e.g., rename "Common Areas" to "Living Room").
 *   **No Images Message**: Text shown if a category is empty.
 
-### 🔗 Links (Partners)
-Manage your recommended partners and friends.
+### 🏆 Awards
+Manage your awards and recognitions.
 
-*   **Partner Logos**: A special section for logos (e.g., "Swiss Hostels").
-    *   **Name**: Name of the partner.
-    *   **Link URL**: Where the logo should link to.
+*   **Page Title**: The heading displayed on the page.
+*   **Awards List**: Add individual awards.
+    *   **Title**: Name of the award (e.g., "TripAdvisor Winner").
+    *   **Image**: Upload the award badge/logo.
+    *   **Year**: (Optional) The year of the award.
+
+### ⚖️ Rechtliches (Legal Pages)
+Edit the content for "Datenschutz" (Privacy Policy) and "AGB" (Terms & Conditions).
+
+*   **Page Title**: The main heading (e.g., "Privacy Policy").
+*   **Content**: The full text of the policy.
+    *   **Rich Text**: You can use headers, lists, **bold** text, and links.
+    *   **Images**: You can insert images directly into the text using the markdown toolbar!
+
+### 🔗 Links (Partners)
+Manage your recommended partners and useful travel links.
+
+*   **Categories**: Group links by topic (e.g., "Travel Guides", "Festivals").
+    *   **Category Name**: The heading for the group.
+    *   **Links**: Add list of URL + Name pairs.
+*   **Partners**: A special section for main partners with logos.
     *   **Logo**: Upload the partner's logo image.
-*   **Link Categories**: Create groups of text links (e.g., "Bern Tourism", "Train Schedules").
+    *   **Link URL**: Where the logo should link to.
 
 ### 📍 Lage (Location)
 *   **Maps URL**: The Google Maps embed link.

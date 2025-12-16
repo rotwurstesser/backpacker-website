@@ -54,9 +54,9 @@ netlify deploy --prod
 
 ## Features
 
+- **Pages**: Home, Rooms, Gallery, Location, Contact, **Awards**, **Links**, **Privacy**, **Terms**
 - **Multilingual**: English, German, Spanish
-- **SSR**: Server-side rendering for SEO
-- **CMS**: Sveltia CMS (Headless, Git-based) for content editing
+- **CMS**: Sveltia CMS (Headless, Git-based) for content editing, including **Awards** and **Legal** pages
 - **Accessible**: WCAG 2.1 AA compliant
 - **Secure**: CSP headers, XSS protection, spam honeypot
 - **Fast**: Lazy loading, optimized images, efficient caching
@@ -81,6 +81,10 @@ src/
 │       ├── gallery/     # Photo gallery
 │       ├── location/    # Map & directions
 │       ├── contact/     # Contact form
+│       ├── links/       # Partner links
+│       ├── awards/      # Awards & Ratings
+│       ├── privacy/     # Privacy Policy
+│       └── terms/       # Terms & Conditions
 │       └── links/       # Partner links
 ├── lib/
 │   ├── components/      # Reusable components
