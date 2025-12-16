@@ -14,6 +14,11 @@
     "en": "Book Now",
     "es": "Reservar Ahora"
   },
+  "booked": {
+    "de": "Ausgebucht",
+    "en": "Booked",
+    "es": "Reservado"
+  },
   "perBed": {
     "de": "pro Bett",
     "en": "per bed",

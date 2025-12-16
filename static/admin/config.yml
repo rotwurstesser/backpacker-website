@@ -201,6 +201,14 @@ collections:
               - { label: Deutsch, name: de, widget: markdown, minimal: true, required: false }
               - { label: Englisch, name: en, widget: markdown, minimal: true, required: false }
               - { label: Spanisch, name: es, widget: markdown, minimal: true, required: false }
+          - label: "Gebucht Text"
+            name: booked
+            widget: object
+            collapsed: true
+            fields:
+              - { label: Deutsch, name: de, widget: markdown, minimal: true, required: false }
+              - { label: Englisch, name: en, widget: markdown, minimal: true, required: false }
+              - { label: Spanisch, name: es, widget: markdown, minimal: true, required: false }
           - label: "Pro Bett Text"
             name: perBed
             widget: object

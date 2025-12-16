@@ -204,6 +204,7 @@ export interface RoomsPageContent {
   title: TranslatedField;
   subtitle: TranslatedField;
   bookButton: TranslatedField;
+  booked: TranslatedField;
   perBed: TranslatedField;
   perRoom: TranslatedField;
   bed: TranslatedField;
