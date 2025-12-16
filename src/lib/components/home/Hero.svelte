@@ -1,7 +1,7 @@
 <script lang="ts">
   import { Button } from "$lib/components/ui";
   import { t as translate } from "$lib/content";
-  import { md } from "$lib/utils";
+  import { md, mdContent } from "$lib/utils";
   import type { Lang, Translations } from "$lib/i18n";
 
   export let homeContent: any;
@@ -20,12 +20,12 @@
       >
         {@html md(translate(homeContent.heroTagline, lang))}
       </span>
-      <h1>
-        {@html md(translate(homeContent.heroTitle, lang))}
-      </h1>
-      <p class="text-xl text-muted-foreground">
-        {@html md(translate(homeContent.heroSubtitle, lang))}
-      </p>
+      <div class="prose dark:prose-invert max-w-none prose-h1:text-4xl prose-h1:font-bold">
+        {@html mdContent(translate(homeContent.heroTitle, lang))}
+      </div>
+      <div class="prose dark:prose-invert max-w-none text-xl text-muted-foreground">
+        {@html mdContent(translate(homeContent.heroSubtitle, lang))}
+      </div>
       <div class="flex flex-col sm:flex-row gap-4 justify-center pt-4">
         <Button size="lg" href={bookingUrl} target="_blank" rel="noopener noreferrer">
           {translate(homeContent.heroCta, lang)}
