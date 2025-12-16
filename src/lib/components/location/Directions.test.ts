@@ -4,20 +4,24 @@ import Directions from './Directions.svelte';
 import { Train } from 'lucide-svelte';
 
 describe('Directions', () => {
-  const mockDirections = [
-    { icon: Train, title: { en: 'By Train' }, description: { en: 'Take the tram.' } }
-  ];
+  const mockProps = {
+    title: { en: 'How to get here' },
+    tramTitle: { en: 'By Train' },
+    tram: { en: 'Take the tram.' },
+    footTitle: { en: 'By Foot' },
+    foot: { en: 'Walk fast.' },
+    carTitle: { en: 'By Car' },
+    car: { en: 'Drive slow.' },
+    lang: 'en' as const
+  };
 
   it('renders direction cards', () => {
-    render(Directions, { directions: mockDirections, title: { en: 'How to get here' }, lang: 'en' });
+    render(Directions, mockProps);
 
     expect(screen.getByText('How to get here')).toBeInTheDocument();
     expect(screen.getByText('By Train')).toBeInTheDocument();
     expect(screen.getByText('Take the tram.')).toBeInTheDocument();
-  });
-
-  it('renders empty list gracefully', () => {
-    render(Directions, { directions: [], title: { en: 'Directions' }, lang: 'en' });
-    expect(screen.getByText('Directions')).toBeInTheDocument();
+    expect(screen.getByText('By Foot')).toBeInTheDocument();
+    expect(screen.getByText('Walk fast.')).toBeInTheDocument();
   });
 });
