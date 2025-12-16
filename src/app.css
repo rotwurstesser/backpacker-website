@@ -3,179 +3,192 @@
 @tailwind utilities;
 
 @layer base {
-	:root {
-		/*
+  :root {
+    /*
 		 * Brand Color Palette from Farbpalette
 		 * Cream: #F0EDE5 | Copper: #C78F57 | Teal: #85ABAB | Burgundy: #854745 | Navy: #1F3345
 		 */
 
-		/* Backgrounds */
-		--background: 40 26% 92%; /* #F0EDE5 Cream - main page background */
-		--card: 0 0% 100%; /* White - cards float above cream */
-		--popover: 0 0% 100%;
+    /* Backgrounds */
+    --background: 40 26% 92%;
+    /* #F0EDE5 Cream - main page background */
+    --card: 0 0% 100%;
+    /* White - cards float above cream */
+    --popover: 0 0% 100%;
 
-		/* Text colors - Navy based */
-		--foreground: 213 38% 20%; /* #1F3345 Navy */
-		--card-foreground: 213 38% 20%;
-		--popover-foreground: 213 38% 20%;
+    /* Text colors - Navy based */
+    --foreground: 213 38% 20%;
+    /* #1F3345 Navy */
+    --card-foreground: 213 38% 20%;
+    --popover-foreground: 213 38% 20%;
 
-		/* Primary - Teal #85ABAB - darkened for better contrast */
-		--primary: 180 25% 45%;
-		--primary-foreground: 0 0% 100%;
+    /* Primary - Teal #85ABAB - darkened for better contrast */
+    --primary: 180 25% 35%;
+    --primary-foreground: 0 0% 100%;
 
-		/* Secondary - Burgundy #854745 */
-		--secondary: 2 31% 40%;
-		--secondary-foreground: 0 0% 100%;
+    /* Secondary - Burgundy #854745 */
+    --secondary: 2 31% 40%;
+    --secondary-foreground: 0 0% 100%;
 
-		/* Accent - Copper #C78F57 */
-		--accent: 29 52% 56%;
-		--accent-foreground: 0 0% 100%;
+    /* Accent - Copper #C78F57 */
+    --accent: 29 52% 56%;
+    --accent-foreground: 0 0% 100%;
 
-		/* Muted - Warm grays derived from cream */
-		--muted: 40 20% 96%; /* Very light warm gray */
-		--muted-foreground: 213 20% 46%; /* Warm gray text */
+    /* Muted - Warm grays derived from cream */
+    --muted: 40 20% 96%;
+    /* Very light warm gray */
+    --muted-foreground: 213 20% 46%;
+    /* Warm gray text */
 
-		/* UI elements */
-		--destructive: 0 72% 51%;
-		--destructive-foreground: 0 0% 100%;
+    /* UI elements */
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 100%;
 
-		/* Borders - Warm gray */
-		--border: 40 15% 85%; /* Warm gray border */
-		--input: 40 20% 94%; /* Slightly tinted input bg */
-		--ring: 180 17% 60%; /* Teal for focus rings */
+    /* Borders - Warm gray */
+    --border: 40 15% 85%;
+    /* Warm gray border */
+    --input: 40 20% 94%;
+    /* Slightly tinted input bg */
+    --ring: 180 17% 60%;
+    /* Teal for focus rings */
 
-		--radius: 0.5rem;
-	}
+    --radius: 0.5rem;
+  }
 
-	.dark {
-		/* Dark mode - Navy based backgrounds */
-		--background: 213 38% 10%;
-		--card: 213 35% 14%;
-		--popover: 213 35% 14%;
+  .dark {
+    /* Dark mode - Navy based backgrounds */
+    --background: 213 38% 10%;
+    --card: 213 35% 14%;
+    --popover: 213 35% 14%;
 
-		--foreground: 40 26% 92%; /* Cream text */
-		--card-foreground: 40 26% 92%;
-		--popover-foreground: 40 26% 92%;
+    --foreground: 40 26% 92%;
+    /* Cream text */
+    --card-foreground: 40 26% 92%;
+    --popover-foreground: 40 26% 92%;
 
-		--primary: 180 17% 60%;
-		--primary-foreground: 213 38% 10%;
+    --primary: 180 17% 60%;
+    --primary-foreground: 213 38% 10%;
 
-		--secondary: 2 31% 50%;
-		--secondary-foreground: 40 26% 92%;
+    --secondary: 2 31% 50%;
+    --secondary-foreground: 40 26% 92%;
 
-		--accent: 29 52% 56%;
-		--accent-foreground: 213 38% 10%;
+    --accent: 29 52% 56%;
+    --accent-foreground: 213 38% 10%;
 
-		--muted: 213 30% 18%;
-		--muted-foreground: 40 15% 65%;
+    --muted: 213 30% 18%;
+    --muted-foreground: 40 15% 65%;
 
-		--destructive: 0 62% 45%;
-		--destructive-foreground: 40 26% 92%;
+    --destructive: 0 62% 45%;
+    --destructive-foreground: 40 26% 92%;
 
-		--border: 213 25% 22%;
-		--input: 213 30% 18%;
-		--ring: 180 17% 60%;
-	}
+    --border: 213 25% 22%;
+    --input: 213 30% 18%;
+    --ring: 180 17% 60%;
+  }
 }
 
 @layer base {
-	* {
-		@apply border-border;
-	}
+  * {
+    @apply border-border;
+  }
 
-	body {
-		@apply bg-background text-foreground;
-		font-family: 'Work Sans', system-ui, sans-serif;
-	}
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Work Sans', system-ui, sans-serif;
+  }
 
-	/*
+  /*
 	 * Typography hierarchy
 	 * Anton is designed to be tight and bold - embrace its condensed nature
 	 * Only add minimal spacing to prevent letters from touching
 	 */
-	h1, h2 {
-		font-family: 'Anton', sans-serif;
-		text-transform: uppercase;
-		line-height: 1.15;
-	}
+  h1,
+  h2 {
+    font-family: 'Anton', sans-serif;
+    text-transform: uppercase;
+    line-height: 1.15;
+  }
 
-	h1 {
-		@apply text-3xl md:text-4xl lg:text-5xl;
-		letter-spacing: -0.01em;
-	}
+  h1 {
+    @apply text-3xl md:text-4xl lg:text-5xl;
+    letter-spacing: -0.01em;
+  }
 
-	h2 {
-		@apply text-xl md:text-2xl lg:text-3xl;
-		letter-spacing: -0.01em;
-	}
+  h2 {
+    @apply text-xl md:text-2xl lg:text-3xl;
+    letter-spacing: -0.01em;
+  }
 
-	/* h3-h6 use body font for better readability at smaller sizes */
-	h3, h4, h5, h6 {
-		font-family: 'Work Sans', system-ui, sans-serif;
-		font-weight: 600;
-		line-height: 1.3;
-	}
+  /* h3-h6 use body font for better readability at smaller sizes */
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: 'Work Sans', system-ui, sans-serif;
+    font-weight: 600;
+    line-height: 1.3;
+  }
 
-	h3 {
-		@apply text-xl md:text-2xl;
-	}
+  h3 {
+    @apply text-xl md:text-2xl;
+  }
 
-	h4 {
-		@apply text-lg md:text-xl;
-	}
+  h4 {
+    @apply text-lg md:text-xl;
+  }
 
-	h5 {
-		@apply text-base md:text-lg;
-	}
+  h5 {
+    @apply text-base md:text-lg;
+  }
 
-	h6 {
-		@apply text-sm md:text-base;
-	}
+  h6 {
+    @apply text-sm md:text-base;
+  }
 
-	/* Inline markdown links - styled nicely with primary color */
-	a:not([class]) {
-		@apply text-primary font-medium;
-		text-decoration: underline;
-		text-decoration-color: hsl(var(--primary) / 0.4);
-		text-underline-offset: 2px;
-		text-decoration-thickness: 1.5px;
-		transition: text-decoration-color 0.2s ease;
-	}
+  /* Inline markdown links - styled nicely with primary color */
+  a:not([class]) {
+    @apply text-primary font-medium;
+    text-decoration: underline;
+    text-decoration-color: hsl(var(--primary) / 0.4);
+    text-underline-offset: 2px;
+    text-decoration-thickness: 1.5px;
+    transition: text-decoration-color 0.2s ease;
+  }
 
-	a:not([class]):hover {
-		text-decoration-color: hsl(var(--primary));
-	}
+  a:not([class]):hover {
+    text-decoration-color: hsl(var(--primary));
+  }
 }
 
 @layer utilities {
-	.sr-only {
-		position: absolute;
-		width: 1px;
-		height: 1px;
-		padding: 0;
-		margin: -1px;
-		overflow: hidden;
-		clip: rect(0, 0, 0, 0);
-		white-space: nowrap;
-		border-width: 0;
-	}
+  .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+  }
 
-	.focus\:not-sr-only:focus {
-		position: static;
-		width: auto;
-		height: auto;
-		padding: inherit;
-		margin: inherit;
-		overflow: visible;
-		clip: auto;
-		white-space: normal;
-	}
+  .focus\:not-sr-only:focus {
+    position: static;
+    width: auto;
+    height: auto;
+    padding: inherit;
+    margin: inherit;
+    overflow: visible;
+    clip: auto;
+    white-space: normal;
+  }
 
-	/* Display heading utility - for when you want Anton style on any element */
-	.font-display {
-		font-family: 'Anton', sans-serif;
-		text-transform: uppercase;
-		letter-spacing: -0.01em;
-		line-height: 1.15;
-	}
+  /* Display heading utility - for when you want Anton style on any element */
+  .font-display {
+    font-family: 'Anton', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: -0.01em;
+    line-height: 1.15;
+  }
 }

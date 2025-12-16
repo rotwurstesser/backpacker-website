@@ -8,7 +8,7 @@
 </script>
 
 <div class="container py-20 max-w-4xl mx-auto">
-  <h1 class="mb-8 text-4xl md:text-5xl font-bold tracking-tight text-center">
+  <h1 class="mb-8 text-4xl md:text-5xl tracking-tight text-center">
     {@html md(title?.[lang] || "Title")}
   </h1>
   <div class="prose dark:prose-invert max-w-none">

@@ -17,7 +17,7 @@
 
 <div class="container py-20 max-w-4xl mx-auto">
   <div class="text-center mb-12 space-y-4">
-    <h1 class="text-4xl md:text-5xl font-bold tracking-tight">
+    <h1 class="text-4xl md:text-5xl tracking-tight">
       {@html md(content?.title?.[currentLang] || "Links")}
     </h1>
     {#if content?.subtitle?.[currentLang]}
@@ -31,7 +31,7 @@
     <div class="space-y-12">
       {#each content.categories as category}
         <section>
-          <h2 class="text-2xl font-semibold mb-6 border-b pb-2">
+          <h2 class="text-3xl tracking-tight text-center mb-12">
             {@html md(category.name?.[currentLang] || "")}
           </h2>
           {#if category.links}
@@ -65,7 +65,7 @@
 
   {#if content?.partners}
     <section class="mt-16">
-      <h2 class="text-2xl font-semibold mb-6 border-b pb-2 text-center">
+      <h2 class="text-3xl tracking-tight text-center mb-12">
         {@html md(content.partnersTitle?.[currentLang] || "Partners")}
       </h2>
       <div class="flex flex-wrap justify-center gap-8 items-center">

@@ -11,7 +11,9 @@
 
 <div class="grid md:grid-cols-3 gap-8">
   <div class="md:col-span-3">
-    <h2 class="text-2xl font-bold text-center mb-12">{@html md(translate(title, lang))}</h2>
+    <h2 class="text-3xl tracking-tight text-center mb-12">
+      {@html md(translate(title, lang))}
+    </h2>
   </div>
 
   {#each directions as direction}

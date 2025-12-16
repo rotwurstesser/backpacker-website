@@ -17,7 +17,9 @@
       </div>
 
       <div class="space-y-2 max-w-xl">
-        <h2 class="text-2xl font-semibold">{@html md(translate(content.sbbTitle, lang))}</h2>
+        <h2 class="text-3xl tracking-tight">
+          {@html md(translate(content.sbbTitle, lang))}
+        </h2>
         <div class="text-muted-foreground prose dark:prose-invert max-w-none">
           {@html mdContent(translate(content.sbbDescription, lang))}
         </div>

@@ -44,7 +44,7 @@
   <!-- Hero -->
   <section class="py-20 bg-gradient-to-br from-primary/10 via-background to-primary/5">
     <div class="container text-center max-w-3xl">
-      <h1 class="text-4xl md:text-5xl font-bold mb-6 tracking-tight">
+      <h1 class="text-4xl md:text-5xl mb-6 tracking-tight">
         {@html md(translate(locationContent.title, currentLang))}
       </h1>
       <p class="text-xl text-muted-foreground leading-relaxed">
@@ -89,7 +89,7 @@
   <!-- Landmarks: Kept inline as it's simple enough, but could be split if needed -->
   <section class="py-20 bg-muted/30">
     <div class="container">
-      <h2 class="text-3xl font-bold text-center mb-4">
+      <h2 class="text-3xl tracking-tight text-center mb-12">
         {@html md(translate(locationContent.landmarksTitle, currentLang))}
       </h2>
       <p class="text-center text-muted-foreground mb-16 max-w-2xl mx-auto">

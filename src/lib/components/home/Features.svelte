@@ -27,7 +27,7 @@
 
 <section class="py-20 bg-muted/30">
   <div class="container">
-    <h2 class="text-center mb-12">{t.features.title}</h2>
+    <h2 class="text-3xl tracking-tight text-center mb-12">{t.features.title}</h2>
     <div class="flex flex-wrap justify-center gap-6">
       {#each homeContent.features as feature (feature.icon)}
         {@const Icon = getIcon(feature.icon)}
