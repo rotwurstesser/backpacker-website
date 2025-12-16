@@ -10,17 +10,15 @@ Willkommen beim **Bern Backpackers Content Management System (CMS)**. Dieser Lei
 1.  **Einloggen**: Gehen Sie zu `https://curious-fudge-dcd031.netlify.app/admin` und melden Sie sich mit Ihrem GitHub-Konto an.
 2.  **Navigieren**: Verwenden Sie die spezifischen "Collections" (Sammlungen) in der linken Seitenleiste, um Inhalte zu finden.
 3.  **Bearbeiten**: Klicken Sie auf einen Eintrag, um den Editor zu öffnen.
-4.  **Veröffentlichen**: Klicken Sie oben rechts auf den grünen **Publish**-Button, um Änderungen sofort live zu schalten.
-
-![CMS Dashboard](images/cms-dashboard.png)
+4.  **Speichern**: Klicken Sie oben auf den **Save** (Speichern) Button, um Änderungen sofort anzuwenden.
 
 ---
 
 ## 🛡️ Sicherheit & "Stressfreies" Bearbeiten
 
-**"Was passiert, wenn zwei Personen dieselbe Seite bearbeiten?"**
+**"Was passiert, wenn zwei Personen dieselbe Seite speichern?"**
 
-Das System verfügt über eine integrierte Sicherheitssperre. Wenn jemand eine Änderung veröffentlicht, während Sie dieselbe Seite bearbeiten:
+Das System verfügt über eine integrierte Sicherheitssperre. Wenn jemand eine Änderung speichert, während Sie dieselbe Seite bearbeiten:
 1.  Erkennt das System einen "Konflikt" (Version Mismatch).
 2.  Ihr Speichervorgang wird mit einer roten Fehlermeldung blockiert ("Entry changed by another user").
 3.  **Es gehen keine Daten verloren.** Sie laden die Seite einfach neu, um die Änderungen der anderen Person zu sehen, und wenden Ihre Änderungen erneut an.
@@ -97,8 +95,6 @@ Verwalten Sie Ihre empfohlenen Partner und Freunde.
 ---
 
 ## 📝 Tipps zur Bearbeitung
-
-![Inhalte bearbeiten](images/cms-edit-page.png)
 
 ### Mehrsprachige Inhalte
 Die meisten Textfelder haben drei Tabs: `Deutsch`, `Englisch`, `Spanisch`.

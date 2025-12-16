@@ -10,9 +10,7 @@ Welcome to the **Bern Backpackers Content Management System (CMS)**. This guide 
 1.  **Login**: Go to `https://curious-fudge-dcd031.netlify.app/admin` and log in with your GitHub account.
 2.  **Navigate**: Use the specific "Collections" on the left sidebar to find content.
 3.  **Edit**: Click an entry to open the editor.
-4.  **Publish**: Click the green **Publish** button at the top right to make changes live immediately.
-
-![CMS Dashboard](images/cms-dashboard.png)
+4.  **Save**: Click the **Save** button at the top to apply your changes immediately.
 
 ---
 
@@ -97,8 +95,6 @@ Manage your recommended partners and friends.
 ---
 
 ## 📝 Editing Tips
-
-![Editing Content](images/cms-edit-page.png)
 
 ### Multilingual Content
 Most text fields have three tabs: `Deutsch`, `Englisch`, `Spanisch`.
