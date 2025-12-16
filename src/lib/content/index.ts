@@ -62,6 +62,7 @@ export interface CustomPage {
   showInNav: boolean;
   navOrder: number;
   published: boolean;
+  slug?: string;
 }
 
 // Helper to get translated value

@@ -32,9 +32,9 @@ collections:
             name: heroTitle
             widget: object
             fields:
-              - { label: Deutsch, name: de, widget: markdown, minimal: true, required: false }
-              - { label: Englisch, name: en, widget: markdown, minimal: true, required: false }
-              - { label: Spanisch, name: es, widget: markdown, minimal: true, required: false }
+              - { label: Deutsch, name: de, widget: markdown, minimal: true, required: false, buttons: ["bold", "italic", "link", "heading-one", "heading-two", "quote", "bulleted-list", "numbered-list"] }
+              - { label: Englisch, name: en, widget: markdown, minimal: true, required: false, buttons: ["bold", "italic", "link", "heading-one", "heading-two", "quote", "bulleted-list", "numbered-list"] }
+              - { label: Spanisch, name: es, widget: markdown, minimal: true, required: false, buttons: ["bold", "italic", "link", "heading-one", "heading-two", "quote", "bulleted-list", "numbered-list"] }
           - label: "Hero Untertitel"
             name: heroSubtitle
             widget: object
