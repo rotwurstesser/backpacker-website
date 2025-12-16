@@ -82,6 +82,12 @@ static/
 └── _headers            # Security headers
 ```
 
+## 📚 Documentation
+
+*   **[User Handbook (English)](docs/cms-handbook.md)**: Guide for content editors.
+*   **[Benutzerhandbuch (Deutsch)](docs/cms-handbuch.md)**: Anleitung für Content-Verwalter.
+*   **[Developer Guide](docs/development.md)**: Technical architecture and CI/CD.
+
 ## Environment
 
 No environment variables required. All configuration is in code.
