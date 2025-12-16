@@ -78,12 +78,21 @@ Decide who can access the CMS.
 
 ---
 
-## 6. Invite Editors (If "Invite Only")
+## 6. Granting Access (Vital) 🔐
 
-1.  Go to Netlify > **Identity**.
-2.  Click **Invite users**.
-3.  Enter the email address of the editor.
-4.  They will receive an email link to create their CMS account (linked to their GitHub).
+Because the repo is **Public**, security is handled by GitHub permissions.
+
+1.  **Public Read Access**: Anyone can view the code (creating transparency).
+2.  **Restricted Write Access**: **ONLY** users you explicitly list as **Collaborators** on GitHub can edit the site.
+
+**To add an editor:**
+1.  Go to your GitHub Repo > **Settings**.
+2.  Click **Collaborators** (left sidebar).
+3.  Click **Add people**.
+4.  Enter their GitHub username or email.
+5.  **They must accept the invite** to gain write access.
+
+> 🛑 **Security Note**: Random internet users CANNOT edit your site. They would get a "403 Error" from GitHub if they tried to save changes.
 
 ---
 
