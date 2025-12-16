@@ -73,11 +73,15 @@
   </section>
 
   <!-- Directions Components -->
-  <Directions
-    directions={directionsList}
-    title={locationContent.directionsTitle}
-    lang={currentLang}
-  />
+  <section class="py-16">
+    <div class="container">
+      <Directions
+        directions={directionsList}
+        title={locationContent.directionsTitle}
+        lang={currentLang}
+      />
+    </div>
+  </section>
 
   <!-- SBB Train Link -->
   <SBB content={locationContent} lang={currentLang} />
