@@ -59,6 +59,8 @@
           <li><a href="/{lang}/rooms" class="hover:text-primary">{t.nav.rooms}</a></li>
           <li><a href="/{lang}/gallery" class="hover:text-primary">{t.nav.gallery}</a></li>
           <li><a href="/{lang}/location" class="hover:text-primary">{t.nav.location}</a></li>
+          <li><a href="/{lang}/links" class="hover:text-primary">{t.nav.links}</a></li>
+          <li><a href="/{lang}/awards" class="hover:text-primary">{t.nav.awards}</a></li>
           <li>
             <a
               href="https://secure.dormproject.ch/online/?id=8&lang={lang}"

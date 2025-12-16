@@ -1,8 +1,8 @@
-import { loadLinksContent } from '$lib/content';
+import { loadPageContent } from '$lib/content';
 import type { PageServerLoad } from './$types';
 
 export const load: PageServerLoad = async () => {
-  const content = await loadLinksContent();
+  const content = await loadPageContent('terms');
   return {
     content
   };

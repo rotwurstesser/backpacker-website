@@ -283,3 +283,27 @@ export async function loadNavPages(): Promise<CustomPage[]> {
   const pages = await loadCustomPages();
   return pages.filter((p) => p.showInNav && p.published);
 }
+
+export interface SimplePageContent {
+  title: TranslatedField;
+  content: TranslatedField;
+}
+
+export async function loadPageContent(slug: string): Promise<SimplePageContent> {
+  const content = await import(`../../../content/pages/${slug}.json`);
+  return content.default as SimplePageContent;
+}
+
+export interface AwardsContent {
+  title: TranslatedField;
+  awards: Array<{
+    title: string;
+    image: string;
+    year?: string;
+  }>;
+}
+
+export async function loadAwardsContent(): Promise<AwardsContent> {
+  const content = await import('../../../content/pages/awards.json');
+  return content.default as AwardsContent;
+}

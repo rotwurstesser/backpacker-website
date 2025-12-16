@@ -20,6 +20,7 @@ export const translations = {
       booked: 'Booked',
       contact: 'Contact',
       links: 'Links',
+      awards: 'Awards',
       language: 'Language'
     },
     // Hero Section
@@ -141,6 +142,7 @@ export const translations = {
       booked: 'Ausgebucht',
       contact: 'Kontakt',
       links: 'Links',
+      awards: 'Auszeichnungen',
       language: 'Sprache'
     },
     // Hero Section
@@ -262,6 +264,7 @@ export const translations = {
       booked: 'Reservado',
       contact: 'Contacto',
       links: 'Enlaces',
+      awards: 'Premios',
       language: 'Idioma'
     },
     // Hero Section

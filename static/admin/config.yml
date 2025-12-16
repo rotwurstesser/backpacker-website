@@ -818,6 +818,76 @@ collections:
                   - { label: Link URL, name: url, widget: string }
 
   # ====================
+  # RECHTLICHES
+  # ====================
+  - name: rechtliches
+    label: "⚖️ Rechtliches"
+    files:
+      - name: privacy
+        label: "Datenschutz"
+        file: content/pages/privacy.json
+        fields:
+          - label: "Seitentitel"
+            name: title
+            widget: object
+            fields:
+              - { label: Deutsch, name: de, widget: markdown, minimal: true, required: false }
+              - { label: Englisch, name: en, widget: markdown, minimal: true, required: false }
+              - { label: Spanisch, name: es, widget: markdown, minimal: true, required: false }
+          - label: "Inhalt"
+            name: content
+            widget: object
+            fields:
+              - { label: Deutsch, name: de, widget: markdown, required: false }
+              - { label: Englisch, name: en, widget: markdown, required: false }
+              - { label: Spanisch, name: es, widget: markdown, required: false }
+
+      - name: terms
+        label: "AGB"
+        file: content/pages/terms.json
+        fields:
+          - label: "Seitentitel"
+            name: title
+            widget: object
+            fields:
+              - { label: Deutsch, name: de, widget: markdown, minimal: true, required: false }
+              - { label: Englisch, name: en, widget: markdown, minimal: true, required: false }
+              - { label: Spanisch, name: es, widget: markdown, minimal: true, required: false }
+          - label: "Inhalt"
+            name: content
+            widget: object
+            fields:
+              - { label: Deutsch, name: de, widget: markdown, required: false }
+              - { label: Englisch, name: en, widget: markdown, required: false }
+              - { label: Spanisch, name: es, widget: markdown, required: false }
+
+  # ====================
+  # AWARDS
+  # ====================
+  - name: awards
+    label: "🏆 Awards"
+    files:
+      - name: awards
+        label: "Awards"
+        file: content/pages/awards.json
+        fields:
+          - label: "Seitentitel"
+            name: title
+            widget: object
+            fields:
+              - { label: Deutsch, name: de, widget: markdown, minimal: true, required: false }
+              - { label: Englisch, name: en, widget: markdown, minimal: true, required: false }
+              - { label: Spanisch, name: es, widget: markdown, minimal: true, required: false }
+          - label: "Auszeichnungen"
+            name: awards
+            widget: list
+            summary: "{{fields.title}}"
+            fields:
+              - { label: Titel, name: title, widget: string }
+              - { label: Bild, name: image, widget: image }
+              - { label: Jahr, name: year, widget: string, required: false }
+
+  # ====================
   # EINSTELLUNGEN
   # ====================
   - name: einstellungen

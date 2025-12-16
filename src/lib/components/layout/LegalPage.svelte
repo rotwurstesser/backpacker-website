@@ -1,0 +1,15 @@
+<script lang="ts">
+  import { md } from "$lib/utils";
+  import type { Lang } from "$lib/i18n";
+
+  export let title: any;
+  export let content: any;
+  export let lang: Lang;
+</script>
+
+<div class="container py-20 max-w-4xl mx-auto">
+  <h1 class="mb-8 text-4xl font-bold">{@html md(title?.[lang] || "Title")}</h1>
+  <div class="prose dark:prose-invert max-w-none">
+    {@html md(content?.[lang] || "Content coming soon...")}
+  </div>
+</div>
