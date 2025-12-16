@@ -7,6 +7,7 @@ Modern website for Bern Backpackers hostel built with SvelteKit, Tailwind CSS, a
 > [!NOTE]
 > **Requirement**: You must have a **GitHub Account** to log in and edit content via the CMS.
 
+*   **[Setup Guide (SOP)](docs/setup-guide.md)**: Step-by-step instructions for deployment and account creation.
 *   **[User Handbook (English)](docs/cms-handbook.md)**: Guide for content editors.
 *   **[Benutzerhandbuch (Deutsch)](docs/cms-handbuch.md)**: Anleitung für Content-Verwalter.
 *   **[Developer Guide](docs/development.md)**: Technical architecture and CI/CD.
