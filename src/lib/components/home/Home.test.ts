@@ -14,9 +14,11 @@ describe('Home Components', () => {
     ]
   };
 
-  const mockT = {
+  const mockT: any = {
     hero: { learnMore: 'Learn More' },
-    features: { title: 'Features' }
+    features: { title: 'Features' },
+    rooms: { title: 'Rooms' }, // Added to satisfy RoomsPreview if needed
+    common: { viewAll: 'View All' }
   };
 
   it('renders Hero correctly', () => {
