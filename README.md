@@ -1,6 +1,6 @@
 # Bern Backpackers Website
 
-Modern website for Bern Backpackers hostel built with SvelteKit, Tailwind CSS, and Netlify CMS.
+Modern website for Bern Backpackers hostel built with SvelteKit, Tailwind CSS, and Sveltia CMS.
 
 ## 📚 Documentation
 
@@ -56,7 +56,7 @@ netlify deploy --prod
 
 - **Multilingual**: English, German, Spanish
 - **SSR**: Server-side rendering for SEO
-- **CMS**: Netlify CMS (Decap CMS) for content editing
+- **CMS**: Sveltia CMS (Headless, Git-based) for content editing
 - **Accessible**: WCAG 2.1 AA compliant
 - **Secure**: CSP headers, XSS protection, spam honeypot
 - **Fast**: Lazy loading, optimized images, efficient caching
@@ -68,7 +68,7 @@ netlify deploy --prod
 - shadcn-svelte components
 - Lucide icons
 - Netlify adapter
-- Decap CMS 3.x
+- Sveltia CMS
 
 ## Project Structure
 
