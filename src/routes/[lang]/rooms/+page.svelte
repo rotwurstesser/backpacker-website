@@ -1,30 +1,36 @@
 <script lang="ts">
-  import { Button, Card } from "$lib/components/ui";
-  import { Bed, Bath, Check, Info } from "lucide-svelte";
+  import { Button } from "$lib/components/ui";
   import { t as translate } from "$lib/content";
   import { md } from "$lib/utils";
   import type { PageData } from "./$types";
+  import type { Lang } from "$lib/i18n";
+
+  import RoomCard from "$lib/components/rooms/RoomCard.svelte";
+  import PriceInfo from "$lib/components/rooms/PriceInfo.svelte";
 
   export let data: PageData;
   $: ({ lang, t, rooms, settings, roomsPageContent } = data);
+  $: currentLang = lang as Lang;
 
   $: bookingUrl = settings?.bookingUrl
-    ? `${settings.bookingUrl}&lang=${lang}`
-    : `https://secure.dormproject.ch/online/?id=8&lang=${lang}`;
+    ? `${settings.bookingUrl}&lang=${currentLang}`
+    : `https://secure.dormproject.ch/online/?id=8&lang=${currentLang}`;
 </script>
 
 <svelte:head>
-  <title>{translate(roomsPageContent?.title, lang) || "Rooms"} | Bern Backpackers</title>
-  <meta name="description" content={translate(roomsPageContent?.subtitle, lang) || ""} />
+  <title>{translate(roomsPageContent?.title, currentLang) || "Rooms"} | Bern Backpackers</title>
+  <meta name="description" content={translate(roomsPageContent?.subtitle, currentLang) || ""} />
 </svelte:head>
 
 {#if t && rooms && roomsPageContent}
   <!-- Hero -->
   <section class="py-16 bg-gradient-to-br from-primary/10 via-background to-primary/5">
     <div class="container text-center">
-      <h1 class="text-4xl font-bold mb-4">{@html md(translate(roomsPageContent.title, lang))}</h1>
+      <h1 class="text-4xl font-bold mb-4">
+        {@html md(translate(roomsPageContent.title, currentLang))}
+      </h1>
       <p class="text-lg text-muted-foreground">
-        {@html md(translate(roomsPageContent.subtitle, lang))}
+        {@html md(translate(roomsPageContent.subtitle, currentLang))}
       </p>
     </div>
   </section>
@@ -34,131 +40,30 @@
     <div class="container">
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
         {#each rooms as room (room.id)}
-          <Card
-            class="overflow-hidden hover:shadow-lg transition-shadow {room.available
-              ? ''
-              : 'opacity-75'}"
-          >
-            {#if room.image}
-              <div class="aspect-[16/9] bg-muted">
-                <img
-                  src={room.image}
-                  alt={translate(room.name, lang)}
-                  class="w-full h-full object-cover {room.available ? '' : 'grayscale filter'}"
-                  loading="lazy"
-                />
-              </div>
-            {/if}
-            <div class="p-6">
-              <div class="flex items-start justify-between mb-4">
-                <div>
-                  <h3 class="text-xl font-semibold">{@html md(translate(room.name, lang))}</h3>
-                  <p class="text-sm text-muted-foreground mt-1">
-                    {@html md(translate(room.description, lang))}
-                  </p>
-                </div>
-              </div>
-
-              <div class="flex items-center gap-4 mb-4 text-sm text-muted-foreground">
-                <span class="flex items-center gap-1">
-                  <Bed class="h-4 w-4" aria-hidden="true" />
-                  {room.beds}
-                  {@html md(
-                    room.beds > 1
-                      ? translate(roomsPageContent.beds, lang)
-                      : translate(roomsPageContent.bed, lang),
-                  )}
-                </span>
-                <span class="flex items-center gap-1">
-                  <Bath class="h-4 w-4" aria-hidden="true" />
-                  {@html md(
-                    room.bathType === "shared"
-                      ? translate(roomsPageContent.sharedBath, lang)
-                      : translate(roomsPageContent.privateBath, lang),
-                  )}
-                </span>
-              </div>
-
-              {#if room.features && room.features.length > 0}
-                <div class="flex flex-wrap gap-2 mb-4">
-                  {#each room.features as feature, i (i)}
-                    <span class="inline-flex items-center gap-1 text-xs bg-muted px-2 py-1 rounded">
-                      <Check class="h-3 w-3 text-primary" aria-hidden="true" />
-                      {@html md(translate(feature, lang))}
-                    </span>
-                  {/each}
-                </div>
-              {/if}
-
-              <div class="flex items-center justify-between pt-4 border-t">
-                <div>
-                  <span class="text-2xl font-bold">{t.common.currency} {room.price}.-</span>
-                  <span class="text-sm text-muted-foreground ml-1">
-                    {@html md(
-                      room.priceUnit === "per_bed"
-                        ? translate(roomsPageContent.perBed, lang)
-                        : translate(roomsPageContent.perRoom, lang),
-                    )}
-                  </span>
-                </div>
-                <Button
-                  href={room.available ? bookingUrl : undefined}
-                  disabled={!room.available}
-                  target={room.available ? "_blank" : undefined}
-                  rel={room.available ? "noopener noreferrer" : undefined}
-                >
-                  {#if room.available}
-                    {@html md(translate(roomsPageContent.bookButton, lang))}
-                  {:else}
-                    {@html md(translate(roomsPageContent.booked, lang))}
-                  {/if}
-                </Button>
-              </div>
-            </div>
-          </Card>
+          <RoomCard
+            {room}
+            {roomsPageContent}
+            lang={currentLang}
+            {bookingUrl}
+            currency={t.common.currency}
+          />
         {/each}
       </div>
     </div>
   </section>
 
   <!-- Price Info -->
-  <section class="py-12 bg-muted/30">
-    <div class="container">
-      <Card class="p-6">
-        <div class="flex items-start gap-4">
-          <Info class="h-6 w-6 text-primary flex-shrink-0 mt-0.5" aria-hidden="true" />
-          <div>
-            <h3 class="font-semibold mb-2">
-              {@html md(translate(roomsPageContent.priceInfoTitle, lang))}
-            </h3>
-            <ul class="space-y-2 text-sm text-muted-foreground">
-              <li>{@html md(translate(roomsPageContent.priceNote, lang))}</li>
-              <li class="flex items-center gap-2">
-                <Check class="h-4 w-4 text-primary" aria-hidden="true" />
-                {@html md(translate(roomsPageContent.sheetsIncluded, lang))}
-              </li>
-              <li class="flex items-center gap-2">
-                <Check class="h-4 w-4 text-primary" aria-hidden="true" />
-                {@html md(translate(roomsPageContent.towelsAvailable, lang))}
-              </li>
-              <li class="flex items-center gap-2">
-                <Check class="h-4 w-4 text-primary" aria-hidden="true" />
-                {@html md(translate(roomsPageContent.paymentMethods, lang))}
-              </li>
-            </ul>
-          </div>
-        </div>
-      </Card>
-    </div>
-  </section>
+  <PriceInfo {roomsPageContent} lang={currentLang} />
 
   <!-- CTA -->
   <section class="py-16 bg-primary text-primary-foreground">
     <div class="container text-center">
       <h2 class="text-2xl font-bold mb-4">
-        {@html md(translate(roomsPageContent.ctaTitle, lang))}
+        {@html md(translate(roomsPageContent.ctaTitle, currentLang))}
       </h2>
-      <p class="mb-6 opacity-90">{@html md(translate(roomsPageContent.ctaDescription, lang))}</p>
+      <p class="mb-6 opacity-90">
+        {@html md(translate(roomsPageContent.ctaDescription, currentLang))}
+      </p>
       <Button
         size="lg"
         variant="secondary"
@@ -166,7 +71,7 @@
         target="_blank"
         rel="noopener noreferrer"
       >
-        {@html md(translate(roomsPageContent.bookButton, lang))}
+        {@html md(translate(roomsPageContent.bookButton, currentLang))}
       </Button>
     </div>
   </section>

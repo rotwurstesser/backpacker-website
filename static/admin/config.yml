@@ -582,7 +582,7 @@ collections:
           - label: "Sehenswürdigkeiten"
             name: landmarks
             widget: list
-            collapsed: true
+            collapsed: false
             summary: "{{fields.name.de}}"
             fields:
               - label: Name
