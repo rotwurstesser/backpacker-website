@@ -10,6 +10,26 @@
     "es": "Cómo llegar a Bern Backpackers"
   },
   "mapEmbedUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2724.2283251397373!2d7.448082776895456!3d46.94811257113962!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x478e39b8a88b82d1%3A0x3c6ecfd3c0ef2dc5!2sRathausgasse%2075%2C%203011%20Bern%2C%20Switzerland!5e0!3m2!1sen!2sus!4v1702500000000!5m2!1sen!2sus",
+  "addressCardTitle": {
+    "de": "Adresse",
+    "en": "Address",
+    "es": "Dirección"
+  },
+  "phoneLabel": {
+    "de": "Telefon",
+    "en": "Phone",
+    "es": "Teléfono"
+  },
+  "emailLabel": {
+    "de": "E-Mail",
+    "en": "Email",
+    "es": "Correo electrónico"
+  },
+  "hoursLabel": {
+    "de": "Öffnungszeiten",
+    "en": "Opening Hours",
+    "es": "Horario de apertura"
+  },
   "directionsTitle": {
     "de": "Anfahrt",
     "en": "Getting Here",
@@ -71,45 +91,69 @@
     "en": "Our hostel is located in the heart of Bern's UNESCO World Heritage Old Town",
     "es": "Nuestro hostal está ubicado en el corazón del casco antiguo de Berna, Patrimonio Mundial de la UNESCO"
   },
-  "addressCardTitle": {
-    "de": "Adresse",
-    "en": "Address",
-    "es": "Dirección"
-  },
-  "phoneLabel": {
-    "de": "Telefon",
-    "en": "Phone",
-    "es": "Teléfono"
-  },
-  "emailLabel": {
-    "de": "E-Mail",
-    "en": "Email",
-    "es": "Correo electrónico"
-  },
-  "hoursLabel": {
-    "de": "Öffnungszeiten",
-    "en": "Opening Hours",
-    "es": "Horario de apertura"
-  },
   "landmarks": [
     {
-      "name": { "de": "Zytglogge", "en": "Zytglogge", "es": "Zytglogge" },
-      "distance": { "de": "1 Min. zu Fuss", "en": "1 min walk", "es": "1 min a pie" }
+      "name": {
+        "de": "berner brocki",
+        "en": "berner brocki",
+        "es": "berner brocki"
+      },
+      "distance": {
+        "de": "1 Min. zu Fuss",
+        "en": "1 Min. zu Fuss ENGLISH",
+        "es": "1 Min. zu Fuss spanisch"
+      }
     },
     {
-      "name": { "de": "Bahnhof", "en": "Train Station", "es": "Estación de Tren" },
-      "distance": { "de": "10 Min. zu Fuss", "en": "10 min walk", "es": "10 min a pie" }
+      "name": {
+        "de": "Zytglogge",
+        "en": "Zytglogge",
+        "es": "Zytglogge"
+      },
+      "distance": {
+        "de": "1 Min. zu Fuss",
+        "en": "1 min walk",
+        "es": "1 min a pie"
+      }
     },
     {
-      "name": { "de": "Bärengraben", "en": "Bear Park", "es": "Foso de los Osos" },
-      "distance": { "de": "5 Min. zu Fuss", "en": "5 min walk", "es": "5 min a pie" }
+      "name": {
+        "de": "Bahnhof",
+        "en": "Train Station",
+        "es": "Estación de Tren"
+      },
+      "distance": {
+        "de": "10 Min. zu Fuss",
+        "en": "10 min walk",
+        "es": "10 min a pie"
+      }
     },
     {
-      "name": { "de": "Bundeshaus", "en": "Parliament Building", "es": "Parlamento" },
-      "distance": { "de": "8 Min. zu Fuss", "en": "8 min walk", "es": "8 min a pie" }
+      "name": {
+        "de": "Bärengraben",
+        "en": "Bear Park",
+        "es": "Foso de los Osos"
+      },
+      "distance": {
+        "de": "5 Min. zu Fuss",
+        "en": "5 min walk",
+        "es": "5 min a pie"
+      }
+    },
+    {
+      "name": {
+        "de": "Bundeshaus",
+        "en": "Parliament Building",
+        "es": "Parlamento"
+      },
+      "distance": {
+        "de": "8 Min. zu Fuss",
+        "en": "8 min walk",
+        "es": "8 min a pie"
+      }
     }
   ],
+  "published": true,
   "showInNav": true,
-  "navOrder": 3,
-  "published": true
+  "navOrder": 3
 }
