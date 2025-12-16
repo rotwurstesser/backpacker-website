@@ -14,7 +14,7 @@
 </svelte:head>
 
 <div class="container py-20">
-  <h1 class="text-4xl font-bold text-center mb-12">
+  <h1 class="text-4xl md:text-5xl font-bold text-center mb-12 tracking-tight">
     {@html md(content?.title?.[currentLang] || "Awards")}
   </h1>
 

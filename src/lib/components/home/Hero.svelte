@@ -20,10 +20,16 @@
       >
         {@html md(translate(homeContent.heroTagline, lang))}
       </span>
-      <div class="prose dark:prose-invert max-w-none prose-h1:text-4xl prose-h1:font-bold">
+      <!-- Title: Targeting inner <p> tag from markdown -->
+      <div
+        class="prose dark:prose-invert max-w-none [&>p]:text-4xl [&>p]:md:text-6xl [&>p]:font-bold [&>p]:leading-tight"
+      >
         {@html mdContent(translate(homeContent.heroTitle, lang))}
       </div>
-      <div class="prose dark:prose-invert max-w-none text-xl text-muted-foreground">
+      <!-- Subtitle -->
+      <div
+        class="prose dark:prose-invert max-w-none text-muted-foreground [&>p]:text-xl [&>p]:md:text-2xl"
+      >
         {@html mdContent(translate(homeContent.heroSubtitle, lang))}
       </div>
       <div class="flex flex-col sm:flex-row gap-4 justify-center pt-4">

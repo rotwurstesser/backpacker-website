@@ -17,7 +17,9 @@
 
 <div class="container py-20 max-w-4xl mx-auto">
   <div class="text-center mb-12 space-y-4">
-    <h1 class="text-4xl font-bold">{@html md(content?.title?.[currentLang] || "Links")}</h1>
+    <h1 class="text-4xl md:text-5xl font-bold tracking-tight">
+      {@html md(content?.title?.[currentLang] || "Links")}
+    </h1>
     {#if content?.subtitle?.[currentLang]}
       <p class="text-xl text-muted-foreground">
         {@html md(content.subtitle[currentLang])}

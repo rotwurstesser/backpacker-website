@@ -44,7 +44,7 @@
   <!-- Hero -->
   <section class="py-20 bg-gradient-to-br from-primary/10 via-background to-primary/5">
     <div class="container text-center max-w-3xl">
-      <h1 class="text-5xl font-bold mb-6 tracking-tight">
+      <h1 class="text-4xl md:text-5xl font-bold mb-6 tracking-tight">
         {@html md(translate(locationContent.title, currentLang))}
       </h1>
       <p class="text-xl text-muted-foreground leading-relaxed">
