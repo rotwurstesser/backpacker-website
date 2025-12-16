@@ -74,8 +74,13 @@
 
   <!-- Directions Components -->
   <Directions
-    directions={directionsList}
     title={locationContent.directionsTitle}
+    tramTitle={locationContent.byTramTitle}
+    tram={locationContent.byTram}
+    footTitle={locationContent.byFootTitle}
+    foot={locationContent.byFoot}
+    carTitle={locationContent.byCarTitle}
+    car={locationContent.byCar}
     lang={currentLang}
   />
 

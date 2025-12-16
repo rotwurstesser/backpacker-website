@@ -2,7 +2,7 @@
   import { Card } from "$lib/components/ui";
   import { MapPin, Wifi, Shield, CreditCard, Bed, Users, Coffee, Home } from "lucide-svelte";
   import { t as translate } from "$lib/content";
-  import { md } from "$lib/utils";
+  import { md, mdContent } from "$lib/utils";
   import type { Lang, Translations } from "$lib/i18n";
 
   export let homeContent: any;
@@ -40,9 +40,9 @@
             <Icon class="h-6 w-6 text-primary" aria-hidden="true" />
           </div>
           <h3 class="font-semibold mb-2">{@html md(translate(feature.title, lang))}</h3>
-          <p class="text-sm text-muted-foreground">
-            {@html md(translate(feature.description, lang))}
-          </p>
+          <div class="text-sm text-muted-foreground prose dark:prose-invert max-w-none">
+            {@html mdContent(translate(feature.description, lang))}
+          </div>
         </Card>
       {/each}
     </div>

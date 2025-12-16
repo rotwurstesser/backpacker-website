@@ -80,9 +80,9 @@ collections:
                 widget: object
                 required: false
                 fields:
-                  - { label: Deutsch, name: de, widget: markdown, minimal: true, required: false }
-                  - { label: Englisch, name: en, widget: markdown, minimal: true, required: false }
-                  - { label: Spanisch, name: es, widget: markdown, minimal: true, required: false }
+                  - { label: Deutsch, name: de, widget: markdown, required: false, buttons: ["bold", "italic", "link", "image", "heading-one", "heading-two", "quote", "bulleted-list", "numbered-list"] }
+                  - { label: Englisch, name: en, widget: markdown, required: false, buttons: ["bold", "italic", "link", "image", "heading-one", "heading-two", "quote", "bulleted-list", "numbered-list"] }
+                  - { label: Spanisch, name: es, widget: markdown, required: false, buttons: ["bold", "italic", "link", "image", "heading-one", "heading-two", "quote", "bulleted-list", "numbered-list"] }
           - label: "Ausstattung Titel"
             name: amenitiesTitle
             widget: object
@@ -104,9 +104,9 @@ collections:
                 widget: object
                 required: false
                 fields:
-                  - { label: Deutsch, name: de, widget: markdown, minimal: true, required: false }
-                  - { label: Englisch, name: en, widget: markdown, minimal: true, required: false }
-                  - { label: Spanisch, name: es, widget: markdown, minimal: true, required: false }
+                  - { label: Deutsch, name: de, widget: markdown, required: false, buttons: ["bold", "italic", "link", "image", "heading-one", "heading-two", "quote", "bulleted-list", "numbered-list"] }
+                  - { label: Englisch, name: en, widget: markdown, required: false, buttons: ["bold", "italic", "link", "image", "heading-one", "heading-two", "quote", "bulleted-list", "numbered-list"] }
+                  - { label: Spanisch, name: es, widget: markdown, required: false, buttons: ["bold", "italic", "link", "image", "heading-one", "heading-two", "quote", "bulleted-list", "numbered-list"] }
           - label: "CTA Titel"
             name: ctaTitle
             widget: object
@@ -149,9 +149,9 @@ collections:
         widget: object
         collapsed: true
         fields:
-          - { label: Deutsch, name: de, widget: markdown, minimal: true, required: false }
-          - { label: Englisch, name: en, widget: markdown, minimal: true, required: false }
-          - { label: Spanisch, name: es, widget: markdown, minimal: true, required: false }
+          - { label: Deutsch, name: de, widget: markdown, required: false, buttons: ["bold", "italic", "link", "image", "heading-one", "heading-two", "quote", "bulleted-list", "numbered-list"] }
+          - { label: Englisch, name: en, widget: markdown, required: false, buttons: ["bold", "italic", "link", "image", "heading-one", "heading-two", "quote", "bulleted-list", "numbered-list"] }
+          - { label: Spanisch, name: es, widget: markdown, required: false, buttons: ["bold", "italic", "link", "image", "heading-one", "heading-two", "quote", "bulleted-list", "numbered-list"] }
       - { label: Preis CHF, name: price, widget: number, required: false }
       - { label: Preistyp, name: priceUnit, widget: select, required: false, options: [{label: "Pro Bett", value: "per_bed"}, {label: "Pro Zimmer", value: "per_room"}] }
       - { label: Anzahl Betten, name: beds, widget: number, required: false }
@@ -310,9 +310,9 @@ collections:
             widget: object
             collapsed: true
             fields:
-              - { label: Deutsch, name: de, widget: markdown, minimal: true, required: false }
-              - { label: Englisch, name: en, widget: markdown, minimal: true, required: false }
-              - { label: Spanisch, name: es, widget: markdown, minimal: true, required: false }
+              - { label: Deutsch, name: de, widget: markdown, required: false, buttons: ["bold", "italic", "link", "image", "heading-one", "heading-two", "quote", "bulleted-list", "numbered-list"] }
+              - { label: Englisch, name: en, widget: markdown, required: false, buttons: ["bold", "italic", "link", "image", "heading-one", "heading-two", "quote", "bulleted-list", "numbered-list"] }
+              - { label: Spanisch, name: es, widget: markdown, required: false, buttons: ["bold", "italic", "link", "image", "heading-one", "heading-two", "quote", "bulleted-list", "numbered-list"] }
 
   # ====================
   # GALERIE BILDER
@@ -382,44 +382,44 @@ collections:
                 name: all
                 widget: object
                 fields:
-                  - { label: Deutsch, name: de, widget: markdown, minimal: true, required: false }
-                  - { label: Englisch, name: en, widget: markdown, minimal: true, required: false }
-                  - { label: Spanisch, name: es, widget: markdown, minimal: true, required: false }
+                  - { label: Deutsch, name: de, widget: markdown, required: false, buttons: ["bold", "italic", "link", "image", "heading-one", "heading-two", "quote", "bulleted-list", "numbered-list"] }
+                  - { label: Englisch, name: en, widget: markdown, required: false, buttons: ["bold", "italic", "link", "image", "heading-one", "heading-two", "quote", "bulleted-list", "numbered-list"] }
+                  - { label: Spanisch, name: es, widget: markdown, required: false, buttons: ["bold", "italic", "link", "image", "heading-one", "heading-two", "quote", "bulleted-list", "numbered-list"] }
               - label: "Zimmer"
                 name: rooms
                 widget: object
                 fields:
-                  - { label: Deutsch, name: de, widget: markdown, minimal: true, required: false }
-                  - { label: Englisch, name: en, widget: markdown, minimal: true, required: false }
-                  - { label: Spanisch, name: es, widget: markdown, minimal: true, required: false }
+                  - { label: Deutsch, name: de, widget: markdown, required: false, buttons: ["bold", "italic", "link", "image", "heading-one", "heading-two", "quote", "bulleted-list", "numbered-list"] }
+                  - { label: Englisch, name: en, widget: markdown, required: false, buttons: ["bold", "italic", "link", "image", "heading-one", "heading-two", "quote", "bulleted-list", "numbered-list"] }
+                  - { label: Spanisch, name: es, widget: markdown, required: false, buttons: ["bold", "italic", "link", "image", "heading-one", "heading-two", "quote", "bulleted-list", "numbered-list"] }
               - label: "Einrichtungen"
                 name: facilities
                 widget: object
                 fields:
-                  - { label: Deutsch, name: de, widget: markdown, minimal: true, required: false }
-                  - { label: Englisch, name: en, widget: markdown, minimal: true, required: false }
-                  - { label: Spanisch, name: es, widget: markdown, minimal: true, required: false }
+                  - { label: Deutsch, name: de, widget: markdown, required: false, buttons: ["bold", "italic", "link", "image", "heading-one", "heading-two", "quote", "bulleted-list", "numbered-list"] }
+                  - { label: Englisch, name: en, widget: markdown, required: false, buttons: ["bold", "italic", "link", "image", "heading-one", "heading-two", "quote", "bulleted-list", "numbered-list"] }
+                  - { label: Spanisch, name: es, widget: markdown, required: false, buttons: ["bold", "italic", "link", "image", "heading-one", "heading-two", "quote", "bulleted-list", "numbered-list"] }
               - label: "Gemeinschaftsraeume"
                 name: common_areas
                 widget: object
                 fields:
-                  - { label: Deutsch, name: de, widget: markdown, minimal: true, required: false }
-                  - { label: Englisch, name: en, widget: markdown, minimal: true, required: false }
-                  - { label: Spanisch, name: es, widget: markdown, minimal: true, required: false }
+                  - { label: Deutsch, name: de, widget: markdown, required: false, buttons: ["bold", "italic", "link", "image", "heading-one", "heading-two", "quote", "bulleted-list", "numbered-list"] }
+                  - { label: Englisch, name: en, widget: markdown, required: false, buttons: ["bold", "italic", "link", "image", "heading-one", "heading-two", "quote", "bulleted-list", "numbered-list"] }
+                  - { label: Spanisch, name: es, widget: markdown, required: false, buttons: ["bold", "italic", "link", "image", "heading-one", "heading-two", "quote", "bulleted-list", "numbered-list"] }
               - label: "Aussenbereich"
                 name: exterior
                 widget: object
                 fields:
-                  - { label: Deutsch, name: de, widget: markdown, minimal: true, required: false }
-                  - { label: Englisch, name: en, widget: markdown, minimal: true, required: false }
-                  - { label: Spanisch, name: es, widget: markdown, minimal: true, required: false }
+                  - { label: Deutsch, name: de, widget: markdown, required: false, buttons: ["bold", "italic", "link", "image", "heading-one", "heading-two", "quote", "bulleted-list", "numbered-list"] }
+                  - { label: Englisch, name: en, widget: markdown, required: false, buttons: ["bold", "italic", "link", "image", "heading-one", "heading-two", "quote", "bulleted-list", "numbered-list"] }
+                  - { label: Spanisch, name: es, widget: markdown, required: false, buttons: ["bold", "italic", "link", "image", "heading-one", "heading-two", "quote", "bulleted-list", "numbered-list"] }
               - label: "Lage"
                 name: location
                 widget: object
                 fields:
-                  - { label: Deutsch, name: de, widget: markdown, minimal: true, required: false }
-                  - { label: Englisch, name: en, widget: markdown, minimal: true, required: false }
-                  - { label: Spanisch, name: es, widget: markdown, minimal: true, required: false }
+                  - { label: Deutsch, name: de, widget: markdown, required: false, buttons: ["bold", "italic", "link", "image", "heading-one", "heading-two", "quote", "bulleted-list", "numbered-list"] }
+                  - { label: Englisch, name: en, widget: markdown, required: false, buttons: ["bold", "italic", "link", "image", "heading-one", "heading-two", "quote", "bulleted-list", "numbered-list"] }
+                  - { label: Spanisch, name: es, widget: markdown, required: false, buttons: ["bold", "italic", "link", "image", "heading-one", "heading-two", "quote", "bulleted-list", "numbered-list"] }
 
   # ====================
   # LAGE & ANFAHRT
@@ -503,57 +503,57 @@ collections:
             widget: object
             collapsed: true
             fields:
-              - { label: Deutsch, name: de, widget: markdown, minimal: true, required: false }
-              - { label: Englisch, name: en, widget: markdown, minimal: true, required: false }
-              - { label: Spanisch, name: es, widget: markdown, minimal: true, required: false }
+              - { label: Deutsch, name: de, widget: markdown, required: false, buttons: ["bold", "italic", "link", "image", "heading-one", "heading-two", "quote", "bulleted-list", "numbered-list"] }
+              - { label: Englisch, name: en, widget: markdown, required: false, buttons: ["bold", "italic", "link", "image", "heading-one", "heading-two", "quote", "bulleted-list", "numbered-list"] }
+              - { label: Spanisch, name: es, widget: markdown, required: false, buttons: ["bold", "italic", "link", "image", "heading-one", "heading-two", "quote", "bulleted-list", "numbered-list"] }
           - label: "Zu Fuss - Titel"
             name: byFootTitle
             widget: object
             collapsed: true
             fields:
-              - { label: Deutsch, name: de, widget: markdown, minimal: true, required: false }
-              - { label: Englisch, name: en, widget: markdown, minimal: true, required: false }
-              - { label: Spanisch, name: es, widget: markdown, minimal: true, required: false }
+              - { label: Deutsch, name: de, widget: markdown, required: false, buttons: ["bold", "italic", "link", "image", "heading-one", "heading-two", "quote", "bulleted-list", "numbered-list"] }
+              - { label: Englisch, name: en, widget: markdown, required: false, buttons: ["bold", "italic", "link", "image", "heading-one", "heading-two", "quote", "bulleted-list", "numbered-list"] }
+              - { label: Spanisch, name: es, widget: markdown, required: false, buttons: ["bold", "italic", "link", "image", "heading-one", "heading-two", "quote", "bulleted-list", "numbered-list"] }
           - label: "Zu Fuss - Beschreibung"
             name: byFoot
             widget: object
             collapsed: true
             fields:
-              - { label: Deutsch, name: de, widget: markdown, minimal: true, required: false }
-              - { label: Englisch, name: en, widget: markdown, minimal: true, required: false }
-              - { label: Spanisch, name: es, widget: markdown, minimal: true, required: false }
+              - { label: Deutsch, name: de, widget: markdown, required: false, buttons: ["bold", "italic", "link", "image", "heading-one", "heading-two", "quote", "bulleted-list", "numbered-list"] }
+              - { label: Englisch, name: en, widget: markdown, required: false, buttons: ["bold", "italic", "link", "image", "heading-one", "heading-two", "quote", "bulleted-list", "numbered-list"] }
+              - { label: Spanisch, name: es, widget: markdown, required: false, buttons: ["bold", "italic", "link", "image", "heading-one", "heading-two", "quote", "bulleted-list", "numbered-list"] }
           - label: "Mit Auto - Titel"
             name: byCarTitle
             widget: object
             collapsed: true
             fields:
-              - { label: Deutsch, name: de, widget: markdown, minimal: true, required: false }
-              - { label: Englisch, name: en, widget: markdown, minimal: true, required: false }
-              - { label: Spanisch, name: es, widget: markdown, minimal: true, required: false }
+              - { label: Deutsch, name: de, widget: markdown, required: false, buttons: ["bold", "italic", "link", "image", "heading-one", "heading-two", "quote", "bulleted-list", "numbered-list"] }
+              - { label: Englisch, name: en, widget: markdown, required: false, buttons: ["bold", "italic", "link", "image", "heading-one", "heading-two", "quote", "bulleted-list", "numbered-list"] }
+              - { label: Spanisch, name: es, widget: markdown, required: false, buttons: ["bold", "italic", "link", "image", "heading-one", "heading-two", "quote", "bulleted-list", "numbered-list"] }
           - label: "Mit Auto - Beschreibung"
             name: byCar
             widget: object
             collapsed: true
             fields:
-              - { label: Deutsch, name: de, widget: markdown, minimal: true, required: false }
-              - { label: Englisch, name: en, widget: markdown, minimal: true, required: false }
-              - { label: Spanisch, name: es, widget: markdown, minimal: true, required: false }
+              - { label: Deutsch, name: de, widget: markdown, required: false, buttons: ["bold", "italic", "link", "image", "heading-one", "heading-two", "quote", "bulleted-list", "numbered-list"] }
+              - { label: Englisch, name: en, widget: markdown, required: false, buttons: ["bold", "italic", "link", "image", "heading-one", "heading-two", "quote", "bulleted-list", "numbered-list"] }
+              - { label: Spanisch, name: es, widget: markdown, required: false, buttons: ["bold", "italic", "link", "image", "heading-one", "heading-two", "quote", "bulleted-list", "numbered-list"] }
           - label: "SBB Bereich Titel"
             name: sbbTitle
             widget: object
             collapsed: true
             fields:
-              - { label: Deutsch, name: de, widget: markdown, minimal: true, required: false }
-              - { label: Englisch, name: en, widget: markdown, minimal: true, required: false }
-              - { label: Spanisch, name: es, widget: markdown, minimal: true, required: false }
+              - { label: Deutsch, name: de, widget: markdown, required: false, buttons: ["bold", "italic", "link", "image", "heading-one", "heading-two", "quote", "bulleted-list", "numbered-list"] }
+              - { label: Englisch, name: en, widget: markdown, required: false, buttons: ["bold", "italic", "link", "image", "heading-one", "heading-two", "quote", "bulleted-list", "numbered-list"] }
+              - { label: Spanisch, name: es, widget: markdown, required: false, buttons: ["bold", "italic", "link", "image", "heading-one", "heading-two", "quote", "bulleted-list", "numbered-list"] }
           - label: "SBB Beschreibung"
             name: sbbDescription
             widget: object
             collapsed: true
             fields:
-              - { label: Deutsch, name: de, widget: markdown, minimal: true, required: false }
-              - { label: Englisch, name: en, widget: markdown, minimal: true, required: false }
-              - { label: Spanisch, name: es, widget: markdown, minimal: true, required: false }
+              - { label: Deutsch, name: de, widget: markdown, required: false, buttons: ["bold", "italic", "link", "image", "heading-one", "heading-two", "quote", "bulleted-list", "numbered-list"] }
+              - { label: Englisch, name: en, widget: markdown, required: false, buttons: ["bold", "italic", "link", "image", "heading-one", "heading-two", "quote", "bulleted-list", "numbered-list"] }
+              - { label: Spanisch, name: es, widget: markdown, required: false, buttons: ["bold", "italic", "link", "image", "heading-one", "heading-two", "quote", "bulleted-list", "numbered-list"] }
           - label: "SBB Link Text"
             name: sbbLinkText
             widget: object
@@ -589,9 +589,9 @@ collections:
                 name: name
                 widget: object
                 fields:
-                  - { label: Deutsch, name: de, widget: markdown, minimal: true, required: false }
-                  - { label: Englisch, name: en, widget: markdown, minimal: true, required: false }
-                  - { label: Spanisch, name: es, widget: markdown, minimal: true, required: false }
+                  - { label: Deutsch, name: de, widget: markdown, required: false, buttons: ["bold", "italic", "link", "image", "heading-one", "heading-two", "quote", "bulleted-list", "numbered-list"] }
+                  - { label: Englisch, name: en, widget: markdown, required: false, buttons: ["bold", "italic", "link", "image", "heading-one", "heading-two", "quote", "bulleted-list", "numbered-list"] }
+                  - { label: Spanisch, name: es, widget: markdown, required: false, buttons: ["bold", "italic", "link", "image", "heading-one", "heading-two", "quote", "bulleted-list", "numbered-list"] }
               - label: Entfernung
                 name: distance
                 widget: object

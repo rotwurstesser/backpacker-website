@@ -2,7 +2,7 @@
   import { Button, Card } from "$lib/components/ui";
   import { Bed, Bath, Check } from "lucide-svelte";
   import { t as translate } from "$lib/content";
-  import { md } from "$lib/utils";
+  import { md, mdContent } from "$lib/utils";
   import type { Lang } from "$lib/i18n";
 
   export let room: any;
@@ -30,7 +30,7 @@
       <div>
         <h3 class="text-xl font-semibold">{@html md(translate(room.name, lang))}</h3>
         <p class="text-sm text-muted-foreground mt-1">
-          {@html md(translate(room.description, lang))}
+          {@html mdContent(translate(room.description, lang))}
         </p>
       </div>
     </div>
