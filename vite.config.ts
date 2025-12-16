@@ -11,6 +11,13 @@ export default defineConfig({
   },
   test: {
     include: ['src/**/*.{test,spec}.{js,ts}'],
-    environment: 'node'
+    environment: 'happy-dom',
+    setupFiles: ['./src/setupTest.ts'],
+    globals: true,
+    server: {
+      deps: {
+        inline: ['@testing-library/dom']
+      }
+    }
   }
 } as UserConfig & { test?: any });
