@@ -74,6 +74,9 @@ Upload visual content for the gallery page.
     *   `Lage` (Location)
 *   **Order**: Control the display sequence.
 
+![Gallery Entry - Selecting Category is Key](images/cms-gallery-entry.png)
+*Figure 4: Gallery Entry - Selecting Category is Key*
+
 ### 🖼️ Galerie Seite (Texts)
 *   **Filters**: Translate the text for the category buttons (e.g., rename "Common Areas" to "Living Room").
 *   **No Images Message**: Text shown if a category is empty.
@@ -129,6 +132,9 @@ You can manage all images and files in the central **Media Library**.
 ### Multilingual Content
 Most text fields have three tabs: `Deutsch`, `Englisch`, `Spanisch`.
 > **Tip**: Always check all three tabs when updating text to ensure no language is left behind!
+
+![Multilingual - Don't forget to check all tabs!](images/cms-multilingual-tabs.png)
+*Figure 5: Multilingual - Don't forget to check all tabs!*
 
 ### Markdown Formatting
 For descriptions, you can use the toolbar buttons:

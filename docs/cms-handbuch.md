@@ -74,6 +74,9 @@ Laden Sie visuelle Inhalte für die Galerie-Seite hoch.
     *   `Lage`
 *   **Order**: Steuert die Reihenfolge der Anzeige.
 
+![Galerie Eintrag - Kategorie ist wichtig](images/cms-gallery-entry.png)
+*Abbildung 4: Galerie Eintrag - Kategorie ist wichtig*
+
 ### 🖼️ Galerie Seite (Texte)
 *   **Filters**: Übersetzen Sie den Text für die Kategorie-Buttons (z. B. "Gemeinschaftsräume" in "Wohnzimmer" umbenennen).
 *   **No Images Message**: Text, der angezeigt wird, wenn eine Kategorie leer ist.
@@ -129,6 +132,9 @@ Sie können alle Bilder und Dateien in der zentralen **Medienbibliothek** verwal
 ### Mehrsprachige Inhalte
 Die meisten Textfelder haben drei Tabs: `Deutsch`, `Englisch`, `Spanisch`.
 > **Tipp**: Überprüfen Sie beim Aktualisieren von Texten immer alle drei Tabs, damit keine Sprache vergessen wird!
+
+![Mehrsprachigkeit - Vergessen Sie keine Tabs!](images/cms-multilingual-tabs.png)
+*Abbildung 5: Mehrsprachigkeit - Vergessen Sie keine Tabs!*
 
 ### Markdown Formatierung
 Für Beschreibungen können Sie die Symbolleiste verwenden:
