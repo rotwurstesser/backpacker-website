@@ -10,7 +10,6 @@
   export let bookingUrl: string;
 </script>
 
-```html
 <section class="py-20 container text-center">
   <div class="max-w-2xl mx-auto bg-primary/5 rounded-2xl p-8 md:p-12">
     <h2 class="mb-4">{@html md(translate(homeContent.ctaTitle, lang))}</h2>
@@ -22,4 +21,3 @@
     </Button>
   </div>
 </section>
-```
