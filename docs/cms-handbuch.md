@@ -12,6 +12,9 @@ Willkommen beim **Bern Backpackers Content Management System (CMS)**. Dieser Lei
 3.  **Bearbeiten**: Klicken Sie auf einen Eintrag, um den Editor zu öffnen.
 4.  **Speichern**: Klicken Sie oben auf den **Save** (Speichern) Button, um Änderungen sofort anzuwenden.
 
+![Dashboard - Hier finden Sie alle Inhalte](images/cms-dashboard.png)
+*Abbildung 1: Dashboard - Hier finden Sie alle Inhalte*
+
 ---
 
 ## 🛡️ Sicherheit & "Stressfreies" Bearbeiten
@@ -49,6 +52,9 @@ Verwalten Sie die tatsächlich verfügbaren Zimmer.
 *   **Photo**: Laden Sie das Hauptbild für die Zimmerkarte hoch.
 *   **Order**: Zahl für die Sortierung der Zimmer (1 = erstes, 10 = letztes).
 *   **Beds & Bath**: Definieren Sie die Kapazität und ob das Bad privat oder geteilt ist.
+
+![Zimmer bearbeiten - Verfügbarkeit und Preise](images/cms-edit-room.png)
+*Abbildung 2: Zimmer bearbeiten - Verfügbarkeit und Preise*
 
 ### 🛏️ Zimmer Seite (Texte)
 *   **System Labels**: Bearbeiten Sie die Übersetzungen für statische Texte auf der Zimmerseite, wie z. B.:
@@ -101,6 +107,9 @@ Sie können alle Bilder und Dateien in der zentralen **Medienbibliothek** verwal
 ### Zugriff auf die Bibliothek
 1.  Öffnen Sie den Reiter **Media** in der Hauptnavigation.
 2.  Hier sehen Sie alle hochgeladenen Dateien, die im System gespeichert sind.
+
+![Medienbibliothek - Alle Bilder verwalten](images/cms-media-library.png)
+*Abbildung 3: Medienbibliothek - Alle Bilder verwalten*
 
 ### Funktionen
 *   **Upload**: Klicken Sie auf **Upload New**, um Bilder für die spätere Verwendung hochzuladen.

@@ -12,6 +12,9 @@ Welcome to the **Bern Backpackers Content Management System (CMS)**. This guide 
 3.  **Edit**: Click an entry to open the editor.
 4.  **Save**: Click the **Save** button at the top to apply your changes immediately.
 
+![Main Dashboard - Access your Collections here](images/cms-dashboard.png)
+*Figure 1: Main Dashboard - Access your Collections here*
+
 ---
 
 ## 🛡️ Safety & "No-Stress" Editing
@@ -49,6 +52,9 @@ Manage the actual rooms available for booking.
 *   **Photo**: Upload the main image for the room card.
 *   **Order**: Number used to sort the rooms (1 = first, 10 = last).
 *   **Beds & Bath**: Define capacity and whether the bath is private/shared.
+
+![Room Editing - Toggle Availability and Set Prices](images/cms-edit-room.png)
+*Figure 2: Room Editing - Toggle Availability and Set Prices*
 
 ### 🛏️ Zimmer Seite (Texts)
 *   **System Labels**: Edit the translation for static text on the rooms page, such as:
@@ -101,6 +107,9 @@ You can manage all images and files in the central **Media Library**.
 ### Accessing the Library
 1.  Open the **Media** tab in the main navigation bar (top or left sidebar).
 2.  Here you see all uploaded files stored in the system.
+
+![Media Library - Manage all global assets](images/cms-media-library.png)
+*Figure 3: Media Library - Manage all global assets*
 
 ### Features
 *   **Upload**: Click **Upload New** to add images directly to the library for later use.
