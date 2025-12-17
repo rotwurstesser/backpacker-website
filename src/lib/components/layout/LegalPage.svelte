@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { md } from "$lib/utils";
+  import { md, mdContent } from "$lib/utils";
   import type { Lang } from "$lib/i18n";
   import PageHeader from "$lib/components/layout/PageHeader.svelte";
 
@@ -12,6 +12,6 @@
 
 <div class="container py-12 max-w-4xl mx-auto">
   <div class="prose dark:prose-invert max-w-none">
-    {@html md(content?.[lang] || "")}
+    {@html mdContent(content?.[lang] || "")}
   </div>
 </div>
