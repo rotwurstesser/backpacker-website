@@ -12,7 +12,6 @@
   $: currentLang = lang;
 </script>
 
-```
 <svelte:head>
   <title>{content?.title?.[currentLang] || "Awards"} | Bern Backpackers</title>
 </svelte:head>

@@ -20,16 +20,11 @@
 
 {#if contactPageContent}
   <!-- Hero -->
-  <section class="py-16 bg-gradient-to-br from-primary/10 via-background to-primary/5">
-    <div class="container text-center">
-      <h1 class="text-4xl font-bold mb-4">
-        {@html md(translate(contactPageContent.title, currentLang))}
-      </h1>
-      <p class="text-lg text-muted-foreground">
-        {@html md(translate(contactPageContent.subtitle, currentLang))}
-      </p>
-    </div>
-  </section>
+  <!-- Hero -->
+  <PageHeader
+    title={translate(contactPageContent.title, currentLang)}
+    subtitle={translate(contactPageContent.subtitle, currentLang)}
+  />
 
   <!-- Contact Info & Form -->
   <section class="py-16">
