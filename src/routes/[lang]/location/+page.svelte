@@ -1,6 +1,6 @@
 <script lang="ts">
   import { t as translate } from "$lib/content";
-  import { md } from "$lib/utils";
+  import { md, mdContent } from "$lib/utils";
   import { MapPin, TramFront, Navigation, Train, Footprints, Car } from "lucide-svelte";
 
   import LeafletMap from "$lib/components/map/LeafletMap.svelte";
@@ -87,9 +87,11 @@
       <h2 class="text-3xl tracking-tight text-center mb-12">
         {@html md(translate(locationContent.landmarksTitle, currentLang))}
       </h2>
-      <p class="text-center text-muted-foreground mb-16 max-w-2xl mx-auto">
-        {@html md(translate(locationContent.landmarksSubtitle, currentLang))}
-      </p>
+      <div
+        class="text-center text-muted-foreground mb-16 max-w-2xl mx-auto prose dark:prose-invert"
+      >
+        {@html mdContent(translate(locationContent.landmarksSubtitle, currentLang))}
+      </div>
       <div class="grid grid-cols-2 md:grid-cols-4 gap-x-8 gap-y-12 max-w-5xl mx-auto">
         {#each locationContent.landmarks as landmark, i (i)}
           <div class="text-center group">

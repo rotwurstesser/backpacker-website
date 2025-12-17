@@ -1,7 +1,7 @@
 <script lang="ts">
   import { Button } from "$lib/components/ui";
   import { t as translate } from "$lib/content";
-  import { md } from "$lib/utils";
+  import { md, mdContent } from "$lib/utils";
   import type { PageData } from "./$types";
   import type { Lang } from "$lib/i18n";
   import PageHeader from "$lib/components/layout/PageHeader.svelte";
@@ -56,9 +56,9 @@
       <h2 class="text-2xl font-bold mb-4">
         {@html md(translate(roomsPageContent.ctaTitle, currentLang))}
       </h2>
-      <p class="mb-6 opacity-90">
-        {@html md(translate(roomsPageContent.ctaDescription, currentLang))}
-      </p>
+      <div class="mb-6 opacity-90 prose dark:prose-invert max-w-none mx-auto">
+        {@html mdContent(translate(roomsPageContent.ctaDescription, currentLang))}
+      </div>
       <Button
         size="lg"
         variant="secondary"

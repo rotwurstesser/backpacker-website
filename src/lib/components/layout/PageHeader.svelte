@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { md } from "$lib/utils";
+  import { md, mdContent } from "$lib/utils";
 
   export let title: string;
   export let subtitle: string | undefined = undefined;
@@ -14,7 +14,7 @@
     </h1>
     {#if subtitle}
       <div class="text-xl text-muted-foreground leading-relaxed">
-        {@html md(subtitle)}
+        {@html mdContent(subtitle)}
       </div>
     {/if}
     <slot />
