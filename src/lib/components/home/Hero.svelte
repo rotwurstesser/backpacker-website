@@ -21,11 +21,11 @@
         {@html md(translate(homeContent.heroTagline, lang))}
       </span>
       <!-- Title: Targeting inner <p> tag from markdown -->
-      <div
-        class="prose dark:prose-invert max-w-none font-display font-normal uppercase [&>p]:text-4xl [&>p]:md:text-6xl [&>p]:leading-tight [&>p]:tracking-tight"
+      <h1
+        class="text-4xl md:text-6xl tracking-tight leading-tight uppercase font-display font-normal"
       >
-        {@html mdContent(translate(homeContent.heroTitle, lang))}
-      </div>
+        {@html md(translate(homeContent.heroTitle, lang))}
+      </h1>
       <!-- Subtitle -->
       <div
         class="prose dark:prose-invert max-w-none text-muted-foreground [&>p]:text-xl [&>p]:md:text-2xl"
