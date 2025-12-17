@@ -1,17 +1,18 @@
 <script lang="ts">
   import { t as translate } from "$lib/content";
   import { md } from "$lib/utils";
-  import { Train, Footprints, Car } from "lucide-svelte";
+  import { MapPin, TramFront, Navigation, Train, Footprints, Car } from "lucide-svelte";
 
   import LeafletMap from "$lib/components/map/LeafletMap.svelte";
   import AddressCard from "$lib/components/location/AddressCard.svelte";
   import Directions from "$lib/components/location/Directions.svelte";
   import SBB from "$lib/components/location/SBB.svelte";
+  import PageHeader from "$lib/components/layout/PageHeader.svelte";
 
   import type { PageData } from "./$types";
   import type { Lang } from "$lib/i18n";
 
-  export let data: PageData;
+  export let data;
   $: ({ lang, locationContent, settings } = data);
   $: currentLang = lang as Lang;
 
@@ -42,16 +43,10 @@
 
 {#if locationContent}
   <!-- Hero -->
-  <section class="py-20 bg-gradient-to-br from-primary/10 via-background to-primary/5">
-    <div class="container text-center max-w-3xl">
-      <h1 class="text-4xl md:text-5xl mb-6 tracking-tight">
-        {@html md(translate(locationContent.title, currentLang))}
-      </h1>
-      <p class="text-xl text-muted-foreground leading-relaxed">
-        {@html md(translate(locationContent.subtitle, currentLang))}
-      </p>
-    </div>
-  </section>
+  <PageHeader
+    title={translate(locationContent.title, currentLang)}
+    subtitle={translate(locationContent.subtitle, currentLang)}
+  />
 
   <!-- Map & Address Section -->
   <section class="py-16">

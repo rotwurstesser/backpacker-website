@@ -16,8 +16,8 @@
         <Train class="w-8 h-8 text-primary" />
       </div>
 
-      <div class="space-y-2 max-w-xl">
-        <h2 class="text-3xl tracking-tight">
+      <div class="space-y-4 max-w-xl text-center md:text-left mx-auto md:mx-0">
+        <h2 class="text-3xl tracking-tight text-center md:text-left mb-6 md:mb-0">
           {@html md(translate(content.sbbTitle, lang))}
         </h2>
         <div class="text-muted-foreground prose dark:prose-invert max-w-none">

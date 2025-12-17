@@ -1,23 +1,28 @@
 <script lang="ts">
-  import { Card } from "$lib/components/ui";
+  import { t as translate } from "$lib/content";
   import { md } from "$lib/utils";
+  import Card from "$lib/components/ui/card.svelte";
   import type { PageData } from "./$types";
-  import type { Lang } from "$lib/i18n";
+  import PageHeader from "$lib/components/layout/PageHeader.svelte";
 
   export let data: PageData;
   $: ({ content, lang } = data);
-  $: currentLang = lang as Lang;
+  // The 'Lang' type import was removed, so casting to 'Lang' here would cause an error.
+  // Assuming 'lang' is already of the correct type or can be used directly.
+  $: currentLang = lang;
 </script>
 
+```
 <svelte:head>
   <title>{content?.title?.[currentLang] || "Awards"} | Bern Backpackers</title>
 </svelte:head>
 
-<div class="container py-20">
-  <h1 class="text-4xl md:text-5xl text-center mb-12 tracking-tight">
-    {@html md(content?.title?.[currentLang] || "Awards")}
-  </h1>
+<PageHeader
+  title={content?.title?.[currentLang] || "Awards"}
+  subtitle={content?.subtitle?.[currentLang]}
+/>
 
+<div class="container py-12">
   {#if content?.awards?.length > 0}
     <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
       {#each content.awards as award}

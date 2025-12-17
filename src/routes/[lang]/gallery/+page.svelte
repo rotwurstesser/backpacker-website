@@ -3,6 +3,7 @@
   import { md } from "$lib/utils";
   import type { PageData } from "./$types";
   import type { Lang } from "$lib/i18n";
+  import PageHeader from "$lib/components/layout/PageHeader.svelte";
 
   import GalleryGrid from "$lib/components/gallery/GalleryGrid.svelte";
   import Lightbox from "$lib/components/gallery/Lightbox.svelte";
@@ -33,16 +34,10 @@
 
 {#if galleryPageContent}
   <!-- Hero -->
-  <section class="py-16 bg-gradient-to-br from-primary/10 via-background to-primary/5">
-    <div class="container text-center">
-      <h1 class="text-4xl font-bold mb-4">
-        {@html md(translate(galleryPageContent.title, currentLang))}
-      </h1>
-      <p class="text-lg text-muted-foreground">
-        {@html md(translate(galleryPageContent.subtitle, currentLang))}
-      </p>
-    </div>
-  </section>
+  <PageHeader
+    title={translate(galleryPageContent.title, currentLang)}
+    subtitle={translate(galleryPageContent.subtitle, currentLang)}
+  />
 
   <GalleryGrid
     images={galleryImages || []}

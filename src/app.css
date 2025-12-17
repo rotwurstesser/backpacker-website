@@ -107,6 +107,8 @@
     font-family: 'Anton', sans-serif;
     text-transform: uppercase;
     line-height: 1.15;
+    font-weight: 400 !important;
+    /* Prevent faux-bolding */
   }
 
   h1 {

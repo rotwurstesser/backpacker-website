@@ -1,17 +1,17 @@
 <script lang="ts">
-  import { md, mdContent } from "$lib/utils";
+  import { md } from "$lib/utils";
   import type { Lang } from "$lib/i18n";
+  import PageHeader from "$lib/components/layout/PageHeader.svelte";
 
-  export let title: any;
-  export let content: any;
+  export let title: Record<string, any> | undefined;
+  export let content: Record<string, any> | undefined;
   export let lang: Lang;
 </script>
 
-<div class="container py-20 max-w-4xl mx-auto">
-  <h1 class="mb-8 text-4xl md:text-5xl tracking-tight text-center">
-    {@html md(title?.[lang] || "Title")}
-  </h1>
+<PageHeader title={title?.[lang] || "Title"} />
+
+<div class="container py-12 max-w-4xl mx-auto">
   <div class="prose dark:prose-invert max-w-none">
-    {@html mdContent(content?.[lang] || "Content coming soon...")}
+    {@html md(content?.[lang] || "")}
   </div>
 </div>

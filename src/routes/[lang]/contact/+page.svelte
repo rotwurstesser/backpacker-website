@@ -6,6 +6,7 @@
 
   import ContactInfo from "$lib/components/contact/ContactInfo.svelte";
   import ContactForm from "$lib/components/contact/ContactForm.svelte";
+  import PageHeader from "$lib/components/layout/PageHeader.svelte";
 
   export let data: PageData;
   $: ({ lang, settings, contactPageContent } = data);

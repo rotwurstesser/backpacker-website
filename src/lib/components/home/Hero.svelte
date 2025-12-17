@@ -22,7 +22,7 @@
       </span>
       <!-- Title: Targeting inner <p> tag from markdown -->
       <div
-        class="prose dark:prose-invert max-w-none [&>p]:text-4xl [&>p]:md:text-6xl [&>p]:leading-tight"
+        class="prose dark:prose-invert max-w-none font-display font-normal uppercase [&>p]:text-4xl [&>p]:md:text-6xl [&>p]:leading-tight [&>p]:tracking-tight"
       >
         {@html mdContent(translate(homeContent.heroTitle, lang))}
       </div>

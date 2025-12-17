@@ -1,32 +1,28 @@
 <script lang="ts">
   import { Card } from "$lib/components/ui";
   import { Button } from "$lib/components/ui";
-  import { ExternalLink } from "lucide-svelte";
+  import { t as translate } from "$lib/content";
   import { md } from "$lib/utils";
+  import { ExternalLink } from "lucide-svelte";
   import type { PageData } from "./$types";
-  import type { Lang } from "$lib/i18n";
+  import PageHeader from "$lib/components/layout/PageHeader.svelte";
 
   export let data: PageData;
   $: ({ content, lang } = data);
-  $: currentLang = lang as Lang;
+  $: currentLang = lang;
 </script>
 
+```
 <svelte:head>
   <title>{content?.title?.[currentLang] || "Links"} | Bern Backpackers</title>
 </svelte:head>
 
-<div class="container py-20 max-w-4xl mx-auto">
-  <div class="text-center mb-12 space-y-4">
-    <h1 class="text-4xl md:text-5xl tracking-tight">
-      {@html md(content?.title?.[currentLang] || "Links")}
-    </h1>
-    {#if content?.subtitle?.[currentLang]}
-      <p class="text-xl text-muted-foreground">
-        {@html md(content.subtitle[currentLang])}
-      </p>
-    {/if}
-  </div>
+<PageHeader
+  title={content?.title?.[currentLang] || "Links"}
+  subtitle={content?.subtitle?.[currentLang]}
+/>
 
+<div class="container py-12 max-w-4xl mx-auto">
   {#if content?.categories}
     <div class="space-y-12">
       {#each content.categories as category}

@@ -296,6 +296,7 @@ export async function loadPageContent(slug: string): Promise<SimplePageContent> 
 
 export interface AwardsContent {
   title: TranslatedField;
+  subtitle?: TranslatedField;
   awards: Array<{
     title: string;
     image: string;

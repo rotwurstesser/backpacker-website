@@ -4,6 +4,7 @@
   import { md } from "$lib/utils";
   import type { PageData } from "./$types";
   import type { Lang } from "$lib/i18n";
+  import PageHeader from "$lib/components/layout/PageHeader.svelte";
 
   import RoomCard from "$lib/components/rooms/RoomCard.svelte";
   import PriceInfo from "$lib/components/rooms/PriceInfo.svelte";
@@ -24,16 +25,10 @@
 
 {#if t && rooms && roomsPageContent}
   <!-- Hero -->
-  <section class="py-16 bg-gradient-to-br from-primary/10 via-background to-primary/5">
-    <div class="container text-center">
-      <h1 class="text-4xl font-bold mb-4">
-        {@html md(translate(roomsPageContent.title, currentLang))}
-      </h1>
-      <p class="text-lg text-muted-foreground">
-        {@html md(translate(roomsPageContent.subtitle, currentLang))}
-      </p>
-    </div>
-  </section>
+  <PageHeader
+    title={translate(roomsPageContent.title, currentLang)}
+    subtitle={translate(roomsPageContent.subtitle, currentLang)}
+  />
 
   <!-- Rooms Grid -->
   <section class="py-16">
