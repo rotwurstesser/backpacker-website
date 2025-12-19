@@ -68,7 +68,7 @@
 
     <div class="flex items-center justify-between pt-4 border-t">
       <div>
-        <span class="text-2xl font-bold">{currency} {room.price}.-</span>
+        <span class="text-2xl font-bold">{translate(roomsPageContent.from, lang)} {currency} {room.price}.-</span>
         <span class="text-sm text-muted-foreground ml-1">
           {@html md(
             room.priceUnit === "per_bed"
