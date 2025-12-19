@@ -1,7 +1,7 @@
 {
   "name": {
     "de": "[dasas](https://www.react-grab.com/)",
-    "en": "dasdsa",
+    "en": "Zimmer 1",
     "es": "dassa"
   },
   "description": {
@@ -9,7 +9,7 @@
     "en": "dasasd",
     "es": "ads"
   },
-  "price": 111,
+  "price": 110,
   "priceUnit": "per_bed",
   "beds": 2,
   "bathType": "shared",
