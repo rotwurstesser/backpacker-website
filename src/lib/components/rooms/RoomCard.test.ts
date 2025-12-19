@@ -19,6 +19,7 @@ describe('RoomCard', () => {
     bed: { en: 'bed' },
     sharedBath: { en: 'Shared Bath' },
     privateBath: { en: 'Private Bath' },
+    from: { en: 'from' },
     perBed: { en: 'per bed' },
     perRoom: { en: 'per room' },
     bookButton: { en: 'Book' },
@@ -36,7 +37,7 @@ describe('RoomCard', () => {
     expect(screen.getByText('Single Room')).toBeInTheDocument();
     expect(screen.getByText('A cozy room')).toBeInTheDocument();
     expect(screen.getByText('Shared Bath')).toBeInTheDocument();
-    expect(screen.getByText('CHF 50.-')).toBeInTheDocument(); // Default currency is CHF
+    expect(screen.getByText(/from CHF 50\.-/)).toBeInTheDocument(); // Default currency is CHF
     expect(screen.getByText('Book')).toBeInTheDocument();
     expect(screen.getByRole('link', { name: /Book/i })).toHaveAttribute('href', 'http://example.com');
   });
