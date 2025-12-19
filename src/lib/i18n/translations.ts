@@ -55,6 +55,7 @@ export const translations = {
     rooms: {
       title: 'Rooms & Prices',
       subtitle: 'Find your perfect accommodation',
+      from: 'from',
       perBed: 'per bed',
       perRoom: 'per room',
       sharedBath: 'Shared bathroom',
@@ -177,6 +178,7 @@ export const translations = {
     rooms: {
       title: 'Zimmer & Preise',
       subtitle: 'Finden Sie Ihre perfekte Unterkunft',
+      from: 'ab',
       perBed: 'pro Bett',
       perRoom: 'pro Zimmer',
       sharedBath: 'Etagendusche',
@@ -299,6 +301,7 @@ export const translations = {
     rooms: {
       title: 'Habitaciones y Precios',
       subtitle: 'Encuentra tu alojamiento perfecto',
+      from: 'desde',
       perBed: 'por cama',
       perRoom: 'por habitación',
       sharedBath: 'Baño compartido',

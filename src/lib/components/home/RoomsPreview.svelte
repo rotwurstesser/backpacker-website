@@ -30,7 +30,7 @@
             <Bed class="h-5 w-5 text-muted-foreground" aria-hidden="true" />
           </div>
           <div class="flex items-baseline gap-1">
-            <span class="text-3xl font-bold">{t.common.currency} {room.price}.-</span>
+            <span class="text-3xl font-bold">{t.rooms.from} {t.common.currency} {room.price}.-</span>
             <span class="text-sm text-muted-foreground">
               {room.priceUnit === "per_bed" ? t.rooms.perBed : t.rooms.perRoom}
             </span>

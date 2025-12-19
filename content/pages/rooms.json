@@ -19,6 +19,11 @@
     "en": "Booked",
     "es": "Reservado"
   },
+  "from": {
+    "de": "ab",
+    "en": "from",
+    "es": "desde"
+  },
   "perBed": {
     "de": "pro Bett",
     "en": "per bed",
