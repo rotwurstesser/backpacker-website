@@ -1,12 +1,12 @@
 {
   "name": {
-    "en": "Double Room",
     "de": "Doppelzimmer",
+    "en": "Double Room",
     "es": "Habitación Doble"
   },
   "description": {
-    "en": "Cozy double room with shared bathroom facilities.",
     "de": "Gemütliches Doppelzimmer mit Etagendusche.",
+    "en": "Cozy double room with shared bathroom facilities.",
     "es": "Acogedora habitación doble con baño compartido."
   },
   "price": 120,
@@ -16,5 +16,5 @@
   "image": "/images/gallery/double-room-view.jpg",
   "features": [],
   "order": 3,
-  "available": true
+  "available": false
 }
